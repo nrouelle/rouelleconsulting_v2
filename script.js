@@ -48,7 +48,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observer tous les éléments animables
-document.querySelectorAll('.problem-card, .sector-card, .testimonial-card, .timeline-item').forEach(el => {
+document.querySelectorAll('.problem-card, .service-card, .sector-card, .testimonial-card, .timeline-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
