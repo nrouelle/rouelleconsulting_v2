@@ -2,53 +2,24 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO Basique -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Développeuse Freelance — Forfait & Régie | Rouelle Consulting</title>
     <meta name="description"
         content="Développeuse freelance spécialisée en développement d’applications. Offres au forfait (projets) ou en régie (renfort d’équipe). Diagnostic gratuit et réponse sous 48h.">
     <meta name="keywords"
         content="application métier, développement sur mesure Lyon, logiciel PME, digitalisation entreprise, Transport Lyon, BTP Lyon, application professionnelle, développeuse freelance, développement application web, forfait développement, freelance régie, dev web lyon, création application métier, développeur javascript freelance">
     <meta name="author" content="Rouelle Consulting">
-    <link rel="canonical" href="https://www.rouelleconsulting.fr/">
-
-    <!-- Open Graph (Facebook, LinkedIn) -->
-    <meta property="og:type" content="website">
     <meta property="og:title" content="Développeuse Freelance — Forfait & Régie | Rouelle Consulting">
-    <meta property="og:description" content="Développement d’applications sur mesure, au forfait ou en régie. Diagnostic gratuit.">
+    <meta property="og:description"
+        content="Développement d’applications sur mesure, au forfait ou en régie. Diagnostic gratuit.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.rouelleconsulting.fr/">
-    <meta property="og:image" content="https://www.rouelleconsulting.fr/images/og-image.jpg">
-    <meta property="og:locale" content="fr_FR">
-    <meta property="og:site_name" content="Rouelle Consulting">
+    <meta property="og:image" content="https://www.rouelleconsulting.fr/assets/og-cover.jpg">
+    <link rel="icon" type="image/png" href="assets/rouelle_consulting_50_50.png">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Applications Métier Sur-Mesure Lyon">
-    <meta name="twitter:description"
-        content="Développement d'applications métier pour PME. Transport, BTP, Conseil. Diagnostic gratuit.">
-    <meta name="twitter:image" content="https://www.rouelleconsulting.fr/images/twitter-card.jpg">
-
-    <!-- Geo Tags -->
-    <meta name="geo.region" content="FR-69">
-    <meta name="geo.placename" content="Lyon">
-    <meta name="geo.position" content="45.764043;4.835659">
-    <meta name="ICBM" content="45.764043, 4.835659">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
@@ -152,188 +123,169 @@
 </head>
 
 <body>
-
-    <!-- NAVIGATION -->
     <nav class="nav">
         <div class="container nav-container">
             <div class="logo">
-                <span class="logo-icon">⚡</span>
+                <img src="assets/rouelle_consulting_50_50.png" alt="Rouelle Consulting" class="logo-icon">
                 <span class="logo-text">Rouelle Consulting</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="#services">Services</a></li>
+                <li><a href="#offres">Offres</a></li>
+                <li><a href="#compare">Forfait vs Régie</a></li>
                 <li><a href="#methode">Méthode</a></li>
                 <li><a href="#contact" class="btn-nav">Contact</a></li>
             </ul>
-            <button class="burger" id="burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <button class="burger" id="burger"><span></span><span></span><span></span></button>
         </div>
     </nav>
 
-    <!-- HERO -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="badge-dot"></span>
-                    Applications métier sur-mesure
-                </div>
-
-                <h1 class="hero-title">
-                    Vos outils ne collent pas à votre métier ?
-                    <span class="gradient-text">Créons l'application qui vous ressemble.</span>
+                <div class="hero-badge"><span class="badge-dot"></span>Offres claires — résultats visibles</div>
+                <h1 class="hero-title">Vous voulez moins d'urgence et plus d'impact ?
+                    <span class="gradient-text">Choisissez le format qui vous correspond.</span>
                 </h1>
-
-                <p class="hero-subtitle">
-                    Transformez vos processus manuels en outils efficaces.
-                    Pour PME de 10 à 100 personnes à Lyon et en Auvergne-Rhône-Alpes.
-                </p>
+                <p class="hero-subtitle">Je propose deux formats complémentaires : <strong>forfait</strong> (projet
+                    livré, périmètre défini) et <strong>régie</strong> (renfort d'équipe, facturation au temps).</p>
 
                 <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">
-                        <span>Diagnostic gratuit</span>
+                    <a href="forfait.html" class="btn btn-primary">
+                        <span>Offre — Forfait (projet)</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </a>
-                    <a href="#secteurs" class="btn btn-secondary">Voir nos secteurs</a>
+
+                    <a href="regie.html" class="btn btn-secondary">Offre — Régie (renfort)</a>
                 </div>
 
                 <div class="hero-stats">
                     <div class="stat">
-                        <div class="stat-number">6-10h</div>
-                        <div class="stat-label">gagnées/semaine</div>
+                        <div class="stat-number">2–6 semaines</div>
+                        <div class="stat-label">MVP possible</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">3-6 mois</div>
-                        <div class="stat-label">ROI moyen</div>
+                        <div class="stat-number">Forfait &</div>
+                        <div class="stat-label">engagements clairs</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">sur-mesure</div>
+                        <div class="stat-number">TJM</div>
+                        <div class="stat-label">en régie</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROBLÈMES -->
-    <section class="problems" id="problemes">
+    <section class="problems" id="offres">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Le constat</span>
-                <h2 class="section-title">Ces situations vous parlent ?</h2>
+                <span class="section-tag">Choisissez</span>
+                <h2 class="section-title">Deux manières de travailler avec moi</h2>
             </div>
 
             <div class="problems-grid">
                 <div class="problem-card">
-                    <div class="card-icon">📊</div>
-                    <h3>Ressaisie permanente</h3>
-                    <p>Vos équipes entrent les mêmes données dans 3 outils différents. Temps perdu + erreurs garanties.
-                    </p>
+                    <div class="card-icon">📦</div>
+                    <h3>Forfait — Projet livré</h3>
+                    <p>Tu veux un résultat précis (ex : outil de planning, portail client, automatisation). On définit
+                        le périmètre, les livrables et les jalons. Je développe selon le planning convenu.</p>
+                    <ul class="service-points" style="margin-top:1rem;">
+                        <li>Devis clair & périmètre signé</li>
+                        <li>Livraisons itératives (sprints)</li>
+                        <li>Garantie & 12 mois de support</li>
+                    </ul>
                 </div>
 
                 <div class="problem-card">
-                    <div class="card-icon">🤹</div>
-                    <h3>Trop d'outils</h3>
-                    <p>Excel + CRM + emails + Dropbox... Les infos sont partout sauf là où vous les cherchez.</p>
+                    <div class="card-icon">🧑‍💻</div>
+                    <h3>Régie — Renfort d'équipe</h3>
+                    <p>Besoin d'une ressource technique disponible X jours/semaine ? Je rejoins votre équipe, code en
+                        pair, fais des revues et exécute les tickets selon vos priorités.</p>
+                    <ul class="service-points" style="margin-top:1rem;">
+                        <li>TJM clair, facturation hebdo/mois</li>
+                        <li>Intégration à votre process (Jira, GitHub, CI)</li>
+                        <li>Reportings réguliers</li>
+                    </ul>
                 </div>
 
                 <div class="problem-card">
-                    <div class="card-icon">😤</div>
-                    <h3>Compromis frustrants</h3>
-                    <p>Votre logiciel a 50 fonctions dont vous n'utilisez que 5. Et celles qui manquent n'existent pas.
-                    </p>
+                    <div class="card-icon">🔁</div>
+                    <h3>Hybride — Le meilleur des deux</h3>
+                    <p>Pour les structures qui ont besoin d'un forfait pour la partie produit et d'une régie pour
+                        l'évolution continue. On combine un scope initial + support en régie pour évoluer.</p>
+                    <ul class="service-points" style="margin-top:1rem;">
+                        <li>Roadmap partagée</li>
+                        <li>Maintenance & évolutions planifiées</li>
+                        <li>Sérénité et contrôle des coûts</li>
+                    </ul>
                 </div>
-
-                <div class="problem-card">
-                    <div class="card-icon">⚡</div>
-                    <h3>Difficile de scaler</h3>
-                    <p>Ce qui marchait à 10 personnes ne tient plus à 30. Vos process manuels deviennent un goulot.</p>
-                </div>
-            </div>
-
-            <div class="problems-cta">
-                <p class="problems-conclusion">
-                    Le problème n'est pas vous. <strong>C'est d'essayer de faire rentrer votre entreprise dans des cases
-                        standardisées.</strong>
-                </p>
             </div>
         </div>
     </section>
 
-    <!-- SOLUTION -->
-    <section class="solution" id="solution">
+    <section class="solution" id="compare">
         <div class="container">
             <div class="solution-content">
                 <div class="solution-text">
-                    <span class="section-tag">Notre approche</span>
-                    <h2 class="section-title">Une application qui s'adapte à vous</h2>
-                    <p class="lead">
-                        Pas de logiciel standard. Pas de compromis.
-                        Juste l'outil dont vous avez réellement besoin.
-                    </p>
+                    <span class="section-tag">Compare</span>
+                    <h2 class="section-title">Forfait vs Régie — lequel choisir ?</h2>
+                    <p class="lead">Voici un guide rapide pour t'aider à choisir en fonction de ton besoin, budget et
+                        maturité produit.</p>
 
                     <div class="features-list">
                         <div class="feature-item">
-                            <div class="feature-icon">✓</div>
+                            <div class="feature-icon">🎯</div>
                             <div>
-                                <h4>100% sur-mesure</h4>
-                                <p>Conçu pour VOS processus spécifiques</p>
+                                <h4>Objectif</h4>
+                                <p>Forfait : livrer un produit. Régie : renforcer une équipe.</p>
                             </div>
                         </div>
-
                         <div class="feature-item">
-                            <div class="feature-icon">✓</div>
+                            <div class="feature-icon">⏱️</div>
                             <div>
-                                <h4>Livraison rapide</h4>
-                                <p>Premières versions en 4-6 semaines</p>
+                                <h4>Contrôle du temps</h4>
+                                <p>Forfait : délais définis. Régie : flexibilité horaire.</p>
                             </div>
                         </div>
-
                         <div class="feature-item">
-                            <div class="feature-icon">✓</div>
+                            <div class="feature-icon">💸</div>
                             <div>
-                                <h4>Code source à vous</h4>
-                                <p>Pas de dépendance éternelle</p>
+                                <h4>Budget</h4>
+                                <p>Forfait : prix fixe / jalons. Régie : coût au temps (TJM).</p>
                             </div>
                         </div>
-
                         <div class="feature-item">
-                            <div class="feature-icon">✓</div>
+                            <div class="feature-icon">🔄</div>
                             <div>
-                                <h4>Formation incluse</h4>
-                                <p>Vos équipes autonomes dès J1</p>
+                                <h4>Évolution</h4>
+                                <p>Forfait : scope limité mais révisable. Régie : idéal pour roadmap continue.</p>
                             </div>
                         </div>
                     </div>
 
-                    <a href="#contact" class="btn btn-primary">Découvrir comment</a>
+                    <a href="#contact" class="btn btn-primary">Demander un diagnostic</a>
                 </div>
 
                 <div class="solution-visual">
                     <div class="before-after">
                         <div class="before">
-                            <div class="card-label">❌ Avant</div>
+                            <div class="card-label">Quand prendre le forfait</div>
                             <ul>
-                                <li>5 outils différents</li>
-                                <li>Ressaisies manuelles</li>
-                                <li>Infos éparpillées</li>
-                                <li>8-12h perdues/semaine</li>
+                                <li>Tu veux un résultat mesurable</li>
+                                <li>Tu as un besoin ponctuel</li>
+                                <li>Tu veux maîtriser le budget</li>
                             </ul>
                         </div>
                         <div class="arrow">→</div>
                         <div class="after">
-                            <div class="card-label">✅ Après</div>
+                            <div class="card-label">Quand prendre la régie</div>
                             <ul>
-                                <li>1 outil centralisé</li>
-                                <li>Automatisation</li>
-                                <li>Tout en 2 clics</li>
-                                <li>Focus sur le métier</li>
+                                <li>Tu as une backlog continue</li>
+                                <li>Tu veux de la réactivité</li>
+                                <li>Tu dois monter en charge</li>
                             </ul>
                         </div>
                     </div>
@@ -342,387 +294,123 @@
         </div>
     </section>
 
-    <!-- SERVICES -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header centered">
-                <span class="section-tag">Notre expertise</span>
-                <h2 class="section-title">Des services adaptés à vos besoins</h2>
-                <p class="section-subtitle">
-                    Du conseil à la réalisation, nous vous accompagnons dans votre transformation digitale
-                </p>
-            </div>
-
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">💻</div>
-                    <h3>Développement sur-mesure</h3>
-                    <p class="service-description">
-                        Conception et développement d'applications web parfaitement adaptées à vos processus métier.
-                        De l'analyse de vos besoins à la mise en production.
-                    </p>
-                    <ul class="service-points">
-                        <li>Applications web métier</li>
-                        <li>Tableaux de bord analytiques</li>
-                        <li>Automatisation de processus</li>
-                        <li>Intégration avec vos outils existants</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">📱</div>
-                    <h3>Développement mobile</h3>
-                    <p class="service-description">
-                        Applications mobiles pour iOS et Android qui prolongent vos outils métier sur le terrain.
-                        Synchronisation temps réel avec vos systèmes.
-                    </p>
-                    <ul class="service-points">
-                        <li>Applications natives iOS/Android</li>
-                        <li>Progressive Web Apps (PWA)</li>
-                        <li>Mode hors-ligne pour le terrain</li>
-                        <li>Interface optimisée mobile</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🎯</div>
-                    <h3>Conseil & Accompagnement</h3>
-                    <p class="service-description">
-                        Analyse de vos besoins métier et recommandations sur les meilleures solutions techniques.
-                        Nous vous guidons dans vos choix technologiques.
-                    </p>
-                    <ul class="service-points">
-                        <li>Audit de vos processus actuels</li>
-                        <li>Recommandations de solutions</li>
-                        <li>Accompagnement au changement</li>
-                        <li>Formation de vos équipes</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTEURS -->
-    <!-- <section class="sectors" id="secteurs">
-        <div class="container">
-            <div class="section-header centered">
-                <span class="section-tag">Nos spécialités</span>
-                <h2 class="section-title">On connaît votre métier</h2>
-                <p class="section-subtitle">
-                    Nous nous spécialisons dans quelques secteurs pour vraiment comprendre vos enjeux
-                </p>
-            </div>
-
-            <div class="sectors-grid">
-                <div class="sector-card">
-                    <div class="sector-icon">🚚</div>
-                    <h3>Transport & Logistique</h3>
-                    <p class="sector-problem">"On passe 2h chaque matin à faire le planning..."</p>
-                    <ul class="sector-features">
-                        <li>Planning de tournées optimisé</li>
-                        <li>Gestion d'entrepôt (WMS)</li>
-                        <li>Tracking temps réel</li>
-                        <li>App mobile chauffeurs</li>
-                    </ul>
-                    <div class="sector-result">
-                        <strong>Résultat :</strong> Planning passé de 2h à 20min/jour
-                    </div>
-                </div>
-
-                <div class="sector-card">
-                    <div class="sector-icon">🏗️</div>
-                    <h3>BTP & Construction</h3>
-                    <p class="sector-problem">"Mes chefs passent leurs soirées sur les rapports..."</p>
-                    <ul class="sector-features">
-                        <li>Suivi de chantiers temps réel</li>
-                        <li>App terrain chefs d'équipe</li>
-                        <li>Reporting automatisé</li>
-                        <li>Gestion des feuilles d'heures</li>
-                    </ul>
-                    <div class="sector-result">
-                        <strong>Résultat :</strong> 6h/semaine économisées en admin
-                    </div>
-                </div>
-
-                <div class="sector-card">
-                    <div class="sector-icon">💼</div>
-                    <h3>Cabinets Conseil</h3>
-                    <p class="sector-problem">"Mes clients demandent 10 fois les mêmes infos..."</p>
-                    <ul class="sector-features">
-                        <li>Dashboards clients personnalisés</li>
-                        <li>Simulateurs interactifs</li>
-                        <li>Portail client sécurisé</li>
-                        <li>Automatisation collecte</li>
-                    </ul>
-                    <div class="sector-result">
-                        <strong>Résultat :</strong> -60% de demandes répétitives
-                    </div>
-                </div>
-
-                <div class="sector-card">
-                    <div class="sector-icon">🏢</div>
-                    <h3>Agences Immobilières</h3>
-                    <p class="sector-problem">"On jongle entre le CRM, Excel, emails..."</p>
-                    <ul class="sector-features">
-                        <li>CRM spécialisé immobilier</li>
-                        <li>Gestion des mandats</li>
-                        <li>Calculateurs rentabilité</li>
-                        <li>Portail propriétaires</li>
-                    </ul>
-                    <div class="sector-result">
-                        <strong>Résultat :</strong> +40% de conversions
-                    </div>
-                </div>
-
-                <div class="sector-card">
-                    <div class="sector-icon">🍽️</div>
-                    <h3>Hôtellerie & Restauration</h3>
-                    <p class="sector-problem">"On perd du temps entre les réservations, le planning et la compta..."</p>
-                    <ul class="sector-features">
-                        <li>Gestion des réservations centralisée</li>
-                        <li>Planning du personnel optimisé</li>
-                        <li>Suivi des stocks et inventaires</li>
-                        <li>Tableau de bord analytique</li>
-                    </ul>
-                    <div class="sector-result">
-                        <strong>Résultat :</strong> 5h/semaine économisées en gestion
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- MÉTHODE -->
     <section class="method" id="methode">
         <div class="container">
-            <div class="section-header centered">
-                <span class="section-tag">Notre process</span>
-                <h2 class="section-title">Comment on travaille ensemble</h2>
+            <div class="section-header centered"><span class="section-tag">Process</span>
+                <h2 class="section-title">Ma méthode — simple et transparente</h2>
             </div>
 
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-number">1</div>
                     <div class="timeline-content">
-                        <h3>Découverte</h3>
-                        <span class="timeline-duration">1 semaine</span>
-                        <p>On comprend vos processus réels, pas un cahier des charges théorique.</p>
+                        <h3>Diagnostique & briefing</h3><span class="timeline-duration">1 semaine</span>
+                        <p>On clarifie le besoin, le périmètre et on choisit le format (forfait / régie).</p>
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="timeline-number">2</div>
                     <div class="timeline-content">
-                        <h3>Co-construction</h3>
-                        <span class="timeline-duration">1 semaine</span>
-                        <p>On dessine l'outil idéal ensemble avec des maquettes interactives.</p>
+                        <h3>Plan & contrat</h3><span class="timeline-duration">1 semaine</span>
+                        <p>Proposition avec livrables et planning (forfait) ou cadence & TJM (régie).</p>
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="timeline-number">3</div>
                     <div class="timeline-content">
-                        <h3>Développement</h3>
-                        <span class="timeline-duration">4-8 semaines</span>
-                        <p>Livraisons toutes les 2 semaines. Vous testez, on ajuste.</p>
+                        <h3>Exec & transparence</h3><span class="timeline-duration">Sprints</span>
+                        <p>Livraisons fréquentes, backlog partagé, reports clairs.</p>
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="timeline-number">4</div>
                     <div class="timeline-content">
-                        <h3>Déploiement</h3>
-                        <span class="timeline-duration">1 semaine</span>
-                        <p>Formation de vos équipes et accompagnement renforcé.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-number">5</div>
-                    <div class="timeline-content">
-                        <h3>Évolution</h3>
-                        <span class="timeline-duration">12 mois inclus</span>
-                        <p>Support, maintenance et ajustements inclus.</p>
+                        <h3>Livraison & support</h3><span class="timeline-duration">Inclut</span>
+                        <p>Formation, documentation et 12 mois de support pour les forfaits.</p>
                     </div>
                 </div>
             </div>
 
             <div class="method-highlights">
-                <div class="highlight-item">
-                    <span class="highlight-icon">⚡</span>
-                    <span>Pas de tunnel de 6 mois</span>
-                </div>
-                <div class="highlight-item">
-                    <span class="highlight-icon">👁️</span>
-                    <span>Transparence totale</span>
-                </div>
-                <div class="highlight-item">
-                    <span class="highlight-icon">🔒</span>
-                    <span>Code source à vous</span>
-                </div>
+                <div class="highlight-item"><span class="highlight-icon">🔒</span><span>Contrat clair</span></div>
+                <div class="highlight-item"><span class="highlight-icon">⚡</span><span>Livrable rapide</span></div>
+                <div class="highlight-item"><span class="highlight-icon">🤝</span><span>Communication hebdo</span></div>
             </div>
         </div>
     </section>
 
-    <!-- TÉMOIGNAGES -->
-    <!-- <section class="testimonials"> -->
-    <!-- <div class="container"> -->
-    <!-- <div class="section-header centered"> -->
-    <!-- <span class="section-tag">Témoignages</span> -->
-    <!-- <h2 class="section-title">Ce que disent nos clients</h2> -->
-    <!-- </div> -->
-
-    <!-- <div class="testimonials-grid"> -->
-    <!-- <div class="testimonial-card"> -->
-    <!-- <div class="stars">⭐⭐⭐⭐⭐</div> -->
-    <!-- <p class="quote"> -->
-    <!-- "On passait 2h chaque matin à faire le planning. Maintenant c'est fait en 20 minutes.  -->
-    <!-- L'outil suggère les meilleures tournées et on ajuste en 2 clics si besoin." -->
-    <!-- </p> -->
-    <!-- <div class="testimonial-author"> -->
-    <!-- <div class="author-avatar">M</div> -->
-    <!-- <div> -->
-    <!-- <div class="author-name">Marc D.</div> -->
-    <!-- <div class="author-role">Directeur, PME Transport (45 pers.)</div> -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </div> -->
-
-    <!-- <div class="testimonial-card"> -->
-    <!-- <div class="stars">⭐⭐⭐⭐⭐</div> -->
-    <!-- <p class="quote"> -->
-    <!-- "Mes chefs de chantier prennent une photo, cochent 3 cases sur leur téléphone,  -->
-    <!-- et le rapport client est généré automatiquement. Un gain de temps incroyable." -->
-    <!-- </p> -->
-    <!-- <div class="testimonial-author"> -->
-    <!-- <div class="author-avatar">S</div> -->
-    <!-- <div> -->
-    <!-- <div class="author-name">Sophie L.</div> -->
-    <!-- <div class="author-role">Gérante, Entreprise BTP (30 pers.)</div> -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </div> -->
-
-    <!-- <div class="testimonial-card"> -->
-    <!-- <div class="stars">⭐⭐⭐⭐⭐</div> -->
-    <!-- <p class="quote"> -->
-    <!-- "Mes clients se connectent à leur portail et ont tout en temps réel.  -->
-    <!-- J'ai récupéré du temps pour du vrai conseil à valeur ajoutée." -->
-    <!-- </p> -->
-    <!-- <div class="testimonial-author"> -->
-    <!-- <div class="author-avatar">T</div> -->
-    <!-- <div> -->
-    <!-- <div class="author-name">Thomas R.</div> -->
-    <!-- <div class="author-role">Expert-comptable (12 pers.)</div> -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </section> -->
-
-    <section class="faq-seo">
+    <section class="services" id="pricing">
         <div class="container">
-            <div class="section-header centered">
-                <h2>Questions fréquentes</h2>
+            <div class="section-header centered"><span class="section-tag">Offres</span>
+                <h2 class="section-title">Exemples d'offres</h2>
+                <p class="section-subtitle">Ordres de grandeur pour te situer. Chaque projet a son devis.</p>
             </div>
 
-            <div class="faq-list">
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                    <h3 itemprop="name">Pourquoi choisir une application sur-mesure plutôt qu'un logiciel standard ?
-                    </h3>
-                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">
-                            Une application sur-mesure s'adapte parfaitement à vos processus métier spécifiques,
-                            sans compromis. Contrairement aux logiciels standards qui vous obligent à adapter
-                            votre façon de travailler, une solution sur-mesure élimine les tâches inutiles et
-                            automatise exactement ce dont vous avez besoin. Le ROI moyen est de 3-6 mois pour nos
-                            clients PME.
-                        </p>
-                    </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Forfait Basique</h3>
+                    <p class="service-description">MVP fonctionnel — 4–6 semaines</p>
+                    <ul class="service-points">
+                        <li>Diagnostic</li>
+                        <li>Développement du MVP</li>
+                        <li>Déploiement</li>
+                        <li>1 mois de support</li>
+                    </ul>
                 </div>
 
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                    <h3 itemprop="name">Combien coûte une application métier sur-mesure ?</h3>
-                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">
-                            Les projets démarrent à partir de 5 000€ pour une automatisation simple.
-                            Pour une application métier complète, comptez entre 12 000€ et 30 000€ selon la complexité.
-                            Ce tarif inclut le diagnostic, la conception, le développement, la formation et 12 mois de
-                            support.
-                            Contactez-nous pour un devis personnalisé gratuit.
-                        </p>
-                    </div>
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>Forfait Complet</h3>
+                    <p class="service-description">Application métier complète — 8–16 semaines</p>
+                    <ul class="service-points">
+                        <li>Analyse & maquettes</li>
+                        <li>Dév itératif</li>
+                        <li>Formation & doc</li>
+                        <li>12 mois de support</li>
+                    </ul>
                 </div>
 
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                    <h3 itemprop="name">Quel est le délai pour développer une application métier ?</h3>
-                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">
-                            Entre 6 et 12 semaines du diagnostic à la mise en production pour un projet standard.
-                            Les premiers résultats sont visibles dès les 2 premières semaines de développement
-                            grâce à notre méthode agile. Les projets simples peuvent être livrés en 4-6 semaines.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                    <h3 itemprop="name">Développez-vous des applications pour les entreprises en dehors de Lyon ?</h3>
-                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">
-                            Oui, nous intervenons dans toute la région Auvergne-Rhône-Alpes (Grenoble, Saint-Étienne,
-                            Annecy, Chambéry...). Pour les autres régions, nous travaillons en full remote avec
-                            des phases de découverte en visioconférence.
-                        </p>
-                    </div>
+                <div class="service-card">
+                    <div class="service-icon">🤝</div>
+                    <h3>Régie — 1/2/3 jours/semaine</h3>
+                    <p class="service-description">Renfort technique pour votre backlog et vos releases.</p>
+                    <ul class="service-points">
+                        <li>Intégration à votre process</li>
+                        <li>Pair programming</li>
+                        <li>Reporting agile</li>
+                        <li>Facturation mensuelle</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA FINAL -->
     <section class="final-cta" id="contact">
         <div class="container">
             <div class="cta-content">
-                <h2 class="cta-title">Prêt à récupérer du temps sur votre métier ?</h2>
-                <p class="cta-subtitle">
-                    Réservez 30 minutes pour un diagnostic gratuit.
-                    On identifie ensemble vos irritants et on voit si on peut vous aider.
+                <h2 class="cta-title">Prête à choisir le bon format ?</h2>
+                <p class="cta-subtitle">Réserve 30 minutes — on regarde ensemble ce qui est le mieux pour ton contexte.
                 </p>
-
-                <div class="cta-benefits">
-                    <div class="benefit-chip">✓ Gratuit et sans engagement</div>
-                    <div class="benefit-chip">✓ Retour d'expérience concret</div>
-                    <div class="benefit-chip">✓ Recommandations actionnables</div>
-                </div>
 
                 <div class="cta-buttons">
-                    <a href="https://calendly.com/rouelleconsulting/30-min-call" class="btn btn-primary btn-large">
-                        <span>Réserver mon diagnostic</span>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </a>
-                    <a href="mailto:contact@rouelleconsulting.fr" class="btn btn-secondary btn-large">
-                        Ou envoyez un email
-                    </a>
+                    <a href="https://calendly.com/rouelleconsulting/30-min-call"
+                        class="btn btn-primary btn-large">Réserver un diagnostic</a>
+                    <a href="mailto:contact@rouelleconsulting.fr" class="btn btn-secondary btn-large">Envoyer un
+                        email</a>
                 </div>
 
-                <p class="cta-reassurance">
-                    📍 Basé à Lyon • 📞 Réponse sous 48h • 💬 Premier échange toujours gratuit
-                </p>
+                <p class="cta-reassurance">📍Basé à Lyon • Réponse sous 48h • Premier échange gratuit</p>
             </div>
         </div>
     </section>
-
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <span class="logo-icon">⚡</span>
+                        <img src="assets/rouelle_consulting_50_50_white.png" alt="Rouelle Consulting" class="logo-icon">
                         <span class="logo-text">Rouelle Consulting</span>
                     </div>
                     <p class="footer-desc">
@@ -730,12 +418,12 @@
                         pour PME
                     </p>
                     <p class="footer-address">
-                    📍 Lyon, France<br>
-                    📧 contact@rouelleconsulting.fr<br>
-                    📞 +33 6 88 34 60 92
-                </p>
+                        📍 Lyon, France<br>
+                        📧 contact@rouelleconsulting.fr<br>
+                        📞 +33 6 88 34 60 92
+                    </p>
                 </div>
-
+                <!-- 
                 <div class="footer-col">
                     <h4>Secteurs d'expertise</h4>
                     <ul>
@@ -745,53 +433,51 @@
                         <li><a href="#secteurs">Agences Immobilières</a></li>
                         <li><a href="#secteurs">Hôtellerie & Restauration</a></li>
                     </ul>
-                </div>
+                </div> -->
 
                 <div class="footer-col">
                     <h4>Services</h4>
-                <ul>
-                    <li><a href="#services">Développement sur-mesure</a></li>
-                    <li><a href="#services">Développement mobile</a></li>
-                    <li><a href="#services">Conseil & Accompagnement</a></li>
-                    <li><a href="#methode">Notre méthode agile</a></li>
-                </ul>
+                    <ul>
+                        <li><a href="#services">Développement sur-mesure</a></li>
+                        <li><a href="#services">Développement mobile</a></li>
+                        <li><a href="#services">Conseil & Accompagnement</a></li>
+                        <li><a href="#services">Forfait & Régie</a></li>
+                        <li><a href="#methode">Notre méthode agile</a></li>
+                    </ul>
                 </div>
 
                 <div class="footer-col">
-                <h4>Zones d'intervention</h4>
-                <ul>
-                    <li>Lyon & Métropole</li>
-                    <li>Villeurbanne</li>
-                    <li>Caluire-et-Cuire</li>
-                    <li>Vénissieux</li>
-                    <li>Toute l'Auvergne-Rhône-Alpes</li>
-                    <li>Toute la France</li>
-                </ul>
-            </div>
-
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <p class="footer-contact">
-                        📧 contact@rouelleconsulting.fr<br>
-                        📍 Lyon, Auvergne-Rhône-Alpes
-                    </p>
-                    <a href="#contact" class="btn btn-footer">Diagnostic gratuit</a>
+                    <h4>Zones d'intervention</h4>
+                    <ul>
+                        <li>Lyon & Métropole</li>
+                        <li>Villeurbanne</li>
+                        <li>Caluire-et-Cuire</li>
+                        <li>Vénissieux</li>
+                        <li>Toute l'Auvergne-Rhône-Alpes</li>
+                        <li>Toute la France</li>
+                    </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 Rouelle Consulting - Applications Métier Lyon • 
-               <a href="/mentions-legales">Mentions légales</a> • 
-               <a href="/confidentialite">Politique de confidentialité</a>
-            </p>
-            <p class="footer-keywords">
-                Développeur applications métier Lyon | Logiciel PME sur-mesure | Digitalisation entreprise Rhône-Alpes
-            </p>
+                <p>&copy; 2025 Rouelle Consulting - Applications Métier Lyon •
+                    <a href="/mentions-legales">Mentions légales</a> •
+                    <a href="/confidentialite">Politique de confidentialité</a>
+                </p>
+                <p class="footer-keywords">
+                    Développeur applications métier Lyon | Logiciel PME sur-mesure | Digitalisation entreprise
+                    Rhône-Alpes
+                </p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // petit JS pour le burger
+        const burger = document.getElementById('burger');
+        const menu = document.querySelector('.nav-menu');
+        burger?.addEventListener('click', () => menu.classList.toggle('active'));
+    </script>
 </body>
 
 </html>
