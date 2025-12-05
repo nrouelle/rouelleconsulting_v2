@@ -17,7 +17,7 @@
         content="Livraison d’applications web au forfait : périmètre défini, budget fixe, jalons clairs.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.rouelleconsulting.fr/forfait.html">
-    <meta property="og:image" content="https://www.rouelleconsulting.fr/assets/forfait-cover.jpg">
+    <meta property="og:image" content="https://www.rouelleconsulting.fr/assets/rouelle_consulting_50_50.png">
     <link rel="icon" type="image/png" href="assets/rouelle_consulting_50_50.png">
 
     <link rel="stylesheet" href="style.css">
@@ -127,11 +127,18 @@
 
     <section class="final-cta" id="contact">
         <div class="container">
-            <h2 class="cta-title">Discutons de ton projet</h2>
+            <h2 class="cta-title">Discutons de votre projet</h2>
             <p class="cta-subtitle">Je t’aide à définir le bon périmètre et un budget précis.</p>
             <a class="btn btn-primary" href="mailto:contact@rouelleconsulting.fr">Demander un devis</a>
         </div>
     </section>
+    
+    <script>
+        // petit JS pour le burger
+        const burger = document.getElementById('burger');
+        const menu = document.querySelector('.nav-menu');
+        burger?.addEventListener('click', () => menu.classList.toggle('active'));
+    </script>
 </body>
 
 </html>
