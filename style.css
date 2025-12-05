@@ -166,6 +166,7 @@ p {
 
 .btn-nav:hover {
     background: var(--primary-dark);
+    color: white;
 }
 
 .btn-footer {
@@ -226,6 +227,11 @@ p {
 
 .nav-menu a:hover {
     color: var(--primary);
+}
+
+.nav-menu a.btn-nav {
+    color: white;
+    font-weight: 500;
 }
 
 .burger {
