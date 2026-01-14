@@ -134,22 +134,32 @@
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav class="nav">
-        <div class="container nav-container">
-            <div class="logo">
-                <img src="assets/rouelle_consulting_50_50.png" alt="Rouelle Consulting" class="logo-icon">
-                <span class="logo-text">Rouelle Consulting</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="accueil.html">Accueil</a></li>
-                <li><a href="forfait.html">Forfait</a></li>
-                <li><a href="regie.html">Régie</a></li>
-                <li><a href="accueil.html#contact" class="btn-nav">Contact</a></li>
-            </ul>
-            <button class="burger" id="burger"><span></span><span></span><span></span></button>
-        </div>
-    </nav>
+  <div class="container nav-container">
+
+    <!-- Logo / Nom -->
+    <a href="./index.html" class="logo">
+      <img src="assets/rouelle_consulting_50_50.png" alt="Rouelle Consulting" class="logo-icon">
+      <span>Rouelle Consulting</span>
+    </a>
+
+    <!-- Menu -->
+    <div class="nav-menu" id="nav-menu">
+      <a href="./index.html">Accueil</a>
+      <a href="./application-gestion-lyon.html">Application de gestion</a>
+      <a href="./faq.html">FAQ</a>
+      <a href="./contact.html" class="btn-nav">Contact</a>
+    </div>
+
+    <!-- Burger mobile -->
+    <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</nav>
 
   <!-- Contenu -->
   <section class="solution" style="padding-top: 120px; padding-bottom: 80px;">
@@ -207,79 +217,41 @@
     </div>
   </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <div class="footer-logo">
-                        <img src="assets/rouelle_consulting_50_50_white.png" alt="Rouelle Consulting" class="logo-icon">
-                        <span class="logo-text">Rouelle Consulting</span>
-                    </div>
-                    <p class="footer-desc">
-                        Applications métier sur-mesure<br>
-                        pour PME
-                    </p>
-                    <p class="footer-address">
-                        📍 Lyon, France<br>
-                        📧 contact@rouelleconsulting.fr<br>
-                        📞 +33 6 88 34 60 92
-                    </p>
-                </div>
-                <!-- 
-                <div class="footer-col">
-                    <h4>Secteurs d'expertise</h4>
-                    <ul>
-                        <li><a href="#secteurs">Transport & Logistique</a></li>
-                        <li><a href="#secteurs">BTP & Construction</a></li>
-                        <li><a href="#secteurs">Cabinets Conseil</a></li>
-                        <li><a href="#secteurs">Agences Immobilières</a></li>
-                        <li><a href="#secteurs">Hôtellerie & Restauration</a></li>
-                    </ul>
-                </div> -->
+   <!-- CTA FINAL -->
+    <section class="final-cta" id="contact">
+        <div class="container cta-content">
 
-                <div class="footer-col">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#services">Développement sur-mesure</a></li>
-                        <li><a href="#services">Développement mobile</a></li>
-                        <li><a href="#services">Conseil & Accompagnement</a></li>
-                        <li><a href="#services">Forfait & Régie</a></li>
-                        <li><a href="#methode">Notre méthode agile</a></li>
-                    </ul>
-                </div>
+            <h2 class="cta-title">Parlons de votre application de gestion</h2>
+            <p class="cta-subtitle">
+                Vous avez un projet ou un besoin d’évolution d’un outil existant ?
+            </p>
 
-                <div class="footer-col">
-                    <h4>Zones d'intervention</h4>
-                    <ul>
-                        <li>Lyon & Métropole</li>
-                        <li>Villeurbanne</li>
-                        <li>Caluire-et-Cuire</li>
-                        <li>Vénissieux</li>
-                        <li>Toute l'Auvergne-Rhône-Alpes</li>
-                        <li>Toute la France</li>
-                    </ul>
-                </div>
+            <div class="cta-benefits">
+                <span class="benefit-chip">Analyse métier</span>
+                <span class="benefit-chip">Solution sur mesure</span>
+                <span class="benefit-chip">Approche pragmatique</span>
             </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2025 Rouelle Consulting - Applications Métier Lyon •
-                    <a href="mentions-legales.html">Mentions légales</a> •
-                    <a href="/confidentialite">Politique de confidentialité</a>
-                </p>
-                <p class="footer-keywords">
-                    Développeuse applications métier Lyon | Logiciel PME sur-mesure | Digitalisation entreprise
-                    Rhône-Alpes
-                </p>
+            <div class="cta-buttons">
+                <a href="./contact.html" class="btn btn-primary btn-large">Me contacter</a>
+                <a href="./application-gestion-lyon.html" class="btn btn-secondary btn-large">Voir les services</a>
             </div>
+
+            <p class="cta-reassurance">
+                Basée à Lyon · Missions possibles à distance · Devis gratuit
+            </p>
+
         </div>
-    </footer>
+    </section>
 
     <script>
-        // petit JS pour le burger
-        const burger = document.getElementById('burger');
-        const menu = document.querySelector('.nav-menu');
-        burger?.addEventListener('click', () => menu.classList.toggle('active'));
-    </script>
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.nav-menu');
+
+  burger.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('active');
+    burger.setAttribute('aria-expanded', isOpen);
+  });
+</script>
 </body>
 </html>
