@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Contact | Rouelle Consulting</title>
+  <meta name="description" content="Contactez Rouelle Consulting pour discuter de votre projet d’application de gestion ou de logiciel métier sur mesure à Lyon.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="container nav-container">
+      <a href="./index.html" class="logo">
+        <img src="assets/rouelle_consulting_50_50.png" alt="Rouelle Consulting" class="logo-icon">
+        <span>Rouelle Consulting</span>
+      </a>
+
+      <div class="nav-menu" id="nav-menu">
+        <a href="./index.html">Accueil</a>
+        <a href="./application-gestion-lyon.html">Application de gestion</a>
+        <a href="./faq.html">FAQ</a>
+        <a href="./contact.html" class="btn-nav">Contact</a>
+      </div>
+
+      <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Contact – Rouelle Consulting
+      </div>
+
+      <h1 class="hero-title">
+        Parlons de votre <span class="gradient-text">projet</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Décrivez votre besoin : application de gestion, modernisation, automatisation, maintenance.
+        Je vous répondrai rapidement.
+      </p>
+
+      <div class="hero-cta">
+        <a href="./application-gestion-lyon.html" class="btn btn-secondary btn-large">Voir “Application de gestion”</a>
+        <a href="./faq.html" class="btn btn-secondary btn-large">Consulter la FAQ</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENU CONTACT -->
+  <section>
+    <div class="container">
+
+      <div class="section-header centered">
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title">Décrivez votre besoin</h2>
+        <p class="section-subtitle">
+          Que vous souhaitiez créer une application de gestion sur mesure, moderniser un outil existant
+          ou automatiser un processus, je peux vous aider à cadrer le besoin et définir une approche pragmatique.
+          <br><br>
+          Pour gagner du temps, indiquez : votre contexte, le nombre d’utilisateurs, les données à gérer,
+          et vos contraintes (délais, intégrations).
+          <br><br>
+          <strong>Basée à Lyon</strong>, j’interviens sur site en région Auvergne-Rhône-Alpes ou à distance partout en France.
+        </p>
+      </div>
+
+      <!-- IFRAME FORMULAIRE -->
+      <div style="border: 1px solid var(--border); border-radius: 1rem; overflow: hidden; background: var(--bg-primary);">
+        <iframe
+          title="Formulaire de contact"
+          src="https://framaforms.org/parlons-de-votre-projet-1768404315"
+          width="100%"
+          height="950"
+          frameborder="0"
+          style="display:block;">
+        </iframe>
+      </div>
+
+      <p style="margin-top: 1rem; text-align: center; color: var(--text-muted);">
+        Réponse sous 1–2 jours ouvrés (en général).
+      </p>
+
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="final-cta">
+    <div class="container cta-content">
+      <h2 class="cta-title">Besoin d’un échange rapide ?</h2>
+      <p class="cta-subtitle">
+        Si vous avez une question avant d’écrire, consultez la FAQ : sur mesure vs standard,
+        modernisation, délais, maintenance.
+      </p>
+
+      <div class="cta-buttons">
+        <a href="./faq.html" class="btn btn-primary btn-large">Aller à la FAQ</a>
+        <a href="./application-gestion-lyon.html" class="btn btn-secondary btn-large">Voir la page Application</a>
+      </div>
+
+      <p class="cta-reassurance">
+        Lyon · Auvergne-Rhône-Alpes · À distance · Approche MVP et itérative
+      </p>
+    </div>
+  </section>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const menu = document.querySelector('.nav-menu');
+
+    burger.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('active');
+      burger.setAttribute('aria-expanded', isOpen);
+    });
+  </script>
+
+</body>
+</html>
