@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pilotage de la production industrielle — Application métier livrée en 45 à 60 jours</title>
+  <meta name="description" content="Application métier de pilotage de production pour PME industrielles. Périmètre clair, délai maîtrisé (45 à 60 jours), approche pragmatique. Budget projet : 30 000 € HT." />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111111;
+      --muted:#444444;
+      --line:#e9e9e9;
+      --accent:#111111;
+      --max: 980px;
+      --radius: 12px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+    a{color:inherit}
+    .wrap{max-width:var(--max);margin:0 auto;padding:56px 20px}
+    header{padding:10px 0 34px 0}
+    .kicker{color:var(--muted);letter-spacing:.02em;text-transform:uppercase;font-size:12px;margin:0 0 10px}
+    h1{font-size:40px;line-height:1.12;margin:0 0 12px;font-weight:650}
+    .sub{font-size:18px;color:var(--muted);margin:0 0 22px;max-width:70ch}
+    .ctaRow{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 0}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 16px;border-radius:999px;border:1px solid var(--text);
+      text-decoration:none;font-weight:600
+    }
+    .btn.primary{background:var(--text);color:var(--bg)}
+    .btn.ghost{background:transparent;color:var(--text)}
+    .meta{margin-top:14px;color:var(--muted);font-size:14px}
+    hr{border:none;border-top:1px solid var(--line);margin:36px 0}
+    section{padding:6px 0}
+    h2{font-size:22px;margin:0 0 10px;font-weight:650}
+    p{margin:0 0 14px;max-width:78ch}
+    ul{margin:0 0 14px 18px;max-width:78ch}
+    li{margin:6px 0}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:18px;
+      margin-top:8px
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:18px 18px 14px;
+      background:#fff;
+    }
+    .card h3{margin:0 0 8px;font-size:16px;font-weight:650}
+    .card p,.card ul{color:var(--muted);margin-bottom:10px}
+    .col6{grid-column:span 6}
+    .col12{grid-column:span 12}
+    .note{
+      border-left:3px solid var(--text);
+      padding:10px 14px;
+      background:#fafafa;
+      color:var(--muted);
+      border-radius:10px;
+      max-width:78ch
+    }
+    .twoCol{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px
+    }
+    .small{font-size:14px;color:var(--muted)}
+    footer{padding:20px 0 0;color:var(--muted);font-size:14px}
+    .topbar{
+      position:sticky;top:0;background:rgba(255,255,255,.9);
+      backdrop-filter:saturate(180%) blur(10px);
+      border-bottom:1px solid var(--line);
+      z-index:10
+    }
+    .topbar .inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:10px 20px;
+      display:flex;align-items:center;justify-content:space-between;gap:12px
+    }
+    .brand{font-weight:650;font-size:14px;letter-spacing:.01em}
+    .nav a{font-size:14px;color:var(--muted);text-decoration:none;margin-left:14px}
+    .nav a:hover{color:var(--text);text-decoration:underline}
+    @media (max-width: 820px){
+      h1{font-size:32px}
+      .col6{grid-column:span 12}
+      .twoCol{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="inner">
+      <div class="brand">Applications métiers</div>
+      <nav class="nav">
+        <a href="./accueil.html">Accueil</a>
+        <a href="./pme-industrielles.html">PME industrielles</a>
+        <a href="./collectivites.html">Collectivités</a>
+        <a href="./a-propos.html">À propos</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <header>
+      <p class="kicker">PME industrielles • Auvergne-Rhône-Alpes</p>
+      <h1>Pilotage de la production industrielle</h1>
+      <p class="sub">
+        Application métier livrée en <strong>45 à 60 jours</strong>, conçue pour améliorer la visibilité atelier
+        et fiabiliser les indicateurs de pilotage — <em>sans ERP lourd</em> et sans projet interminable.
+      </p>
+
+      <div class="ctaRow">
+        <a class="btn primary" href="#contact">Planifier un échange (30 min)</a>
+        <a class="btn ghost" href="#contenu">Voir le contenu de l’intervention</a>
+      </div>
+      <p class="meta">Budget projet : <strong>30 000 € HT</strong> • Périmètre figé • Délai engagé</p>
+    </header>
+
+    <hr />
+
+    <section id="constat">
+      <h2>Le constat</h2>
+      <p>
+        Dans beaucoup de PME industrielles, le suivi de production repose encore sur des outils qui ont longtemps suffi,
+        mais qui montrent leurs limites dès que l’activité se tend.
+      </p>
+      <ul>
+        <li>Fichiers Excel multiples, versions divergentes</li>
+        <li>Saisies tardives ou incomplètes</li>
+        <li>Visibilité partielle sur l’avancement réel</li>
+        <li>Dépendance à des personnes clés</li>
+      </ul>
+      <p>
+        Résultat : décisions prises trop tard, indicateurs peu fiables, et frustration côté atelier comme côté encadrement.
+      </p>
+    </section>
+
+    <hr />
+
+    <section id="objectif">
+      <h2>L’objectif</h2>
+      <p>
+        Mettre en place un outil simple et fiable permettant de :
+      </p>
+      <ul>
+        <li>Suivre l’avancement réel de la production</li>
+        <li>Disposer d’indicateurs exploitables au quotidien</li>
+        <li>Faciliter la remontée d’informations depuis l’atelier</li>
+        <li>Améliorer le pilotage sans complexifier le système d’information</li>
+      </ul>
+    </section>
+
+    <hr />
+
+    <section id="approche">
+      <h2>L’approche</h2>
+      <p>
+        Je conçois et déploie des <strong>applications métiers ciblées</strong>, adaptées aux réalités terrain.
+        L’approche repose sur trois principes :
+      </p>
+
+      <div class="grid">
+        <div class="card col6">
+          <h3>Périmètre clair</h3>
+          <p>On traite un problème précis, pas toute l’organisation.</p>
+        </div>
+        <div class="card col6">
+          <h3>Délai maîtrisé</h3>
+          <p>Un outil opérationnel en moins de deux mois.</p>
+        </div>
+        <div class="card col12">
+          <h3>Usage avant technologie</h3>
+          <p>L’outil doit être compris et utilisé par les équipes.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <section id="contenu">
+      <h2>Le contenu de l’intervention</h2>
+
+      <div class="grid">
+        <div class="card col6">
+          <h3>1) Cadrage</h3>
+          <ul>
+            <li>Échanges avec la direction et la production</li>
+            <li>Compréhension des flux réels</li>
+            <li>Définition des indicateurs utiles</li>
+            <li>Validation d’un périmètre figé</li>
+          </ul>
+          <p class="small">Livrable : document de cadrage validé.</p>
+        </div>
+
+        <div class="card col6">
+          <h3>2) Application de pilotage</h3>
+          <ul>
+            <li>Suivi des ordres de fabrication</li>
+            <li>Remontée d’informations atelier</li>
+            <li>Tableaux de bord production / encadrement</li>
+            <li>Gestion des utilisateurs et des droits</li>
+          </ul>
+          <p class="small">Application web interne (PC / tablette).</p>
+        </div>
+
+        <div class="card col12">
+          <h3>3) Déploiement</h3>
+          <ul>
+            <li>Mise en service progressive</li>
+            <li>Accompagnement des utilisateurs clés</li>
+            <li>Ajustements après les premiers retours terrain</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <section id="pas">
+      <h2>Ce que cette approche n’est pas</h2>
+      <ul>
+        <li>Un ERP complet</li>
+        <li>Un projet informatique long</li>
+        <li>Une refonte globale du SI</li>
+        <li>Un développement sans limite de périmètre</li>
+      </ul>
+      <p>
+        Ces sujets peuvent être traités, mais dans un autre cadre.
+      </p>
+    </section>
+
+    <hr />
+
+    <section id="resultats">
+      <h2>Résultats observés</h2>
+      <p>
+        Dans des contextes industriels comparables :
+      </p>
+      <ul>
+        <li>Meilleure visibilité sur l’avancement réel</li>
+        <li>Données plus fiables et plus tôt disponibles</li>
+        <li>Décisions de pilotage facilitées</li>
+        <li>Meilleure adhésion des équipes terrain</li>
+      </ul>
+      <p class="small">(Références disponibles sur demande – cas anonymisés)</p>
+    </section>
+
+    <hr />
+
+    <section id="cible">
+      <h2>À qui s’adresse cette offre</h2>
+
+      <div class="twoCol">
+        <div class="card">
+          <h3>Adaptée si</h3>
+          <ul>
+            <li>PME industrielle (20 à 300 salariés)</li>
+            <li>Suivi de production perfectible</li>
+            <li>Amélioration rapide et pragmatique</li>
+            <li>Direction et production impliquées</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Peu adaptée si</h3>
+          <ul>
+            <li>Vous recherchez un outil très standardisé</li>
+            <li>Aucun sponsor interne n’est identifié</li>
+            <li>Le besoin n’est pas encore clarifié</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <section id="modalites">
+      <h2>Modalités</h2>
+      <ul>
+        <li>Durée : <strong>45 à 60 jours</strong></li>
+        <li>Budget projet : <strong>30 000 € HT</strong></li>
+        <li>Intervention principalement en <strong>Auvergne-Rhône-Alpes</strong></li>
+        <li>Possibilité d’intervention partout en France avec présence terrain au démarrage</li>
+      </ul>
+    </section>
+
+    <hr />
+
+    <section id="contact">
+      <h2>Premier échange</h2>
+      <p>
+        Je propose un <strong>échange de cadrage gratuit (30 minutes)</strong> pour comprendre votre contexte,
+        vérifier si cette approche est pertinente, et décider ensemble de la suite.
+      </p>
+
+      <div class="ctaRow">
+        <!-- Remplace l'email et/ou le lien de calendrier -->
+        <a class="btn primary" href="mailto:contact@votredomaine.fr?subject=Demande%20d%27%C3%A9change%20-%20Pilotage%20de%20la%20production&body=Bonjour%2C%0A%0AJe%20souhaite%20planifier%20un%20%C3%A9change%20de%2030%20minutes%20au%20sujet%20du%20pilotage%20de%20la%20production.%0A%0AEntreprise%20%3A%0AContexte%20%3A%0A%0AMerci%2C">
+          Demander un échange
+        </a>
+        <!-- Option : lien Calendly / Tidycal / etc. -->
+        <a class="btn ghost" href="#" aria-disabled="true" title="Remplacez # par votre lien de prise de rendez-vous">
+          Lien de prise de rendez-vous
+        </a>
+      </div>
+
+      <div class="note" style="margin-top:14px">
+        <strong>Important :</strong> cet échange n’est ni une démonstration ni un devis.
+        Il sert uniquement à déterminer si le sujet mérite d’être approfondi.
+      </div>
+    </section>
+
+    <footer>
+      <hr />
+      <p>
+        © <span id="y"></span> — Pilotage de la production industrielle.  
+        <span class="small">Mentions légales • Politique de confidentialité (à ajouter).</span>
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
