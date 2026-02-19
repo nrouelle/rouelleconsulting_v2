@@ -1,0 +1,39 @@
+# Rouelle Consulting
+
+> Rouelle Consulting aide les PME industrielles françaises (50 à 200 salariés) à sécuriser leurs processus critiques. Basé à Lyon, Auvergne-Rhône-Alpes.
+
+## Activité
+
+Conseil en organisation et diagnostic opérationnel pour PME industrielles. Spécialisé dans la sécurisation des flux production–logistique–facturation.
+
+## Problèmes adressés
+
+- Processus critiques gérés sous Excel, fragiles et non sécurisés
+- Dépendance à une personne-clé (risque de continuité)
+- Erreurs de saisie manuelle coûteuses
+- Retards de facturation impactant le cash-flow
+- Manque de traçabilité freinant la scalabilité
+
+## Offre principale
+
+Diagnostic Sécurisation des Processus Critiques — intervention de 2 semaines comprenant :
+1. Cartographie des flux sensibles (production, logistique, facturation)
+2. Identification des dépendances humaines critiques
+3. Évaluation du risque opérationnel (score de criticité par processus)
+4. Plan de sécurisation priorisé — roadmap 90 jours avec rapport direction
+
+## Cible
+
+PME industrielles françaises de 50 à 200 salariés, en phase de croissance, dont les processus internes deviennent un frein à la scalabilité.
+
+## Différenciation
+
+- Expérience terrain en environnement industriel
+- Vision systémique des flux production / logistique / facturation
+- Du diagnostic à l'implémentation — pas de recommandation sans exécution
+
+## Contact
+
+- Email: contact@rouelleconsulting.fr
+- Site: https://rouelleconsulting.fr
+- Localisation: Lyon, Auvergne-Rhône-Alpes, France
