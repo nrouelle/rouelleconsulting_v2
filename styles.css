@@ -103,6 +103,10 @@ a {
   text-decoration: none;
 }
 
+.main-nav a.button {
+  color: #fff;
+}
+
 .main-nav a:not(.button):hover {
   color: var(--blue);
 }
