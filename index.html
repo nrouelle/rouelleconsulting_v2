@@ -3,851 +3,347 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sécurisation des Processus Critiques — PME Industrielles | Rouelle Consulting</title>
-  <meta name="description" content="J'aide les PME industrielles de 50 à 200 salariés à sécuriser leurs processus critiques : éliminer les dépendances Excel, réduire les risques opérationnels et fiabiliser les flux production–facturation." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://rouelleconsulting.fr/" />
-  <link rel="help" type="text/plain" href="/llms.txt" title="LLM information" />
 
-  <!-- Geo SEO -->
-  <meta name="geo.region" content="FR-ARA" />
-  <meta name="geo.placename" content="Lyon" />
-  <meta name="geo.position" content="45.7640;4.8357" />
-  <meta name="ICBM" content="45.7640, 4.8357" />
+  <title>Applications métier sur mesure</title>
+  <meta
+    name="description"
+    content="Accompagnement métier, conception et développement d'applications sur mesure."
+  />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="fr_FR" />
-  <meta property="og:title" content="Sécurisation des Processus Critiques — PME Industrielles" />
-  <meta property="og:description" content="Diagnostic et sécurisation des processus critiques pour PME industrielles. Éliminez les dépendances Excel et réduisez vos risques opérationnels." />
-  <meta property="og:url" content="https://rouelleconsulting.fr/" />
-  <meta property="og:site_name" content="Rouelle Consulting" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Sécurisation des Processus Critiques — PME Industrielles" />
-  <meta name="twitter:description" content="Diagnostic et sécurisation des processus critiques pour PME industrielles. Éliminez les dépendances Excel et réduisez vos risques opérationnels." />
-
-  <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LYXXZY2WP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-7LYXXZY2WP');
-    </script>
-    
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Rouelle Consulting",
-    "description": "Sécurisation des processus critiques pour PME industrielles de 50 à 200 salariés. Diagnostic opérationnel, cartographie des flux et plan de sécurisation.",
-    "url": "https://rouelleconsulting.fr",
-    "email": "contact@rouelleconsulting.fr",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Lyon",
-      "addressRegion": "Auvergne-Rhône-Alpes",
-      "addressCountry": "FR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 45.7640,
-      "longitude": 4.8357
-    },
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Lyon"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "Auvergne-Rhône-Alpes"
-      },
-      {
-        "@type": "Country",
-        "name": "France"
-      }
-    ],
-    "serviceType": ["Conseil en organisation", "Diagnostic opérationnel", "Sécurisation des processus"],
-    "knowsAbout": ["Processus industriels", "PME industrielles", "Optimisation opérationnelle", "Gestion des risques"]
-  }
-  </script>
-  <style>
-    /* ── Reset & base ── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      color: #1a1f2e;
-      background: #fff;
-      line-height: 1.65;
-    }
-
-    /* ── Palette ── */
-    :root {
-      --blue-dark:  #0f1f3d;
-      --blue-mid:   #1a3566;
-      --blue-light: #2451a3;
-      --accent:     #e8540a;
-      --accent-h:   #c94309;
-      --gray-bg:    #f5f7fb;
-      --gray-text:  #4a5568;
-      --border:     #dde3f0;
-      --white:      #ffffff;
-    }
-
-    /* ── Typography helpers ── */
-    .label {
-      display: inline-block;
-      font-size: .72rem;
-      font-weight: 700;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: .9rem;
-    }
-    h1 { font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.15; font-weight: 800; }
-    h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); line-height: 1.2; font-weight: 800; }
-    h3 { font-size: 1.15rem; font-weight: 700; }
-    p  { color: var(--gray-text); }
-
-    /* ── Layout ── */
-    .container {
-      max-width: 1060px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-    section { padding: 5.5rem 0; }
-
-    /* ── Buttons ── */
-    .btn {
-      display: inline-block;
-      padding: .9rem 2rem;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: .95rem;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background .18s, transform .15s;
-    }
-    .btn-primary {
-      background: var(--accent);
-      color: #fff;
-      border: none;
-    }
-    .btn-primary:hover { background: var(--accent-h); transform: translateY(-2px); }
-    .btn-outline {
-      background: transparent;
-      color: var(--white);
-      border: 2px solid rgba(255,255,255,.55);
-    }
-    .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,.08); }
-
-    /* ════════════════════════════════════════
-       NAV
-    ════════════════════════════════════════ */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--blue-dark);
-      border-bottom: 1px solid rgba(255,255,255,.08);
-    }
-    nav .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-    }
-    .nav-logo {
-      font-size: 1rem;
-      font-weight: 800;
-      color: #fff;
-      letter-spacing: -.01em;
-    }
-    .nav-logo span { color: var(--accent); }
-    .nav-cta { font-size: .85rem; padding: .55rem 1.3rem; }
-
-    /* ════════════════════════════════════════
-       HERO
-    ════════════════════════════════════════ */
-    #hero {
-      background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-mid) 100%);
-      color: #fff;
-      padding: 7rem 0 6rem;
-    }
-    #hero .container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-    #hero h1 { color: #fff; }
-    #hero h1 em {
-      font-style: normal;
-      color: var(--accent);
-    }
-    #hero .subtitle {
-      margin: 1.5rem 0 2.2rem;
-      font-size: 1.1rem;
-      color: rgba(255,255,255,.75);
-      max-width: 480px;
-    }
-    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
-    .hero-note {
-      font-size: .8rem;
-      color: rgba(255,255,255,.45);
-      margin-top: .7rem;
-    }
-
-    /* Stats card */
-    .hero-card {
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 14px;
-      padding: 2rem;
-    }
-    .hero-card .card-title {
-      font-size: .8rem;
-      font-weight: 700;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1.5rem;
-    }
-    .stat-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      padding: 1rem 0;
-      border-bottom: 1px solid rgba(255,255,255,.08);
-    }
-    .stat-item:last-child { border-bottom: none; }
-    .stat-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 8px;
-      background: rgba(232,84,10,.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-size: 1.1rem;
-    }
-    .stat-text strong {
-      display: block;
-      color: #fff;
-      font-size: .95rem;
-    }
-    .stat-text span {
-      font-size: .8rem;
-      color: rgba(255,255,255,.5);
-    }
-
-    /* ════════════════════════════════════════
-       SECTION — PROBLÈME
-    ════════════════════════════════════════ */
-    #probleme { background: #fff; }
-    #probleme .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-      margin-top: 3rem;
-    }
-    .pain-list { list-style: none; display: flex; flex-direction: column; gap: .9rem; }
-    .pain-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: .9rem;
-      padding: 1rem 1.2rem;
-      border-radius: 8px;
-      background: var(--gray-bg);
-      border-left: 3px solid var(--accent);
-    }
-    .pain-list li .icon { font-size: 1.1rem; margin-top: .05rem; flex-shrink: 0; }
-    .pain-list li p { color: #2d3748; font-size: .93rem; margin: 0; }
-
-    .callout-box {
-      background: var(--blue-dark);
-      border-radius: 14px;
-      padding: 2.4rem;
-      color: #fff;
-    }
-    .callout-box blockquote {
-      font-size: 1.25rem;
-      font-weight: 700;
-      line-height: 1.4;
-      color: #fff;
-      border: none;
-      margin-bottom: 1.2rem;
-    }
-    .callout-box blockquote em {
-      font-style: normal;
-      color: var(--accent);
-    }
-    .callout-box p {
-      color: rgba(255,255,255,.65);
-      font-size: .92rem;
-    }
-
-    /* ════════════════════════════════════════
-       SECTION — CONSÉQUENCES
-    ════════════════════════════════════════ */
-    #consequences { background: var(--gray-bg); }
-    #consequences .intro {
-      max-width: 640px;
-      margin-bottom: 3rem;
-    }
-    .impact-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.2rem;
-    }
-    .impact-card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 1.6rem;
-      border: 1px solid var(--border);
-      transition: box-shadow .2s, transform .2s;
-    }
-    .impact-card:hover { box-shadow: 0 8px 28px rgba(15,31,61,.09); transform: translateY(-3px); }
-    .impact-card .ic-icon { font-size: 1.6rem; margin-bottom: .9rem; }
-    .impact-card h3 { color: var(--blue-dark); margin-bottom: .4rem; }
-    .impact-card p { font-size: .88rem; }
-
-    .risk-badge {
-      display: inline-block;
-      margin-top: .7rem;
-      padding: .28rem .75rem;
-      border-radius: 999px;
-      font-size: .72rem;
-      font-weight: 700;
-      letter-spacing: .05em;
-      text-transform: uppercase;
-    }
-    .risk-high   { background: #fee2e2; color: #b91c1c; }
-    .risk-medium { background: #fef3c7; color: #92400e; }
-
-    /* ════════════════════════════════════════
-       SECTION — OFFRE
-    ════════════════════════════════════════ */
-    #offre { background: #fff; }
-    .offre-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      gap: 4rem;
-      align-items: start;
-      margin-top: 3rem;
-    }
-    .offre-intro h2 { margin-bottom: 1rem; }
-    .offre-intro p  { margin-bottom: 1.5rem; }
-    .deliverables {
-      background: linear-gradient(135deg, var(--blue-dark), var(--blue-mid));
-      border-radius: 14px;
-      padding: 2.4rem;
-      color: #fff;
-    }
-    .deliverables h3 {
-      color: var(--accent);
-      font-size: .8rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
-    }
-    .deliverable-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      padding: .85rem 0;
-      border-bottom: 1px solid rgba(255,255,255,.1);
-    }
-    .deliverable-item:last-child { border-bottom: none; }
-    .di-num {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: var(--accent);
-      color: #fff;
-      font-size: .8rem;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: .05rem;
-    }
-    .di-text strong { color: #fff; display: block; font-size: .95rem; }
-    .di-text span   { font-size: .82rem; color: rgba(255,255,255,.55); }
-
-    .offre-meta {
-      margin-top: 1.8rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid rgba(255,255,255,.12);
-      display: flex;
-      gap: 2rem;
-    }
-    .meta-item strong { display: block; color: #fff; font-size: 1rem; }
-    .meta-item span   { font-size: .8rem; color: rgba(255,255,255,.5); }
-
-    /* ════════════════════════════════════════
-       SECTION — POURQUOI MOI
-    ════════════════════════════════════════ */
-    #pourquoi { background: var(--gray-bg); }
-    .pourquoi-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: start;
-      margin-top: 3rem;
-    }
-    .differentiator {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .diff-item {
-      display: flex;
-      gap: 1rem;
-      padding: 1.1rem 1.3rem;
-      background: #fff;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      align-items: flex-start;
-    }
-    .diff-check {
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      background: var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      color: #fff;
-      font-size: .7rem;
-      margin-top: .1rem;
-    }
-    .diff-item p { font-size: .92rem; color: #2d3748; margin: 0; }
-    .diff-item strong { color: var(--blue-dark); }
-
-    .quote-card {
-      background: var(--blue-dark);
-      border-radius: 14px;
-      padding: 2.4rem;
-      color: #fff;
-      position: relative;
-    }
-    .quote-card::before {
-      content: "\201C";
-      position: absolute;
-      top: 1rem;
-      left: 1.5rem;
-      font-size: 5rem;
-      color: var(--accent);
-      line-height: 1;
-      font-family: Georgia, serif;
-      opacity: .6;
-    }
-    .quote-card blockquote {
-      font-size: 1.05rem;
-      line-height: 1.6;
-      color: rgba(255,255,255,.85);
-      border: none;
-      margin-top: 2.5rem;
-    }
-    .quote-card .quote-author {
-      margin-top: 1.5rem;
-      font-size: .85rem;
-      color: rgba(255,255,255,.45);
-    }
-
-    /* ════════════════════════════════════════
-       SECTION — CTA FINAL
-    ════════════════════════════════════════ */
-    #cta-final {
-      background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-mid) 100%);
-      color: #fff;
-      text-align: center;
-      padding: 6rem 0;
-    }
-    #cta-final h2 { color: #fff; margin-bottom: 1rem; }
-    #cta-final p  { color: rgba(255,255,255,.7); max-width: 540px; margin: 0 auto 2rem; }
-    .cta-steps {
-      display: flex;
-      justify-content: center;
-      gap: 0;
-      margin-bottom: 2.5rem;
-      flex-wrap: wrap;
-    }
-    .cta-step {
-      display: flex;
-      align-items: center;
-      gap: .6rem;
-      font-size: .85rem;
-      color: rgba(255,255,255,.65);
-    }
-    .cta-step .step-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-    }
-    .cta-sep {
-      width: 40px;
-      height: 1px;
-      background: rgba(255,255,255,.2);
-      margin: 0 .8rem;
-      align-self: center;
-    }
-    #cta-final .btn-primary { font-size: 1rem; padding: 1rem 2.4rem; }
-    #cta-final .cta-note {
-      margin-top: 1rem;
-      font-size: .8rem;
-      color: rgba(255,255,255,.35);
-    }
-
-    /* ════════════════════════════════════════
-       FOOTER
-    ════════════════════════════════════════ */
-    footer {
-      background: var(--blue-dark);
-      border-top: 1px solid rgba(255,255,255,.06);
-      padding: 2rem 0;
-    }
-    footer .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    footer p { font-size: .8rem; color: rgba(255,255,255,.3); margin: 0; }
-    footer a { color: rgba(255,255,255,.4); text-decoration: none; font-size: .8rem; }
-    footer a:hover { color: var(--accent); }
-
-    /* ════════════════════════════════════════
-       RESPONSIVE
-    ════════════════════════════════════════ */
-    @media (max-width: 860px) {
-      #hero .container,
-      #probleme .grid,
-      .offre-wrapper,
-      .pourquoi-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .hero-card { display: none; }
-      .impact-grid { grid-template-columns: 1fr 1fr; }
-      section { padding: 4rem 0; }
-    }
-    @media (max-width: 560px) {
-      .impact-grid { grid-template-columns: 1fr; }
-      .cta-sep { display: none; }
-      .cta-steps { flex-direction: column; align-items: center; gap: .5rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
-<!-- ════════════════════════ NAV ════════════════════════ -->
-<nav>
-  <div class="container">
-    <div class="nav-logo">Rouelle <span>Consulting</span></div>
-    <div style="display:flex;align-items:center;gap:1.5rem;">
-      <a href="faq.html" style="color:rgba(255,255,255,.7);text-decoration:none;font-size:.85rem;font-weight:600;">FAQ</a>
-      <a href="#cta-final" class="btn btn-primary nav-cta">Prendre contact</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand">
+        <span class="brand-name">Rouelle Consulting</span>
+        <span class="brand-subtitle">Applications métier sur mesure</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="#accompagnement">Accompagnement</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#articles">Articles</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact" class="button button-small">Contact</a>
+      </nav>
     </div>
-  </div>
-</nav>
+  </header>
 
-<!-- ════════════════════════ HERO ════════════════════════ -->
-<section id="hero">
-  <div class="container">
-    <div class="hero-content">
-      <span class="label">Partenaire opérationnel · PME Industrielles</span>
-      <h1>Sécurisez vos processus critiques avant que la croissance ne les <em>fragilise.</em></h1>
-      <p class="subtitle">
-        J'aide les PME industrielles de 50 à 200 salariés à éliminer les dépendances Excel
-        et à réduire les risques opérationnels dans leurs flux production–facturation.
-      </p>
-      <div class="hero-ctas">
-        <a href="#cta-final" class="btn btn-primary">Demander un échange stratégique — 20 min</a>
-      </div>
-      <p class="hero-note">Sans engagement · Échange confidentiel</p>
-    </div>
+  <main>
 
-    <div class="hero-card">
-      <div class="card-title">Signaux d'alerte fréquents</div>
-      <div class="stat-item">
-        <div class="stat-icon">📊</div>
-        <div class="stat-text">
-          <strong>Fichiers Excel critiques</strong>
-          <span>Gérés par une seule personne</span>
-        </div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-icon">⏱️</div>
-        <div class="stat-text">
-          <strong>Retards de facturation</strong>
-          <span>Liés à des saisies manuelles</span>
-        </div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-icon">🔗</div>
-        <div class="stat-text">
-          <strong>Dépendance personne-clé</strong>
-          <span>Risque d'absence non couvert</span>
-        </div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-icon">📉</div>
-        <div class="stat-text">
-          <strong>Manque de traçabilité</strong>
-          <span>Frein à la scalabilité</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <section class="hero">
+      <div class="container hero-grid">
 
-<!-- ════════════════════════ PROBLÈME ════════════════════════ -->
-<section id="probleme">
-  <div class="container">
-    <span class="label">Le problème</span>
-    <h2>Vos processus ont été conçus pour un volume stable.<br>Pas pour la croissance.</h2>
-    <div class="grid">
-      <ul class="pain-list">
-        <li>
-          <span class="icon">📋</span>
-          <p><strong>Processus critiques gérés sous Excel</strong> — Commandes, stocks, plannings : tout repose sur des fichiers fragiles et non sécurisés.</p>
-        </li>
-        <li>
-          <span class="icon">👤</span>
-          <p><strong>Dépendance à une seule personne</strong> — Si elle est absente, l'activité ralentit ou s'arrête.</p>
-        </li>
-        <li>
-          <span class="icon">⚠️</span>
-          <p><strong>Risque d'erreur de saisie</strong> — Une faute de frappe peut coûter des milliers d'euros.</p>
-        </li>
-        <li>
-          <span class="icon">🧾</span>
-          <p><strong>Retards de facturation récurrents</strong> — Le cash-flow en pâtit directement.</p>
-        </li>
-        <li>
-          <span class="icon">🔍</span>
-          <p><strong>Manque de traçabilité</strong> — Impossible d'auditer, d'identifier l'origine d'un problème.</p>
-        </li>
-      </ul>
+        <div class="hero-content">
+          <h1>
+            Comprendre le métier.<br />
+            Concevoir le bon outil.<br />
+            <span>Le développer.</span>
+          </h1>
 
-      <div class="callout-box">
-        <blockquote>
-          Tant que le volume est stable,<br>le système <em>tient.</em><br><br>
-          En phase de croissance,<br>il devient <em>fragile.</em>
-        </blockquote>
-        <p>
-          Les outils qui ont permis de construire votre PME deviennent les mêmes
-          qui bloquent votre prochain palier de croissance. Ce n'est pas une fatalité —
-          c'est un chantier à prioriser.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+          <div class="accent-line"></div>
 
-<!-- ════════════════════════ CONSÉQUENCES ════════════════════════ -->
-<section id="consequences">
-  <div class="container">
-    <span class="label">Les conséquences business</span>
-    <div class="intro">
-      <h2>Ce n'est pas qu'un problème IT. C'est un risque financier et organisationnel.</h2>
-      <p>Chaque fragilité opérationnelle non adressée se transforme en coût visible ou invisible pour votre activité.</p>
-    </div>
-    <div class="impact-grid">
-      <div class="impact-card">
-        <div class="ic-icon">💸</div>
-        <h3>Perte de chiffre d'affaires</h3>
-        <p>Commandes mal traitées, délais dépassés, pénalités contractuelles — les erreurs ont un prix.</p>
-        <span class="risk-badge risk-high">Risque élevé</span>
-      </div>
-      <div class="impact-card">
-        <div class="ic-icon">⏳</div>
-        <h3>Retard d'encaissement</h3>
-        <p>Une facturation retardée de 15 jours sur 2 M€ de CA représente un écart de trésorerie significatif.</p>
-        <span class="risk-badge risk-high">Impact cash-flow</span>
-      </div>
-      <div class="impact-card">
-        <div class="ic-icon">🏭</div>
-        <h3>Désorganisation interne</h3>
-        <p>Les équipes perdent du temps à corriger des erreurs plutôt qu'à produire de la valeur.</p>
-        <span class="risk-badge risk-medium">Productivité</span>
-      </div>
-      <div class="impact-card">
-        <div class="ic-icon">😤</div>
-        <h3>Tension entre équipes</h3>
-        <p>Production, logistique et administration se renvoient la responsabilité des dysfonctionnements.</p>
-        <span class="risk-badge risk-medium">RH & Management</span>
-      </div>
-      <div class="impact-card">
-        <div class="ic-icon">🚧</div>
-        <h3>Frein à la scalabilité</h3>
-        <p>Impossible de doubler le volume sans doubler les équipes — le modèle ne scale pas.</p>
-        <span class="risk-badge risk-high">Stratégique</span>
-      </div>
-      <div class="impact-card">
-        <div class="ic-icon">🔒</div>
-        <h3>Risque de continuité</h3>
-        <p>Un départ, une maladie, et le process s'effondre. Votre continuité opérationnelle est exposée.</p>
-        <span class="risk-badge risk-high">Risque opérationnel</span>
-      </div>
-    </div>
-  </div>
-</section>
+          <p class="hero-intro">
+            J'accompagne les entreprises de la compréhension de leurs besoins
+            jusqu'à la conception et au développement de leurs applications métier.
+          </p>
 
-<!-- ════════════════════════ OFFRE ════════════════════════ -->
-<section id="offre">
-  <div class="container">
-    <span class="label">Mon offre</span>
-    <div class="offre-wrapper">
-      <div class="offre-intro">
-        <h2>Diagnostic Sécurisation des Processus Critiques</h2>
-        <p>
-          Une intervention structurée pour dresser un état des lieux objectif de vos vulnérabilités
-          opérationnelles et définir un plan d'action concret — priorisé et actionnable.
-        </p>
-        <p>
-          Pas de jargon technique. Pas de rapport de 80 pages inutiles. Un livrable que
-          votre direction peut lire, décider et déléguer immédiatement.
-        </p>
-        <a href="#cta-final" class="btn btn-primary" style="margin-top: .5rem;">Planifier un échange →</a>
-      </div>
+          <p class="hero-text">
+            Avant de parler écrans et fonctionnalités, commençons par comprendre
+            votre métier.
+          </p>
 
-      <div class="deliverables">
-        <h3>Ce que vous obtenez</h3>
-
-        <div class="deliverable-item">
-          <div class="di-num">1</div>
-          <div class="di-text">
-            <strong>Cartographie des flux sensibles</strong>
-            <span>Identification de tous les processus production–logistique–facturation et leurs interdépendances.</span>
+          <div class="hero-actions">
+            <a href="#contact" class="button">Parlons de votre projet</a>
+            <a href="#accompagnement" class="button button-outline">
+              Découvrir mon approche
+            </a>
           </div>
         </div>
 
-        <div class="deliverable-item">
-          <div class="di-num">2</div>
-          <div class="di-text">
-            <strong>Identification des dépendances humaines</strong>
-            <span>Qui sait quoi ? Qui fait quoi ? Qui est irremplaçable — et pourquoi c'est un risque.</span>
+        <div class="hero-visual">
+          <div class="visual-card">
+            <div class="visual-paper">
+              <div class="diagram">
+                <span class="diagram-box"></span>
+                <span class="diagram-box"></span>
+                <span class="diagram-box"></span>
+
+                <span class="diagram-box"></span>
+                <span class="diagram-box diagram-box-main"></span>
+                <span class="diagram-box"></span>
+
+                <span class="diagram-box"></span>
+                <span class="diagram-box"></span>
+                <span class="diagram-box"></span>
+              </div>
+            </div>
+
+            <div class="visual-circle"></div>
           </div>
         </div>
 
-        <div class="deliverable-item">
-          <div class="di-num">3</div>
-          <div class="di-text">
-            <strong>Évaluation du risque opérationnel</strong>
-            <span>Score de criticité par processus avec impact estimé sur le CA et la trésorerie.</span>
-          </div>
+      </div>
+    </section>
+
+    <section class="process-section" id="accompagnement">
+      <div class="container">
+
+        <div class="section-heading centered">
+          <p class="eyebrow">Ma façon de travailler</p>
+          <h2>Une application commence rarement par du code.</h2>
+          <div class="accent-line centered-line"></div>
         </div>
 
-        <div class="deliverable-item">
-          <div class="di-num">4</div>
-          <div class="di-text">
-            <strong>Plan de sécurisation priorisé</strong>
-            <span>Roadmap 90 jours avec actions classées par impact/effort. Rapport direction inclus.</span>
-          </div>
-        </div>
+        <div class="steps">
 
-        <div class="offre-meta">
-          <div class="meta-item">
-            <strong>2 semaines</strong>
-            <span>Durée d'intervention</span>
-          </div>
-          <div class="meta-item">
-            <strong>Rapport direction</strong>
-            <span>+ Roadmap 90 jours</span>
-          </div>
+          <article class="step">
+            <div class="step-head">
+              <span class="step-number">01</span>
+              <div class="step-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target-icon lucide-target"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+              </div>
+            </div>
+            <h3>Comprendre</h3>
+            <p>
+              Ateliers avec vos équipes pour comprendre le métier,
+              les processus et les difficultés rencontrées.
+            </p>
+          </article>
+
+          <article class="step">
+            <div class="step-head">
+              <span class="step-number">02</span>
+              <div class="step-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crosshair-icon lucide-crosshair"><circle cx="12" cy="12" r="10"/><line x1="22" x2="18" y1="12" y2="12"/><line x1="6" x2="2" y1="12" y2="12"/><line x1="12" x2="12" y1="6" y2="2"/><line x1="12" x2="12" y1="22" y2="18"/></svg>
+              </div>
+            </div>
+            <h3>Challenger</h3>
+            <p>
+              Questionner l'existant, identifier ce qui apporte réellement
+              de la valeur et définir les priorités.
+            </p>
+          </article>
+
+          <article class="step">
+            <div class="step-head">
+              <span class="step-number">03</span>
+              <div class="step-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pen-line-icon lucide-pen-line"><path d="M13 21h8"/><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg>
+              </div>
+            </div>
+            <h3>Concevoir</h3>
+            <p>
+              Transformer les besoins identifiés en parcours et interfaces
+              simples, adaptés à chaque usage.
+            </p>
+          </article>
+
+          <article class="step">
+            <div class="step-head">
+              <span class="step-number">04</span>
+              <div class="step-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml-icon lucide-code-xml"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+              </div>
+            </div>
+            <h3>Développer</h3>
+            <p>
+              Construire l'application, la confronter aux utilisateurs
+              et la faire évoluer dans le temps.
+            </p>
+          </article>
+
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ════════════════════════ POURQUOI MOI ════════════════════════ -->
-<section id="pourquoi">
-  <div class="container">
-    <span class="label">Pourquoi travailler avec moi</span>
-    <div class="pourquoi-grid">
-      <div class="differentiator">
-        <h2 style="margin-bottom: 1.5rem;">Ce qui me différencie d'un consultant généraliste</h2>
+    <section class="needs-section">
+      <div class="container needs-grid">
 
-        <div class="diff-item">
-          <div class="diff-check">✓</div>
-          <p><strong>Expérience en environnement industriel</strong> — Je connais les contraintes réelles du terrain : urgences de production, interlocuteurs multiples, systèmes hétérogènes.</p>
+        <div class="needs-intro">
+          <h2>Votre organisation a évolué,<br />vos outils moins.</h2>
+          <div class="accent-line"></div>
+
+          <p>
+            Fichiers complexes, outils vieillissants, informations dispersées,
+            tâches manuelles… Ces situations coûtent du temps et génèrent des erreurs.
+          </p>
+
+          <p class="highlight">
+            Mon rôle n'est pas de reproduire l'existant mais de construire
+            la solution qui répond à vos vrais besoins.
+          </p>
         </div>
-        <div class="diff-item">
-          <div class="diff-check">✓</div>
-          <p><strong>Compréhension du triptyque production / logistique / facturation</strong> — Je vois les flux dans leur globalité, pas en silos.</p>
+
+        <div>
+          <p class="eyebrow">Ce que je vous aide à obtenir</p>
+
+          <div class="benefits-grid">
+
+            <article class="benefit">
+              <div class="benefit-icon">◎</div>
+              <h3>Des outils adaptés</h3>
+              <p>À votre métier et non l'inverse.</p>
+            </article>
+
+            <article class="benefit">
+              <div class="benefit-icon">◉</div>
+              <h3>Des utilisateurs impliqués</h3>
+              <p>Dès la conception de la solution.</p>
+            </article>
+
+            <article class="benefit">
+              <div class="benefit-icon">✓</div>
+              <h3>Un périmètre maîtrisé</h3>
+              <p>Avec des priorités claires.</p>
+            </article>
+
+            <article class="benefit">
+              <div class="benefit-icon">↗</div>
+              <h3>Une solution évolutive</h3>
+              <p>Qui grandit avec vos besoins.</p>
+            </article>
+
+          </div>
         </div>
-        <div class="diff-item">
-          <div class="diff-check">✓</div>
-          <p><strong>Vision systémique</strong> — Je ne corrige pas un symptôme isolé. J'analyse le système dans son ensemble pour identifier les vraies causes.</p>
+
+      </div>
+    </section>
+
+    <section class="projects-section" id="realisations">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">Quelques réalisations</p>
+          <h2>Des applications pensées autour des usages.</h2>
         </div>
-        <div class="diff-item">
-          <div class="diff-check">✓</div>
-          <p><strong>Capacité à concevoir et implémenter</strong> — Du diagnostic à la solution, je reste dans la boucle. Pas de recommandation sans responsabilité d'exécution.</p>
+
+        <div class="cards-grid">
+
+          <article class="card">
+            <div class="card-icon">▣</div>
+            <h3>Plateforme de suivi d'activité</h3>
+            <p>
+              Centralisation des données et automatisation des traitements
+              pour un meilleur pilotage.
+            </p>
+            <a href="#">Gestion d'activité →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">◯</div>
+            <h3>Portail clients</h3>
+            <p>
+              Un espace centralisé pour simplifier les échanges et renforcer
+              l'autonomie.
+            </p>
+            <a href="#">Expérience utilisateur →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">↗</div>
+            <h3>Outil de planification</h3>
+            <p>
+              Planification de ressources et suivi en temps réel
+              pour gagner en réactivité.
+            </p>
+            <a href="#">Organisation & planning →</a>
+          </article>
+
         </div>
       </div>
+    </section>
 
-      <div class="quote-card">
-        <blockquote>
-          "J'ai observé ces fragilités dans plusieurs environnements industriels exigeants —
-          des process Excel critiques, des dépendances silencieuses, des risques invisibles
-          jusqu'au moment où ils deviennent coûteux.
-          <br><br>
-          Je me spécialise aujourd'hui dans leur sécurisation, parce que c'est là où
-          l'impact pour une PME industrielle est immédiat et mesurable."
-        </blockquote>
-        <div class="quote-author">— Votre partenaire opérationnel</div>
+    <section class="articles-section" id="articles">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">Derniers articles</p>
+          <h2>Réflexions autour des applications métier.</h2>
+        </div>
+
+        <div class="articles-grid">
+
+          <article class="article-card">
+            <h3>
+              Comment se déroule un atelier métier avant de créer une application ?
+            </h3>
+            <a href="ateliers-metiers.html">Lire l'article →</a>
+          </article>
+
+          <article class="article-card">
+            <h3>
+              Pourquoi reproduire votre outil actuel est rarement un bon cahier des charges
+            </h3>
+            <a href="#">Lire l'article →</a>
+          </article>
+
+          <article class="article-card">
+            <h3>Tout n'a pas besoin d'être dans la V1</h3>
+            <a href="#">Lire l'article →</a>
+          </article>
+
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ════════════════════════ CTA FINAL ════════════════════════ -->
-<section id="cta-final">
-  <div class="container">
-    <span class="label" style="color: var(--accent);">Passons à l'action</span>
-    <h2>Identifions ensemble vos risques opérationnels en 20 minutes.</h2>
-    <p>Un échange sans engagement pour évaluer si votre situation justifie un diagnostic. Confidentiel, direct, orienté décision.</p>
+    <section class="about-section" id="apropos">
+      <div class="container about-grid">
 
-    <div class="ctas-steps">
-      <div class="cta-steps">
-        <div class="cta-step"><div class="step-dot"></div> Vous me décrivez votre contexte</div>
-        <div class="cta-sep"></div>
-        <div class="cta-step"><div class="step-dot"></div> J'identifie les risques prioritaires</div>
-        <div class="cta-sep"></div>
-        <div class="cta-step"><div class="step-dot"></div> On décide ensemble de la suite</div>
+        <div>
+          <p class="eyebrow">À propos</p>
+          <h2>Un interlocuteur unique du besoin jusqu'au développement.</h2>
+        </div>
+
+        <div>
+          <p>
+            J'interviens sur des projets d'applications métier sur mesure,
+            en combinant compréhension du besoin, conception fonctionnelle
+            et développement.
+          </p>
+
+          <p>
+            L'objectif : construire un outil utile, compréhensible
+            et réellement adapté à la façon dont vos équipes travaillent.
+          </p>
+        </div>
+
       </div>
-    </div>
+    </section>
 
-    <a href="mailto:contact@rouelleconsulting.fr?subject=Demande%20d%27%C3%A9change%20strat%C3%A9gique" class="btn btn-primary">
-      Demander un échange stratégique — 20 min
-    </a>
-    <p class="cta-note">Sans engagement · Réponse sous 24h · Échange 100% confidentiel</p>
-  </div>
-</section>
+    <section class="contact-section" id="contact">
+      <div class="container contact-inner">
 
-<!-- ════════════════════════ FOOTER ════════════════════════ -->
-<footer>
-  <div class="container">
-    <p>© 2026 · Sécurisation des processus critiques · PME Industrielles</p>
-    <div style="display:flex;gap:1.5rem;align-items:center;">
-      <a href="faq.html">FAQ</a>
-      <a href="mailto:contact@rouelleconsulting.fr">contact@rouelleconsulting.fr</a>
+        <div>
+          <h2>Vous avez un besoin, mais pas encore de cahier des charges ?</h2>
+          <p>
+            Ce n'est pas un problème. Nous pouvons justement commencer
+            par le définir ensemble.
+          </p>
+        </div>
+
+        <a href="mailto:nadege@rouelleconsulting.fr" class="button">
+          Échangeons sur votre projet
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Rouelle Consulting</strong>
+        <span>Applications métier sur mesure</span>
+      </div>
+
+      <p>© 2026 — Tous droits réservés.</p>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
 </html>
