@@ -415,6 +415,15 @@ p {
   font-size: 14px;
 }
 
+.step a {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
 /* NEEDS */
 
 .needs-section {
