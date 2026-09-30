@@ -814,6 +814,52 @@ p {
   font-size: 14px;
 }
 
+/* FREELANCE LANDING PAGE (extra service sections) */
+
+.service-catalog,
+.service-examples,
+.service-location,
+.faq-section {
+  padding: 84px 0;
+  background: var(--background);
+}
+
+.service-steps {
+  padding: 84px 0;
+  background: var(--background-soft);
+}
+
+.section-cta {
+  margin-top: 36px;
+}
+
+.faq-list {
+  margin-top: 36px;
+}
+
+.faq-item {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:first-child {
+  padding-top: 0;
+}
+
+.faq-item:last-child {
+  border-bottom: 0;
+}
+
+.faq-item h3 {
+  margin-bottom: 8px;
+  font-size: 17px;
+}
+
+.faq-item p {
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
 /* LEGAL PAGE */
 
 .legal-page {
@@ -998,7 +1044,12 @@ p {
   .service-result,
   .diagnostic-scope,
   .diagnostic-security,
-  .service-profile {
+  .service-profile,
+  .service-catalog,
+  .service-steps,
+  .service-examples,
+  .service-location,
+  .faq-section {
     padding: 56px 0;
   }
 
