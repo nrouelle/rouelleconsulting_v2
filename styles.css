@@ -560,22 +560,27 @@ p {
 
 .articles-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
 
 .article-card {
   padding: 28px 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.article-card:nth-child(odd) {
+  padding-left: 0;
   border-right: 1px solid var(--border);
 }
 
-.article-card:first-child {
-  padding-left: 0;
+.article-card:nth-child(even) {
+  padding-right: 0;
 }
 
-.article-card:last-child {
-  border-right: 0;
+.article-card:nth-last-child(-n+2) {
+  border-bottom: 0;
 }
 
 .article-card h3 {
