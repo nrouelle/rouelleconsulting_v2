@@ -8,6 +8,7 @@ interface Props {
   description: string;
   canonicalPath: string;
   ogImage?: string;
+  ogType?: 'website' | 'article';
   isHome?: boolean;
   footerCurrentPage?: 'diagnostic' | 'developpeuse';
 }
@@ -17,6 +18,7 @@ const {
   description,
   canonicalPath,
   ogImage = '/og-image.jpg',
+  ogType = 'website',
   isHome = false,
   footerCurrentPage,
 }: Props = Astro.props;
@@ -37,7 +39,7 @@ const ogImageUrl = new URL(ogImage, Astro.site);
     <link rel="icon" type="image/png" href="/assets/favicon.png" />
     <link rel="canonical" href={canonicalUrl} />
 
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content="Rouelle Consulting" />
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:title" content={title} />

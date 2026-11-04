@@ -1,0 +1,382 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const serviceJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: "Audit d'application métier",
+  name: "Audit d'application métier en 4 jours",
+  description:
+    "Audit technique et métier d'une application existante, réalisé en 4 jours, avec rapport de diagnostic et restitution.",
+  url: 'https://www.rouelleconsulting.fr/audit-application-metier.html',
+  provider: {
+    '@type': 'ProfessionalService',
+    '@id': 'https://www.rouelleconsulting.fr/#organization',
+    name: 'Rouelle Consulting',
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Lyon' },
+    { '@type': 'Country', name: 'France' },
+  ],
+  offers: {
+    '@type': 'Offer',
+    price: '2800',
+    priceCurrency: 'EUR',
+    description:
+      "Tarif de base hors taxes pour 4 jours d'intervention sur un périmètre maîtrisé, rapport de diagnostic et restitution inclus. Une proposition adaptée est établie pour les périmètres plus complexes.",
+  },
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.rouelleconsulting.fr/' },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: "Audit d'application métier",
+      item: 'https://www.rouelleconsulting.fr/audit-application-metier.html',
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Audit d'application métier en 4 jours — Rouelle Consulting"
+  description="Audit complet de votre application métier en 4 jours : état des lieux technique, usages réels, priorités et plan d'action. Rapport et restitution inclus, à partir de 2 800 € HT."
+  canonicalPath="/audit-application-metier.html"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(serviceJsonLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+  </Fragment>
+
+  <section class="service-hero">
+    <div class="container">
+
+      <p class="eyebrow">Audit d'application métier — 4 jours</p>
+
+      <h1>
+        Votre application métier est-elle prête
+        pour les prochaines années ?
+      </h1>
+
+      <p class="lead">
+        Avant d'engager un budget sur l'existant ou sur un nouveau projet,
+        un audit court et cadré permet de savoir précisément où vous en êtes —
+        et ce qui mérite réellement d'être priorisé.
+      </p>
+
+      <a href="mailto:nadege@rouelleconsulting.fr" class="button">
+        Échanger 20 minutes sur votre application
+      </a>
+
+    </div>
+  </section>
+
+  <section class="service-context">
+    <div class="container">
+
+      <p class="eyebrow">Pour qui</p>
+
+      <h2>Quand cet audit est-il utile ?</h2>
+
+      <p class="section-intro">
+        Certaines situations méritent de faire un point clair
+        avant de décider quoi faire de votre application métier.
+        Voir aussi : <a href="/quand-refondre-application-metier.html">quand refondre une application métier →</a>
+      </p>
+
+      <div class="service-signals">
+
+        <article class="signal">
+          <h3>Une application vieillissante</h3>
+          <p>
+            Elle tourne depuis plusieurs années et personne
+            ne sait plus vraiment ce qu'il y a dedans.
+          </p>
+        </article>
+
+        <article class="signal">
+          <h3>Une dette technique qui s'accumule</h3>
+          <p>
+            Chaque évolution prend plus de temps et plus de risques
+            que la précédente.
+          </p>
+        </article>
+
+        <article class="signal">
+          <h3>Une difficulté à faire évoluer le logiciel</h3>
+          <p>
+            Ajouter une fonctionnalité devient un risque
+            plutôt qu'une amélioration.
+          </p>
+        </article>
+
+        <article class="signal">
+          <h3>Un manque de visibilité sur l'existant</h3>
+          <p>
+            Vous ne savez plus exactement ce que fait l'application,
+            ni ce qu'il faudrait prioriser.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="diagnostic-package">
+    <div class="container">
+
+      <p class="eyebrow">L'audit</p>
+
+      <h2>Quatre jours, quatre étapes.</h2>
+
+      <p class="section-intro">
+        Un format court et cadré, pensé pour limiter la mobilisation
+        de vos équipes tout en couvrant les dimensions technique et métier.
+      </p>
+
+      <div class="service-signals">
+
+        <article class="diagnostic-step">
+          <span class="step-number">01</span>
+
+          <h3>Cadrage &amp; analyse technique</h3>
+
+          <p>
+            Prise en main de l'application et analyse du code,
+            des dépendances et des processus de déploiement.
+          </p>
+
+          <ul>
+            <li>Architecture et organisation du code</li>
+            <li>Dette technique et maintenabilité</li>
+            <li>Dépendances obsolètes et points de vigilance</li>
+          </ul>
+        </article>
+
+        <article class="diagnostic-step">
+          <span class="step-number">02</span>
+
+          <h3>Ateliers métier</h3>
+
+          <p>
+            Échanges avec les utilisateurs et référents métier
+            pour comprendre les usages réels.
+          </p>
+
+          <ul>
+            <li>Processus couverts par l'application</li>
+            <li>Besoins des différents profils</li>
+            <li>Contournements et outils parallèles</li>
+          </ul>
+        </article>
+
+        <article class="diagnostic-step">
+          <span class="step-number">03</span>
+
+          <h3>Analyse croisée &amp; priorisation</h3>
+
+          <p>
+            Rapprochement des constats techniques et métier
+            pour distinguer l'urgent de l'accessoire.
+          </p>
+
+          <ul>
+            <li>Risques à traiter en priorité</li>
+            <li>Sujets pouvant attendre</li>
+            <li>Dépendances entre les deux</li>
+          </ul>
+        </article>
+
+        <article class="diagnostic-step">
+          <span class="step-number">04</span>
+
+          <h3>Rapport &amp; restitution</h3>
+
+          <p>
+            Rédaction du rapport de diagnostic et présentation
+            des constats et recommandations.
+          </p>
+
+          <ul>
+            <li>Document de synthèse remis par écrit</li>
+            <li>Réunion de restitution</li>
+            <li>Prochaines étapes recommandées</li>
+          </ul>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="service-deliverable">
+    <div class="container">
+
+      <p class="eyebrow">Le résultat</p>
+
+      <h2>Ce que vous recevez.</h2>
+
+      <p class="section-intro">
+        Un rapport exploitable, pensé pour être partagé en interne
+        et servir de base à vos décisions budgétaires.
+      </p>
+
+      <div class="deliverables">
+
+        <article>
+          <span class="deliverable-number">01</span>
+          <h3>État des lieux technique</h3>
+          <p>
+            Architecture, dette technique et dépendances
+            de l'application.
+          </p>
+        </article>
+
+        <article>
+          <span class="deliverable-number">02</span>
+          <h3>Diagnostic des usages</h3>
+          <p>
+            Processus couverts, besoins réels et contournements
+            observés côté métier.
+          </p>
+        </article>
+
+        <article>
+          <span class="deliverable-number">03</span>
+          <h3>Priorités &amp; risques</h3>
+          <p>
+            Les sujets à traiter rapidement et ceux qui peuvent
+            attendre.
+          </p>
+        </article>
+
+        <article>
+          <span class="deliverable-number">04</span>
+          <h3>Plan d'action</h3>
+          <p>
+            Une trajectoire recommandée et des prochaines
+            étapes concrètes.
+          </p>
+        </article>
+
+      </div>
+
+      <div class="scope-note">
+        <p>
+          <strong>Aperçu du rapport —</strong>{' '}
+          synthèse exécutive, état des lieux technique, diagnostic des usages métier,
+          risques &amp; priorités, plan d'action recommandé, annexes.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="diagnostic-scope">
+    <div class="container">
+
+      <div class="scope-box">
+
+        <div class="scope-content">
+
+          <p class="eyebrow">Les modalités</p>
+
+          <h2>Audit d'application métier en 4 jours</h2>
+
+          <p>
+            Un format court, à budget maîtrisé — pratique pour
+            engager une dépense avant la clôture de l'exercice.
+          </p>
+
+          <p>Il comprend :</p>
+
+          <ul>
+            <li>4 jours d'intervention, sur site ou à distance ;</li>
+            <li>un périmètre défini et validé avec vous en amont ;</li>
+            <li>les accès nécessaires (code, environnements, documentation) à préparer avant le démarrage ;</li>
+            <li>le rapport de diagnostic complet ;</li>
+            <li>une réunion de restitution d'environ 1h30.</li>
+          </ul>
+
+        </div>
+
+        <div class="scope-price">
+
+          <span>À partir de</span>
+
+          <strong>2 800 €</strong>
+
+          <small>HT</small>
+
+          <a href="#contact" class="button">
+            Échanger 20 minutes
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="scope-note">
+
+        <p>
+          <strong>Le périmètre est validé avant le démarrage.</strong>{' '}
+          Plusieurs applications, une architecture composée de nombreux services
+          ou un nombre important d'interlocuteurs peuvent nécessiter une intervention
+          plus approfondie et font l'objet d'une proposition adaptée.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="service-profile">
+    <div class="container">
+      <div class="section-narrow">
+
+        <p class="eyebrow">L'accompagnement</p>
+
+        <h2>Une vision métier et technique du même problème.</h2>
+
+        <p>
+          Je suis développeuse Fullstack .NET / Vue.js et j'accompagne
+          les entreprises dans la conception, la modernisation et le
+          développement de leurs applications métier.
+        </p>
+
+        <p>
+          Les ateliers avec les équipes permettent de comprendre les usages
+          réels, pour que le rapport reflète votre contexte plutôt qu'une
+          grille de lecture générique.
+        </p>
+
+        <p>
+          <a href="/developpeuse-freelance-lyon.html">En savoir plus sur mon activité de développeuse freelance à Lyon →</a>
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="container contact-inner">
+
+      <div style="max-width: 420px;">
+        <h2>Un budget à engager avant la fin de l'année ?</h2>
+
+        <p>
+          Un premier échange de 20 minutes permet de comprendre votre contexte
+          et de vérifier si cet audit est adapté à votre situation.
+        </p>
+      </div>
+
+      <a href="mailto:nadege@rouelleconsulting.fr" class="button" style="white-space: nowrap;">Échanger 20 minutes sur votre application</a>
+
+    </div>
+  </section>
+</BaseLayout>
