@@ -8,24 +8,27 @@ This is a static marketing website for Rouelle Consulting, a custom business app
 
 ## Technology Stack
 
-- **Pure HTML/CSS/JavaScript** - No build tools or frameworks
+- **Astro** (static output, no server runtime) - see `astro.config.mjs`
 - **Font**: Inter from Google Fonts
-- **PWA Support**: manifest.json for progressive web app capabilities
+- No UI framework (React/Vue/etc.) is used — pages are plain `.astro` files
 
 ## File Structure
 
-- `index.html` - Single-page marketing site with all content
-- `style.css` - Complete styling with CSS custom properties (variables)
-- `script.js` - Client-side interactions (mobile nav, smooth scroll, animations)
-- `manifest.json` - PWA configuration
+- `src/pages/*.astro` - One file per route (homepage, service pages, articles, mentions légales). Astro maps each file to a URL by filename.
+- `src/layouts/BaseLayout.astro` - Shared `<head>` (meta/OG/Twitter/canonical/Umami), `<Header>`, `<Footer>`, and a `head` slot for page-specific JSON-LD. Every page wraps its content in this layout.
+- `src/components/Header.astro`, `src/components/Footer.astro` - Shared nav and footer, extracted out of what used to be duplicated across every page.
+- `src/styles/global.css` - Complete styling with CSS custom properties (variables); imported once in `BaseLayout.astro`.
+- `public/` - Static assets served as-is: `assets/` (logos, favicon), `og-image.jpg`, `robots.txt`, `script.js` (mobile nav toggle).
+- `astro.config.mjs` - `build.format: 'file'` keeps flat `page.html` URLs (not `page/index.html`) to preserve existing SEO/backlinks; `@astrojs/sitemap` generates `sitemap-index.xml`/`sitemap-0.xml` at build time with a `serialize()` hook that restores the `.html` extension and the per-page `priority`/`changefreq` values.
 
 ## Development Workflow
 
-Since this is a static site with no build process:
+This is now an Astro project with a build step:
 
-1. **Local Development**: Open `index.html` directly in a browser, or use a simple HTTP server
-2. **Testing**: Refresh browser to see changes
-3. **Deployment**: Upload files directly to web hosting
+1. **Install**: `npm install`
+2. **Local Development**: `npm run dev` (serves at `localhost:4321`) — note the dev server serves clean URLs without `.html`; only the production build (`npm run build`) honors `build.format: 'file'` and produces real `page.html` files in `dist/`.
+3. **Preview the real build**: `npm run build && npm run preview` to check the exact `.html` URLs that will be deployed.
+4. **Deployment**: GitHub Pages via `.github/workflows/deploy.yml`. This workflow still needs updating to run `npm run build` and publish `dist/` instead of the repo root — until then, do not rely on it to deploy the Astro output.
 
 ## Key Architecture Patterns
 
@@ -47,7 +50,7 @@ All colors, fonts, spacing, and effects are defined as CSS custom properties in 
 - **Sticky Nav Effects**: Shadow appears on scroll (lines 58-66)
 
 ### HTML Structure
-- **SEO Optimized**: Comprehensive meta tags (lines 8-43), Schema.org structured data (lines 54-151)
+- **SEO Optimized**: title/description/canonical/OG/Twitter meta are props passed to `BaseLayout` from each page; Schema.org JSON-LD is page-specific and passed via the layout's `head` slot (`<Fragment slot="head">`)
 - **Section-based**: Each major content block is a semantic `<section>` with ID for anchor navigation
 - **Accessibility**: Semantic HTML, proper heading hierarchy
 
@@ -71,24 +74,18 @@ All colors, fonts, spacing, and effects are defined as CSS custom properties in 
 
 ## Content Updates
 
-### Frequently Updated Sections
-- **Hero Stats** (lines 207-220): Update metrics as needed
-- **Sector Cards** (lines 358-417): Add/modify industry-specific offerings
-- **FAQ Section** (lines 550-607): Schema.org markup for rich snippets
-- **Contact CTAs**: Calendly link (line 626), email (lines 633, 700), phone (line 661)
+Content now lives per-route in `src/pages/*.astro` instead of one monolithic `index.html`. Homepage sections (hero, process steps, articles grid, etc.) are in `src/pages/index.astro`; each service/article page is its own file with its own JSON-LD defined as a plain object in the file's frontmatter.
 
 ### SEO-Critical Elements
-- Title tag (line 9)
-- Meta description (lines 10-11)
-- Schema.org JSON-LD (lines 54-151)
-- Canonical URL (line 15)
-- Open Graph tags (lines 17-25)
+- `title`/`description`/`canonicalPath`/`ogType` props on `<BaseLayout>` in each page
+- Schema.org JSON-LD: an object in the page's frontmatter, serialized via `set:html={JSON.stringify(...)}` in the `head` slot
+- `astro.config.mjs`: sitemap `serialize()` hook (URL `.html` suffix + priority/changefreq) — update the `sitemapMeta` map there when adding or re-prioritizing a page
 
 ## Deployment Notes
 
-- No build step required
-- Ensure all referenced assets exist (favicons, og-image.jpg, icons for PWA)
-- Verify all external links (Calendly, LinkedIn, email addresses)
+- Build step required: `npm run build` (see Development Workflow above)
+- Ensure all referenced assets exist (favicons, og-image.jpg) in `public/`
+- Verify all external links (LinkedIn, email addresses)
 - Test on mobile devices for responsive behavior
 - Validate Schema.org markup using Google's Rich Results Test
 
