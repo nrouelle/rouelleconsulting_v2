@@ -1,0 +1,71 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath: string;
+  ogImage?: string;
+  isHome?: boolean;
+  footerCurrentPage?: 'diagnostic' | 'developpeuse';
+}
+
+const {
+  title,
+  description,
+  canonicalPath,
+  ogImage = '/og-image.jpg',
+  isHome = false,
+  footerCurrentPage,
+}: Props = Astro.props;
+
+const canonicalUrl = new URL(canonicalPath, Astro.site);
+const ogImageUrl = new URL(ogImage, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Rouelle Consulting" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1499" />
+    <meta property="og:image:height" content="788" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <slot name="head" />
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="691bc11b-e4f1-449a-becd-6ac7ac310728"></script>
+  </head>
+
+  <body>
+    <Header isHome={isHome} />
+
+    <main>
+      <slot />
+    </main>
+
+    <Footer currentPage={footerCurrentPage} />
+
+    <script is:inline src="/script.js"></script>
+  </body>
+</html>

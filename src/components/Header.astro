@@ -1,0 +1,38 @@
+---
+interface Props {
+  isHome?: boolean;
+}
+
+const { isHome = false }: Props = Astro.props;
+
+const navLinks = [
+  { anchor: 'accompagnement', label: 'Accompagnement' },
+  { anchor: 'realisations', label: 'Réalisations' },
+  { anchor: 'articles', label: 'Articles' },
+  { anchor: 'apropos', label: 'À propos' },
+];
+
+const hrefFor = (anchor: string) => (isHome ? `#${anchor}` : `/#${anchor}`);
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="brand">
+      <span class="brand-name">Rouelle Consulting</span>
+      <span class="brand-subtitle">Applications métier sur mesure</span>
+    </a>
+
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+      {navLinks.map((link) => (
+        <a href={hrefFor(link.anchor)}>{link.label}</a>
+      ))}
+      <a href={hrefFor('contact')} class="button button-small">Contact</a>
+    </nav>
+  </div>
+</header>
