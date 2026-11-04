@@ -1,0 +1,277 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: "L'IA dans mon quotidien de développeuse",
+  description:
+    "Dix mois après un premier billet sur l'IA comme changement de paradigme, retour terrain : ce que l'IA accélère vraiment dans mon travail de développeuse, et ce qu'elle ne remplace pas.",
+  image: 'https://www.rouelleconsulting.fr/og-image.jpg',
+  url: 'https://www.rouelleconsulting.fr/ia-quotidien-developpeuse.html',
+  datePublished: '2026-11-02',
+  dateModified: '2026-11-02',
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.rouelleconsulting.fr/#person',
+    name: 'Nadège Rouelle',
+  },
+  publisher: {
+    '@type': 'ProfessionalService',
+    '@id': 'https://www.rouelleconsulting.fr/#organization',
+    name: 'Rouelle Consulting',
+  },
+  mainEntityOfPage: 'https://www.rouelleconsulting.fr/ia-quotidien-developpeuse.html',
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.rouelleconsulting.fr/' },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: "L'IA dans mon quotidien de développeuse",
+      item: 'https://www.rouelleconsulting.fr/ia-quotidien-developpeuse.html',
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="L'IA dans mon quotidien de développeuse — Rouelle Consulting"
+  description="Dix mois après un premier billet sur l'IA comme changement de paradigme, retour terrain : ce que l'IA accélère vraiment dans mon travail de développeuse, et ce qu'elle ne remplace pas."
+  canonicalPath="/ia-quotidien-developpeuse.html"
+  ogType="article"
+>
+  <Fragment slot="head">
+    <meta property="article:published_time" content="2026-11-02" />
+    <meta property="article:modified_time" content="2026-11-02" />
+    <meta property="article:author" content="https://www.rouelleconsulting.fr/developpeuse-freelance-lyon.html" />
+    <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+  </Fragment>
+
+  <article class="article-page">
+
+    <header class="article-header">
+      <div class="container article-header-inner">
+        <p class="eyebrow">Intelligence artificielle &amp; développement</p>
+
+        <h1>
+          L'IA dans mon quotidien de développeuse
+        </h1>
+        <div class="accent-line"></div>
+
+        <p class="article-intro">
+          <em>Ce qu'elle accélère vraiment, et ce qu'elle ne remplace pas.</em>
+        </p>
+        <div class="article-meta">
+          <span>Lecture : 6 minutes</span>
+          <span>•</span>
+          <span>Intelligence artificielle</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="container article-layout">
+      <div class="article-content">
+
+        <section>
+          <p>
+            En janvier, j'écrivais que l'IA marquait un changement de
+            paradigme pour notre métier. Dix mois plus tard, voici le
+            retour terrain promis : comment je l'utilise vraiment, après
+            beaucoup d'essais et pas mal d'erreurs.
+          </p>
+
+          <p>
+            Spoiler : elle me fait gagner un temps réel. Mais pas là où je
+            l'attendais au départ. Et elle ne fait pas le travail qui
+            compte le plus : comprendre le besoin et savoir challenger une
+            demande.
+          </p>
+        </section>
+
+
+        <section>
+          <h2>Premier réflexe : tout lui confier d'un coup</h2>
+
+          <p>
+            J'ai commencé comme beaucoup : décrire l'application en
+            quelques paragraphes et laisser l'IA tout produire. Le
+            résultat compilait, avait l'air propre… et ne me satisfaisait
+            pas.
+          </p>
+
+          <p>
+            Le code partait dans des directions que je n'avais pas
+            choisies. Des règles métier étaient inventées pour combler
+            les trous de ma demande. Et surtout, je ne maîtrisais plus ce
+            qui avait été produit. Reprendre ce code aurait pris plus de
+            temps que de l'écrire.
+          </p>
+
+          <p>
+            Le problème ne venait pas vraiment de l'outil. Il venait de ma
+            façon de lui parler : une demande floue donne un résultat
+            flou, simplement plus vite.
+          </p>
+        </section>
+
+
+        <section>
+          <h2>Avancer pas à pas, comme sur un vrai projet</h2>
+
+          <p>
+            J'ai donc changé d'approche : faire avancer l'IA étape par
+            étape, dans l'ordre où je mène un projet moi-même.
+          </p>
+
+          <ol>
+            <li>
+              <strong>Les user stories.</strong> Je l'ai d'abord
+              sollicitée pour m'aider à écrire des US précises. C'est là
+              qu'elle m'a le plus surprise : en posant des questions, elle
+              révèle les zones floues du besoin.
+            </li>
+            <li>
+              <strong>Les cas de tests métier.</strong> Ensuite, les
+              scénarios à valider pour chaque US. Formuler les critères
+              d'acceptation avant d'écrire une ligne de code, c'est du BDD
+              appliqué, et l'IA y est très efficace.
+            </li>
+            <li>
+              <strong>L'architecture.</strong> Puis la mise en place de
+              l'architecture. J'ai repris ses propositions, je les ai
+              challengées, et je l'ai parfois fait changer d'avis. Elle
+              propose vite et bien, mais elle ne connaît ni le contexte du
+              client, ni ses contraintes d'exploitation, ni l'équipe qui
+              maintiendra le code.
+            </li>
+          </ol>
+
+          <p>
+            Cette phase m'a appris deux choses. D'abord, à la questionner
+            au lieu de la croire sur parole. Ensuite, à mieux exprimer mon
+            besoin dès le départ : le contexte, les restrictions, les
+            attendus. Autrement dit, exactement ce qu'on attend d'un bon
+            cahier des charges.
+          </p>
+        </section>
+
+
+        <section>
+          <h2>Piloter l'IA, US par US</h2>
+
+          <p>
+            Une fois le cadre posé, je l'ai pilotée pour chaque user
+            story, avec trois garde-fous :
+          </p>
+
+          <ul>
+            <li>
+              <strong>Des contraintes fortes.</strong> Ce qu'elle a le
+              droit de toucher, les patterns à respecter, ce qui est hors
+              périmètre.
+            </li>
+            <li>
+              <strong>Une documentation d'architecture.</strong> Elle sert
+              de référence commune : l'IA s'y conforme, et je vérifie
+              qu'elle le fait.
+            </li>
+            <li>
+              <strong>Des petites PR.</strong> Une PR courte, je la relis
+              vraiment. Une PR de 2 000 lignes, je la survole, et c'est là
+              que les erreurs passent.
+            </li>
+          </ul>
+
+          <p>
+            C'est finalement la façon dont j'encadrerais un développeur
+            junior très rapide : un cadre clair, des livraisons courtes,
+            une revue systématique.
+          </p>
+        </section>
+
+
+        <section>
+          <h2>Garder le contrôle</h2>
+
+          <p>
+            Oui, je suis de celles qui veulent comprendre ce que fait
+            l'IA, être capables de reprendre son code et de le corriger.
+            C'est sans doute plus long que de tout accepter les yeux
+            fermés. Mais c'est ce qui me permet de garder la main sur ce
+            qui est produit, et d'en répondre devant mes clients.
+          </p>
+
+          <p>
+            Après ces mois de pratique, voici où je place la frontière :
+          </p>
+
+          <div class="comparison-table-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Ce que l'IA accélère vraiment</th>
+                  <th>Ce qu'elle ne remplace pas</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Rédiger des US et des critères d'acceptation</td>
+                  <td>Comprendre le vrai besoin derrière la demande</td>
+                </tr>
+                <tr>
+                  <td>Proposer des options d'architecture</td>
+                  <td>Choisir en fonction du contexte, des contraintes et de l'équipe</td>
+                </tr>
+                <tr>
+                  <td>Écrire le code d'une US bien cadrée</td>
+                  <td>Challenger une demande, dire « non » ou « pas maintenant »</td>
+                </tr>
+                <tr>
+                  <td>Générer les tests</td>
+                  <td>Relire, comprendre et assumer ce qui part en production</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            La colonne de droite, c'est précisément ce que mes clients
+            viennent chercher.
+          </p>
+        </section>
+
+
+        <section>
+          <h2>En conclusion</h2>
+
+          <p>
+            L'IA m'apporte aujourd'hui beaucoup de valeur. Elle me fait
+            coder plus vite, c'est certain. Mais son effet le plus
+            inattendu est ailleurs : elle a amélioré ma réflexion, en me
+            forçant à être plus organisée et plus précise dans
+            l'expression du besoin.
+          </p>
+
+          <p>
+            Le changement de paradigme dont je parlais en janvier est bien
+            réel. Il ne déplace pas la valeur du développeur vers la
+            machine : il la déplace vers ce qui se passe avant et après le
+            code. Comprendre, cadrer, challenger, relire.
+          </p>
+
+          <p>
+            Et vous, où placez-vous la frontière entre ce que vous
+            déléguez à l'IA et ce que vous gardez sous contrôle ?
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </article>
+</BaseLayout>

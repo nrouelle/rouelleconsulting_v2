@@ -1,0 +1,370 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Quand refondre une application métier ?',
+  description:
+    "Dette technique, coût des évolutions, usages qui ont changé : les signaux qui doivent alerter, un tableau pour choisir entre conserver, moderniser ou refondre, et les étapes avant de se lancer.",
+  image: 'https://www.rouelleconsulting.fr/og-image.jpg',
+  url: 'https://www.rouelleconsulting.fr/quand-refondre-application-metier.html',
+  datePublished: '2026-11-03',
+  dateModified: '2026-11-03',
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.rouelleconsulting.fr/#person',
+    name: 'Nadège Rouelle',
+  },
+  publisher: {
+    '@type': 'ProfessionalService',
+    '@id': 'https://www.rouelleconsulting.fr/#organization',
+    name: 'Rouelle Consulting',
+  },
+  mainEntityOfPage: 'https://www.rouelleconsulting.fr/quand-refondre-application-metier.html',
+};
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Faut-il toujours refondre une application vieillissante ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Non. L'âge d'une application n'est pas en soi un signal suffisant. Une application ancienne mais stable, dont les technologies sont encore maintenues et qui répond toujours aux besoins métier, peut très bien continuer à évoluer par petites touches. La refonte devient pertinente quand plusieurs signaux s'accumulent en même temps : dette technique, coût croissant des évolutions, technologies qui ne sont plus maintenues et écart grandissant avec les usages réels.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Quelle est la différence entre moderniser et refondre une application métier ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Moderniser consiste à faire évoluer certaines parties de l'application existante sans tout reconstruire : mettre à jour des dépendances, réécrire un module particulièrement fragile, faire évoluer une interface. Refondre consiste à concevoir une nouvelle application pour remplacer l'existante. La modernisation progressive est presque toujours plus rapide et moins risquée ; la refonte se justifie quand l'architecture elle-même ne permet plus d'avancer, quelle que soit la partie que l'on cherche à améliorer.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: "Combien de temps dure la refonte d'une application métier ?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Cela dépend entièrement du périmètre retenu. Une refonte menée d'un seul bloc, avec l'ensemble des fonctionnalités existantes recopiées à l'identique, prend logiquement plus de temps qu'une refonte qui démarre par un périmètre V1 réduit aux usages essentiels, mis en production puis complété progressivement. C'est cette seconde approche qui permet d'obtenir des résultats utilisables le plus tôt possible.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: "Diagnostic ou audit d'application métier : lequel choisir avant une refonte ?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Le diagnostic est adapté quand la décision n'est pas encore claire : il croise une analyse technique et des ateliers métier sur 1 à 2 semaines pour construire plusieurs scénarios possibles. L'audit est adapté quand un premier état des lieux rapide suffit pour arbitrer un budget ou prioriser : il tient en 4 jours, à un tarif fixe. Dans les deux cas, l'objectif est le même — décider avec des éléments factuels plutôt que sur une impression.",
+      },
+    },
+  ],
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.rouelleconsulting.fr/' },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Quand refondre une application métier ?',
+      item: 'https://www.rouelleconsulting.fr/quand-refondre-application-metier.html',
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Quand refondre une application métier ? — Rouelle Consulting"
+  description="Dette technique, coût des évolutions, usages qui ont changé : les signaux qui doivent alerter, un tableau pour choisir entre conserver, moderniser ou refondre, et les étapes avant de se lancer."
+  canonicalPath="/quand-refondre-application-metier.html"
+  ogType="article"
+>
+  <Fragment slot="head">
+    <meta property="article:published_time" content="2026-11-03" />
+    <meta property="article:modified_time" content="2026-11-03" />
+    <meta property="article:author" content="https://www.rouelleconsulting.fr/developpeuse-freelance-lyon.html" />
+    <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+  </Fragment>
+
+  <article class="article-page">
+
+    <header class="article-header">
+      <div class="container article-header-inner">
+        <p class="eyebrow">Modernisation d'application métier</p>
+
+        <h1>
+          Quand refondre une application métier ?
+        </h1>
+        <div class="accent-line"></div>
+
+        <p class="article-intro">
+          Une refonte complète se justifie quand la dette technique rend
+          chaque évolution plus longue et plus risquée, quand les
+          technologies utilisées ne sont plus maintenues, et quand l'écart
+          entre l'application et les besoins réels de l'entreprise devient
+          trop important pour être comblé par des ajustements. Dans la
+          plupart des situations, conserver l'existant ou le moderniser
+          progressivement reste pourtant plus rapide et moins coûteux :
+          la refonte ne doit pas être la première option envisagée, mais
+          la dernière.
+        </p>
+        <div class="article-meta">
+          <span>Lecture : 8 minutes</span>
+          <span>•</span>
+          <span>Applications métier</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="container article-layout">
+      <div class="article-content">
+
+        <section>
+          <h2>Les signaux qui doivent vous alerter</h2>
+
+          <p>
+            Aucun de ces signaux, pris isolément, n'impose une refonte.
+            C'est leur accumulation, et la vitesse à laquelle ils
+            s'aggravent, qui doit alerter.
+          </p>
+
+          <ol>
+            <li>
+              <strong>Le coût et le risque des évolutions augmentent.</strong>{' '}
+              Une fonctionnalité qui prenait quelques jours en demande
+              désormais plusieurs semaines, et chaque modification risque
+              d'en casser une autre ailleurs dans l'application.
+            </li>
+            <li>
+              <strong>La dette technique s'accumule plus vite qu'elle ne
+              se résorbe.</strong> Les correctifs rapides s'empilent, les
+              dépendances ne sont plus mises à jour par crainte de tout
+              casser, et personne n'ose plus toucher à certaines parties
+              du code.
+            </li>
+            <li>
+              <strong>Peu de personnes comprennent encore l'application
+              dans son ensemble.</strong> Le départ d'une seule personne —
+              salarié ou prestataire — suffirait à mettre l'entreprise en
+              difficulté pour la moindre évolution.
+            </li>
+            <li>
+              <strong>Le métier a évolué plus vite que l'application.</strong>{' '}
+              De nouveaux processus, de nouveaux produits ou de nouvelles
+              contraintes réglementaires ne trouvent plus leur place dans
+              l'organisation actuelle de l'outil.
+            </li>
+            <li>
+              <strong>Les contournements se multiplient.</strong> Fichiers
+              Excel parallèles, ressaisies manuelles, échanges par e-mail
+              pour pallier ce que l'application ne sait plus faire
+              correctement.
+            </li>
+          </ol>
+        </section>
+
+
+        <section>
+          <h2>Conserver, moderniser ou refondre : le tableau de décision</h2>
+
+          <p>
+            Le choix ne se limite pas à une alternative entre tout garder
+            et tout refaire. Trois options méritent d'être comparées selon
+            le budget disponible, le délai souhaité et le niveau de risque
+            accepté.
+          </p>
+
+          <div class="comparison-table-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Critère</th>
+                  <th>Conserver et améliorer</th>
+                  <th>Moderniser progressivement</th>
+                  <th>Refondre</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Budget initial</td>
+                  <td>Faible</td>
+                  <td>Modéré, réparti dans le temps</td>
+                  <td>Élevé, engagé sur plusieurs mois</td>
+                </tr>
+                <tr>
+                  <td>Délai avant premier bénéfice</td>
+                  <td>Immédiat</td>
+                  <td>Quelques semaines par chantier</td>
+                  <td>Plusieurs mois, même avec un périmètre V1 réduit</td>
+                </tr>
+                <tr>
+                  <td>Niveau de risque</td>
+                  <td>Faible</td>
+                  <td>Maîtrisé, chantier par chantier</td>
+                  <td>Plus élevé : nouvelle application, nouveaux usages</td>
+                </tr>
+                <tr>
+                  <td>Dette technique traitée</td>
+                  <td>Non, ou marginalement</td>
+                  <td>Partiellement, selon les chantiers menés</td>
+                  <td>Oui, en totalité</td>
+                </tr>
+                <tr>
+                  <td>Pertinente quand…</td>
+                  <td>L'application reste saine et adaptée aux besoins</td>
+                  <td>Certaines parties sont fragiles mais le socle tient</td>
+                  <td>L'architecture elle-même freine toute évolution</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            En cas de doute, c'est souvent la modernisation progressive qui
+            est écartée trop vite — parce qu'elle paraît moins
+            « définitive » qu'une refonte, alors qu'elle permet justement
+            de vérifier, chantier après chantier, si le socle tient encore
+            ou s'il faut effectivement basculer vers une refonte.
+          </p>
+        </section>
+
+
+        <section>
+          <h2>Les étapes avant de se lancer dans une refonte</h2>
+
+          <p>
+            Une fois la refonte identifiée comme la meilleure option,
+            plusieurs étapes permettent d'éviter les erreurs les plus
+            coûteuses.
+          </p>
+
+          <ol>
+            <li>
+              <strong>Comprendre les usages réels avant de cadrer la
+              nouvelle application</strong>, à l'occasion d'<a href="/ateliers-metiers.html">ateliers métier</a> avec les
+              personnes qui utilisent l'outil au quotidien — pas seulement
+              celles qui l'ont commandé.
+            </li>
+            <li>
+              <strong>Résister à la tentation de reproduire l'existant à
+              l'identique.</strong> Copier un outil que l'on connaît est
+              tentant, mais cela reconduit souvent ses défauts dans une
+              version plus moderne, sans profiter de l'occasion pour les
+              corriger.
+            </li>
+            <li>
+              <strong>Définir un périmètre V1 réduit aux usages
+              essentiels</strong>, plutôt que de vouloir tout reconstruire
+              d'un seul bloc avant la première mise en production.
+            </li>
+            <li>
+              <strong>Avancer fonctionnalité par fonctionnalité</strong>{' '}
+              pour obtenir des retours utilisateurs tôt, et corriger une
+              mauvaise direction avant qu'elle ne coûte cher.
+            </li>
+            <li>
+              <strong>Objectiver la décision avec un état des lieux
+              externe</strong> si le constat interne reste flou ou
+              contesté — c'est le rôle d'un <a href="/diagnostic-application-metier.html">diagnostic d'application métier</a> ou d'un <a href="/audit-application-metier.html">audit en format court</a>.
+            </li>
+          </ol>
+        </section>
+
+
+        <section class="article-faq">
+          <h2>Questions fréquentes</h2>
+
+          <div class="faq-list">
+
+            <div class="faq-item">
+              <h3>Faut-il toujours refondre une application vieillissante ?</h3>
+              <p>
+                Non. L'âge d'une application n'est pas en soi un signal
+                suffisant. Une application ancienne mais stable, dont les
+                technologies sont encore maintenues et qui répond toujours
+                aux besoins métier, peut très bien continuer à évoluer par
+                petites touches. La refonte devient pertinente quand
+                plusieurs signaux s'accumulent en même temps : dette
+                technique, coût croissant des évolutions, technologies qui
+                ne sont plus maintenues et écart grandissant avec les
+                usages réels.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Quelle est la différence entre moderniser et refondre une application métier ?</h3>
+              <p>
+                Moderniser consiste à faire évoluer certaines parties de
+                l'application existante sans tout reconstruire : mettre à
+                jour des dépendances, réécrire un module particulièrement
+                fragile, faire évoluer une interface. Refondre consiste à
+                concevoir une nouvelle application pour remplacer
+                l'existante. La modernisation progressive est presque
+                toujours plus rapide et moins risquée ; la refonte se
+                justifie quand l'architecture elle-même ne permet plus
+                d'avancer, quelle que soit la partie que l'on cherche à
+                améliorer.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Combien de temps dure la refonte d'une application métier ?</h3>
+              <p>
+                Cela dépend entièrement du périmètre retenu. Une refonte
+                menée d'un seul bloc, avec l'ensemble des fonctionnalités
+                existantes recopiées à l'identique, prend logiquement plus
+                de temps qu'une refonte qui démarre par un périmètre V1
+                réduit aux usages essentiels, mis en production puis
+                complété progressivement. C'est cette seconde approche qui
+                permet d'obtenir des résultats utilisables le plus tôt
+                possible.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Diagnostic ou audit d'application métier : lequel choisir avant une refonte ?</h3>
+              <p>
+                Le diagnostic est adapté quand la décision n'est pas
+                encore claire : il croise une analyse technique et des
+                ateliers métier sur 1 à 2 semaines pour construire
+                plusieurs scénarios possibles. L'audit est adapté quand un
+                premier état des lieux rapide suffit pour arbitrer un
+                budget ou prioriser : il tient en 4 jours, à un tarif
+                fixe. Dans les deux cas, l'objectif est le même — décider
+                avec des éléments factuels plutôt que sur une impression.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+
+        <section class="article-conclusion">
+          <h2>Vous hésitez entre conserver, moderniser ou refondre votre application ?</h2>
+
+          <p>
+            Si le constat reste incertain ou difficile à partager en
+            interne, un regard extérieur permet souvent de trancher plus
+            vite — et avec moins de risque de se tromper.
+          </p>
+
+          <ul>
+            <li>
+              Besoin de construire plusieurs scénarios avant de décider ? <a href="/diagnostic-application-metier.html">Découvrez le diagnostic d'application métier →</a>
+            </li>
+            <li>
+              Besoin d'un premier état des lieux rapide, à budget fixe ? <a href="/audit-application-metier.html">Découvrez l'audit en 4 jours →</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
