@@ -2,7 +2,6 @@ docs/
 
 # build output
 dist/
-
 # generated types
 .astro/
 

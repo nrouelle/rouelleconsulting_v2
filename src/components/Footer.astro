@@ -1,0 +1,31 @@
+---
+interface Props {
+  currentPage?: 'diagnostic' | 'developpeuse' | 'quand-refondre';
+}
+
+const { currentPage }: Props = Astro.props;
+---
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <strong>Rouelle Consulting</strong>
+      <span>Applications métier sur mesure</span>
+      <span>Lyon &amp; à distance</span>
+    </div>
+
+    <p>© 2026 — Tous droits réservés.{' '}
+      {currentPage !== 'diagnostic' && (
+        <>— <a href="/diagnostic-application-metier.html">Diagnostic d'application métier</a>{' '}</>
+      )}
+      {currentPage !== 'quand-refondre' && (
+        <>— <a href="/quand-refondre-application-metier.html">Quand refondre une application métier ?</a>{' '}</>
+      )}
+      {currentPage !== 'developpeuse' && (
+        <>— <a href="/developpeuse-freelance-lyon.html">Développeuse freelance à Lyon</a>{' '}</>
+      )}
+      — <a href="/mentions-legales.html">Mentions légales</a>{' '}
+      — <a href="https://www.linkedin.com/in/nadegerouelle-dev-dotnet/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </p>
+  </div>
+</footer>

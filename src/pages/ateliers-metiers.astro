@@ -1,0 +1,188 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Comment se déroule un atelier métier avant de créer une application ?',
+  description: "Découvrez comment se déroule un atelier métier avant la création d'une application.",
+  image: 'https://www.rouelleconsulting.fr/og-image.jpg',
+  url: 'https://www.rouelleconsulting.fr/ateliers-metiers.html',
+  datePublished: '2026-09-02',
+  dateModified: '2026-09-17',
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.rouelleconsulting.fr/#person',
+    name: 'Nadège Rouelle',
+    url: 'https://www.rouelleconsulting.fr/developpeuse-freelance-lyon.html',
+    sameAs: 'https://www.linkedin.com/in/nadegerouelle-dev-dotnet/',
+  },
+  publisher: {
+    '@type': 'ProfessionalService',
+    '@id': 'https://www.rouelleconsulting.fr/#organization',
+    name: 'Rouelle Consulting',
+  },
+  mainEntityOfPage: 'https://www.rouelleconsulting.fr/ateliers-metiers.html',
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.rouelleconsulting.fr/' },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Atelier métier',
+      item: 'https://www.rouelleconsulting.fr/ateliers-metiers.html',
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Comment se déroule un atelier métier avant de créer une application ?"
+  description="Découvrez comment se déroule un atelier métier avant la création d'une application."
+  canonicalPath="/ateliers-metiers.html"
+  ogType="article"
+>
+  <Fragment slot="head">
+    <meta property="article:published_time" content="2026-09-02" />
+    <meta property="article:modified_time" content="2026-09-17" />
+    <meta property="article:author" content="https://www.rouelleconsulting.fr/developpeuse-freelance-lyon.html" />
+    <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+  </Fragment>
+
+  <article class="article-page">
+
+    <header class="article-header">
+      <div class="container article-header-inner">
+        <p class="eyebrow">Accompagnement métier</p>
+
+        <h1>Comment se déroule un atelier métier avant de créer une application ?</h1>
+
+        <div class="accent-line"></div>
+
+        <p class="article-intro">
+          Avant de concevoir une application métier, il est essentiel de comprendre
+          comment le travail est réellement effectué. L'atelier métier permet de
+          partir des usages, de faire émerger les vrais besoins et de construire
+          une solution adaptée.
+        </p>
+
+        <div class="article-meta">
+          <span>Lecture : 5 minutes</span>
+          <span>•</span>
+          <span>Applications métier</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="container article-layout">
+
+      <aside class="article-sidebar" aria-label="Sommaire de l'article">
+        <p class="sidebar-title">Dans cet article</p>
+
+        <nav>
+          <a href="#partir-du-metier">1. Partir du métier</a><br />
+          <a href="#faire-parler">2. Faire parler ceux qui font</a><br />
+          <a href="#application-simple">3. Transformer cette compréhension</a><br />
+        </nav>
+      </aside>
+
+      <div class="article-content">
+
+        <section id="partir-du-metier">
+          <span class="section-number">01</span>
+          <h2>Partir du métier, pas de l'application</h2>
+
+          <p>
+            Un atelier ne commence pas par « Quels écrans voulez-vous ? » ou
+            « Quelles fonctionnalités faut-il développer ? ».
+          </p>
+
+          <p>
+            On choisit plutôt un cas concret et on déroule ce qui se passe réellement :
+            qu'est-ce qui déclenche le processus ? Qui intervient ? Que fait cette personne ?
+            Que se passe-t-il ensuite ?
+          </p>
+
+          <p>
+            L'objectif est de comprendre le fonctionnement du métier avant d'imaginer
+            la solution.
+          </p>
+        </section>
+
+        <section id="faire-parler">
+          <span class="section-number">02</span>
+          <h2>Faire parler ceux qui font</h2>
+
+          <p>
+            L'intérêt de l'atelier est de réunir autour de la table les personnes qui
+            connaissent réellement le processus.
+          </p>
+
+          <p>
+            En reconstruisant ensemble les différentes étapes, on fait rapidement apparaître
+            les cas particuliers, les informations manquantes ou même les différences de
+            compréhension entre les équipes.
+          </p>
+
+          <blockquote>
+            « Normalement, on fait comme ça… sauf quand… »
+          </blockquote>
+
+          <p>
+            Ce sont souvent ces discussions qui permettent de découvrir les vrais besoins
+            que le cahier des charges initial ne faisait pas apparaître.
+          </p>
+        </section>
+
+        <section id="application-simple">
+          <span class="section-number">03</span>
+          <h2>Transformer cette compréhension en une application simple</h2>
+
+          <p>
+            Une fois le fonctionnement compris, on peut commencer à parler de l'application.
+            Mais plutôt que de reproduire l'outil ou les habitudes existantes, on se demande
+            ce dont chaque utilisateur a réellement besoin pour accomplir sa tâche : <a href="/reproduire-outil-existant.html">pourquoi reproduire l'outil actuel est rarement un bon cahier des charges →</a>
+          </p>
+
+          <p>
+            Certaines fonctionnalités imaginées au départ disparaissent, d'autres apparaissent
+            et certaines sont simplifiées.
+          </p>
+
+          <p>
+            Le but de l'atelier n'est donc pas de produire une longue liste de fonctionnalités :
+            <strong>c'est de s'assurer que l'on va développer la bonne application avant d'écrire
+              la première ligne de code.</strong>
+          </p>
+        </section>
+
+        <section class="article-conclusion">
+          <div class="conclusion-mark">→</div>
+
+          <h2>Comprendre avant de construire</h2>
+
+          <p>
+            Un atelier métier permet de réduire les incompréhensions, de mieux prioriser
+            les besoins et de concevoir une application réellement utile aux personnes
+            qui vont l'utiliser.
+          </p>
+
+          <p>
+            Une fois le métier compris, reste à décider ce qui doit entrer dans la première
+            version de l'application : <a href="/version-1.html">Tout n'a pas besoin d'être dans la V1 →</a>
+          </p>
+
+          <a href="/#contact" class="button">
+            Parlons de votre projet
+          </a>
+        </section>
+
+      </div>
+    </div>
+  </article>
+</BaseLayout>

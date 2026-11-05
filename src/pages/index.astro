@@ -1,0 +1,421 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': 'https://www.rouelleconsulting.fr/#organization',
+  name: 'Rouelle Consulting',
+  description:
+    "Conception et développement d'applications métier sur mesure, de la compréhension du besoin au développement, pour les entreprises à Lyon et en France.",
+  url: 'https://www.rouelleconsulting.fr/',
+  logo: 'https://www.rouelleconsulting.fr/assets/logo.png',
+  email: 'nadege@rouelleconsulting.fr',
+  founder: {
+    '@type': 'Person',
+    '@id': 'https://www.rouelleconsulting.fr/#person',
+    name: 'Nadège Rouelle',
+    jobTitle: 'Développeuse freelance',
+    url: 'https://www.rouelleconsulting.fr/developpeuse-freelance-lyon.html',
+    sameAs: 'https://www.linkedin.com/in/nadegerouelle-dev-dotnet/',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    postalCode: '69250',
+    addressLocality: "Curis-au-Mont-d'Or",
+    addressCountry: 'FR',
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Lyon' },
+    { '@type': 'Country', name: 'France' },
+  ],
+  knowsAbout: ['Applications métier sur mesure', 'Développement web', '.NET', 'Vue.js'],
+};
+---
+
+<BaseLayout
+  title="Conception et création d'applications métier à Lyon — Rouelle Consulting"
+  description="Conception et création d'applications métier sur mesure pour PME à Lyon et en Auvergne-Rhône-Alpes, de l'atelier métier au développement. Parlons de votre projet."
+  canonicalPath="/"
+  isHome
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(organizationJsonLd)} />
+  </Fragment>
+
+  <section class="hero">
+    <div class="container hero-grid">
+
+      <div class="hero-content">
+        <h1>
+          Comprendre le métier.<br />
+          Concevoir le bon outil.<br />
+          <span>Le développer.</span>
+        </h1>
+
+        <div class="accent-line"></div>
+
+        <p class="hero-intro">
+          J'accompagne les entreprises de la compréhension de leurs besoins
+          jusqu'à la conception et au développement de leurs applications métier.
+        </p>
+
+        <p class="hero-text">
+          Avant de parler écrans et fonctionnalités, commençons par comprendre
+          votre métier.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="button">Parlons de votre projet</a>
+          <a href="#accompagnement" class="button button-outline">
+            Découvrir mon approche
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="visual-card">
+          <div class="visual-paper">
+            <div class="diagram">
+              <span class="diagram-box"></span>
+              <span class="diagram-box"></span>
+              <span class="diagram-box"></span>
+
+              <span class="diagram-box"></span>
+              <span class="diagram-box diagram-box-main"></span>
+              <span class="diagram-box"></span>
+
+              <span class="diagram-box"></span>
+              <span class="diagram-box"></span>
+              <span class="diagram-box"></span>
+            </div>
+          </div>
+
+          <div class="visual-circle"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="process-section" id="accompagnement">
+    <div class="container">
+
+      <div class="section-heading centered">
+        <p class="eyebrow">Ma façon de travailler</p>
+        <h2>Une application commence rarement par du code.</h2>
+        <div class="accent-line centered-line"></div>
+      </div>
+
+      <div class="steps">
+
+        <article class="step">
+          <div class="step-head">
+            <span class="step-number">01</span>
+            <div class="step-icon">
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target-icon lucide-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+            </div>
+          </div>
+          <h3>Comprendre</h3>
+          <p>
+            Ateliers avec vos équipes pour comprendre le métier,
+            les processus et les difficultés rencontrées.
+          </p>
+        </article>
+
+        <article class="step">
+          <div class="step-head">
+            <span class="step-number">02</span>
+            <div class="step-icon">
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crosshair-icon lucide-crosshair"><circle cx="12" cy="12" r="10"></circle><line x1="22" x2="18" y1="12" y2="12"></line><line x1="6" x2="2" y1="12" y2="12"></line><line x1="12" x2="12" y1="6" y2="2"></line><line x1="12" x2="12" y1="22" y2="18"></line></svg>
+            </div>
+          </div>
+          <h3>Challenger</h3>
+          <p>
+            Questionner l'existant, identifier ce qui apporte réellement
+            de la valeur et définir les priorités.
+          </p>
+        </article>
+
+        <article class="step">
+          <div class="step-head">
+            <span class="step-number">03</span>
+            <div class="step-icon">
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pen-line-icon lucide-pen-line"><path d="M13 21h8"></path><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path></svg>
+            </div>
+          </div>
+          <h3>Concevoir</h3>
+          <p>
+            Transformer les besoins identifiés en parcours et interfaces
+            simples, adaptés à chaque usage.
+          </p>
+        </article>
+
+        <article class="step">
+          <div class="step-head">
+            <span class="step-number">04</span>
+            <div class="step-icon">
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml-icon lucide-code-xml"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
+            </div>
+          </div>
+          <h3>Développer</h3>
+          <p>
+            Construire l'application, la confronter aux utilisateurs
+            et la faire évoluer dans le temps.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="needs-section">
+    <div class="container needs-grid">
+
+      <div class="needs-intro">
+        <h2>Votre organisation a évolué,<br />vos outils moins.</h2>
+        <div class="accent-line"></div>
+
+        <p>
+          Fichiers complexes, outils vieillissants, informations dispersées,
+          tâches manuelles… Ces situations coûtent du temps et génèrent des erreurs.
+        </p>
+
+        <p class="highlight">
+          Mon rôle n'est pas de reproduire l'existant mais de construire
+          la solution qui répond à vos vrais besoins.
+        </p>
+
+        <p>
+          Votre application actuelle montre ses limites ?{' '}
+          <a href="/diagnostic-application-metier.html">Faire un diagnostic de votre application métier →</a>
+        </p>
+      </div>
+
+      <div>
+        <p class="eyebrow">Ce que je vous aide à obtenir</p>
+
+        <div class="benefits-grid">
+
+          <article class="benefit">
+            <div class="benefit-icon">◎</div>
+            <h3>Des outils adaptés</h3>
+            <p>À votre métier et non l'inverse.</p>
+          </article>
+
+          <article class="benefit">
+            <div class="benefit-icon">◉</div>
+            <h3>Des utilisateurs impliqués</h3>
+            <p>Dès la conception de la solution.</p>
+          </article>
+
+          <article class="benefit">
+            <div class="benefit-icon">✓</div>
+            <h3>Un périmètre maîtrisé</h3>
+            <p>Avec des priorités claires.</p>
+          </article>
+
+          <article class="benefit">
+            <div class="benefit-icon">↗</div>
+            <h3>Une solution évolutive</h3>
+            <p>Qui grandit avec vos besoins.</p>
+          </article>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="projects-section" id="realisations">
+    <div class="container">
+
+      <div class="section-heading">
+        <p class="eyebrow">Quelques réalisations</p>
+        <h2>Des applications pensées autour des usages.</h2>
+      </div>
+
+      <div class="cards-grid">
+
+        <article class="card">
+          <div class="card-icon">▣</div>
+          <h3>Plateforme de suivi d'activité</h3>
+          <p>
+            Centralisation des données et automatisation des traitements
+            pour un meilleur pilotage.
+          </p>
+          <a href="#">Gestion d'activité →</a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">◯</div>
+          <h3>Portail clients</h3>
+          <p>
+            Un espace centralisé pour simplifier les échanges et renforcer
+            l'autonomie.
+          </p>
+          <a href="#">Expérience utilisateur →</a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">↗</div>
+          <h3>Outil de planification</h3>
+          <p>
+            Planification de ressources et suivi en temps réel
+            pour gagner en réactivité.
+          </p>
+          <a href="#">Organisation &amp; planning →</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="articles-section" id="articles">
+    <div class="container">
+
+      <div class="section-heading">
+        <p class="eyebrow">Derniers articles</p>
+        <h2>Réflexions autour des applications métier.</h2>
+      </div>
+
+      <div class="articles-grid">
+
+        <article class="article-card">
+          <span class="article-card-date">9 novembre 2026</span>
+          <h3>
+            Combien budgéter en 2027 pour que votre logiciel métier ne vous lâche pas ?
+          </h3>
+          <p>
+            Pas de pourcentage magique ni de forfait flou : une grille
+            en quatre postes pour construire un budget de maintenance
+            2027 défendable.
+          </p>
+          <a href="/budget-maintenance-logiciel-2027.html">Lire l'article →</a>
+        </article>
+
+        <article class="article-card">
+          <span class="article-card-date">2 novembre 2026</span>
+          <h3>
+            L'IA dans mon quotidien de développeuse
+          </h3>
+          <p>
+            Dix mois après avoir annoncé un changement de paradigme,
+            retour terrain : ce que l'IA accélère vraiment dans mon
+            travail, et ce qu'elle ne remplace pas.
+          </p>
+          <a href="/ia-quotidien-developpeuse.html">Lire l'article →</a>
+        </article>
+
+        <article class="article-card">
+          <span class="article-card-date">3 novembre 2026</span>
+          <h3>
+            Quand refondre une application métier ?
+          </h3>
+          <p>
+            Les signaux qui doivent alerter, un tableau pour choisir entre
+            conserver, moderniser ou refondre, et les étapes avant de se
+            lancer.
+          </p>
+          <a href="/quand-refondre-application-metier.html">Lire l'article →</a>
+        </article>
+
+        <article class="article-card">
+          <span class="article-card-date">27 octobre 2026</span>
+          <h3>
+            Développement d'une application métier : pourquoi avancer fonctionnalité par fonctionnalité ?
+          </h3>
+          <p>
+            Avancer fonctionnalité par fonctionnalité plutôt que brique par
+            brique, pour des retours utilisateurs plus tôt et moins de
+            mauvaises surprises.
+          </p>
+          <a href="/feature-first.html">Lire l'article →</a>
+        </article>
+
+        <article class="article-card">
+          <span class="article-card-date">22 octobre 2026</span>
+          <h3>
+            Pourquoi reproduire votre outil actuel est rarement un bon cahier des charges
+          </h3>
+          <p>
+            Copier votre outil actuel revient souvent à reconduire ses
+            défauts dans une version plus moderne.
+          </p>
+          <a href="/reproduire-outil-existant.html">Lire l'article →</a>
+        </article>
+
+        <article class="article-card">
+          <span class="article-card-date">2 septembre 2026</span>
+          <h3>
+            Comment se déroule un atelier métier avant de créer une application ?
+          </h3>
+          <p>
+            Comprendre les besoins réels du terrain avant de cadrer les
+            fonctionnalités à développer.
+          </p>
+          <a href="/ateliers-metiers.html">Lire l'article →</a>
+        </article>
+
+        <article class="article-card">
+          <span class="article-card-date">2 septembre 2026</span>
+          <h3>Tout n'a pas besoin d'être dans la V1</h3>
+          <p>
+            Lister toutes les fonctionnalités possibles n'est pas la bonne
+            méthode : comment prioriser ce qui doit vraiment être développé
+            dès le début.
+          </p>
+          <a href="/version-1.html">Lire l'article →</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section" id="apropos">
+    <div class="container about-grid">
+
+      <div>
+        <p class="eyebrow">À propos</p>
+        <h2>Un interlocuteur unique du besoin jusqu'au développement.</h2>
+      </div>
+
+      <div>
+        <p>
+          J'interviens sur des projets d'applications métier sur mesure,
+          en combinant compréhension du besoin, conception fonctionnelle
+          et développement.
+        </p>
+
+        <p>
+          L'objectif : construire un outil utile, compréhensible
+          et réellement adapté à la façon dont vos équipes travaillent.
+        </p>
+
+        <p>
+          Basée à Lyon, j'interviens aussi à distance partout en France.{' '}
+          <a href="/developpeuse-freelance-lyon.html">En savoir plus sur mon activité de développeuse freelance à Lyon →</a>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="container contact-inner">
+
+      <div>
+        <h2>Vous avez un besoin, mais pas encore de cahier des charges ?</h2>
+        <p>
+          Ce n'est pas un problème. Nous pouvons justement commencer
+          par le définir ensemble.
+        </p>
+      </div>
+
+      <a href="mailto:nadege@rouelleconsulting.fr" class="button">
+        Échangeons sur votre projet
+      </a>
+
+    </div>
+  </section>
+</BaseLayout>
