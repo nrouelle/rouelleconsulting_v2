@@ -6,11 +6,11 @@ const articleJsonLd = {
   '@type': 'Article',
   headline: 'Quand refondre une application métier ?',
   description:
-    "Dette technique, coût des évolutions, usages qui ont changé : les signaux qui doivent alerter, un tableau pour choisir entre conserver, moderniser ou refondre, et les étapes avant de se lancer.",
+    "Définition, enjeux et signaux d'alerte : quand envisager la refonte d'une application métier plutôt que la conserver ou la moderniser. Tableau de décision et étapes clés.",
   image: 'https://www.rouelleconsulting.fr/og-image.jpg',
   url: 'https://www.rouelleconsulting.fr/quand-refondre-application-metier.html',
   datePublished: '2026-11-03',
-  dateModified: '2026-11-03',
+  dateModified: '2026-11-05',
   author: {
     '@type': 'Person',
     '@id': 'https://www.rouelleconsulting.fr/#person',
@@ -30,6 +30,22 @@ const faqJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
+    {
+      '@type': 'Question',
+      name: "Qu'est-ce qu'une refonte d'application métier ?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Une refonte d'application métier consiste à concevoir et développer une nouvelle application pour remplacer un logiciel existant devenu limitant, plutôt que de continuer à le faire évoluer par petites touches. Elle se distingue de la modernisation, qui fait évoluer certaines parties de l'existant sans tout reconstruire.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: "Quels sont les enjeux d'une refonte d'application métier ?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Les enjeux se répartissent en trois familles : des enjeux business (compétitivité, satisfaction des utilisateurs), des enjeux techniques (dette technique, obsolescence) et les risques à ne rien faire (dépendance à une seule personne, coûts qui continuent d'augmenter).",
+      },
+    },
     {
       '@type': 'Question',
       name: 'Faut-il toujours refondre une application vieillissante ?',
@@ -82,13 +98,14 @@ const breadcrumbJsonLd = {
 
 <BaseLayout
   title="Quand refondre une application métier ? — Rouelle Consulting"
-  description="Dette technique, coût des évolutions, usages qui ont changé : les signaux qui doivent alerter, un tableau pour choisir entre conserver, moderniser ou refondre, et les étapes avant de se lancer."
+  description="Définition, enjeux et signaux d'alerte : quand envisager la refonte d'une application métier plutôt que la conserver ou la moderniser. Tableau de décision et étapes clés."
   canonicalPath="/quand-refondre-application-metier.html"
   ogType="article"
+  footerCurrentPage="quand-refondre"
 >
   <Fragment slot="head">
     <meta property="article:published_time" content="2026-11-03" />
-    <meta property="article:modified_time" content="2026-11-03" />
+    <meta property="article:modified_time" content="2026-11-05" />
     <meta property="article:author" content="https://www.rouelleconsulting.fr/developpeuse-freelance-lyon.html" />
     <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
     <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
@@ -129,7 +146,38 @@ const breadcrumbJsonLd = {
       <div class="article-content">
 
         <section>
-          <h2>Les signaux qui doivent vous alerter</h2>
+          <h2>Quels sont les enjeux d'une refonte d'application métier ?</h2>
+
+          <p>
+            Une refonte complète engage trois types d'enjeux : des enjeux
+            business, des enjeux techniques, et les risques à ne rien faire.
+          </p>
+
+          <h3>Enjeux business</h3>
+          <p>
+            Un outil qui freine les équipes ralentit l'activité et dégrade
+            la satisfaction des utilisateurs internes comme externes.
+          </p>
+
+          <h3>Enjeux techniques</h3>
+          <p>
+            La dette technique et l'obsolescence des technologies rendent
+            chaque évolution plus longue, plus coûteuse et plus risquée.
+          </p>
+
+          <h3>Risques du statu quo</h3>
+          <p>
+            Ne rien faire ne supprime pas le problème : il continue de
+            s'accumuler, et la dépendance à une seule personne qui comprend
+            encore l'application s'aggrave avec le temps. Si ces enjeux
+            restent difficiles à objectiver dans votre contexte, <a href="/diagnostic-application-metier.html">un diagnostic d'application métier pour objectiver ces enjeux</a>{' '}
+            permet de trancher avant de s'engager.
+          </p>
+        </section>
+
+
+        <section>
+          <h2 id="signaux">Les signaux qui doivent vous alerter</h2>
 
           <p>
             Aucun de ces signaux, pris isolément, n'impose une refonte.
@@ -284,6 +332,29 @@ const breadcrumbJsonLd = {
           <h2>Questions fréquentes</h2>
 
           <div class="faq-list">
+
+            <div class="faq-item">
+              <h3>Qu'est-ce qu'une refonte d'application métier ?</h3>
+              <p>
+                Une refonte d'application métier consiste à concevoir et
+                développer une nouvelle application pour remplacer un
+                logiciel existant devenu limitant, plutôt que de continuer à
+                le faire évoluer par petites touches. Elle se distingue de
+                la modernisation, qui fait évoluer certaines parties de
+                l'existant sans tout reconstruire.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Quels sont les enjeux d'une refonte d'application métier ?</h3>
+              <p>
+                Les enjeux se répartissent en trois familles : des enjeux
+                business (compétitivité, satisfaction des utilisateurs), des
+                enjeux techniques (dette technique, obsolescence) et les
+                risques à ne rien faire (dépendance à une seule personne,
+                coûts qui continuent d'augmenter).
+              </p>
+            </div>
 
             <div class="faq-item">
               <h3>Faut-il toujours refondre une application vieillissante ?</h3>
