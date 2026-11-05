@@ -12,6 +12,7 @@ const sitemapMeta = {
   '/diagnostic-application-metier': { priority: 0.8, changefreq: 'monthly' },
   '/audit-application-metier': { priority: 0.8, changefreq: 'monthly' },
   '/quand-refondre-application-metier': { priority: 0.7, changefreq: 'monthly' },
+  '/budget-maintenance-logiciel-2027': { priority: 0.7, changefreq: 'monthly' },
   '/ateliers-metiers': { priority: 0.6, changefreq: 'monthly' },
   '/version-1': { priority: 0.6, changefreq: 'monthly' },
   '/reproduire-outil-existant': { priority: 0.6, changefreq: 'monthly' },

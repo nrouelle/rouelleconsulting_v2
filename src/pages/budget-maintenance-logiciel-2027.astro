@@ -1,0 +1,493 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Combien budgéter en 2027 pour que votre logiciel métier ne vous lâche pas ?',
+  description:
+    "Maintenance de logiciel métier : comment construire un budget 2027 défendable en 4 postes, sans pourcentage magique ni forfait flou. Grille et questions.",
+  image: 'https://www.rouelleconsulting.fr/og-image.jpg',
+  url: 'https://www.rouelleconsulting.fr/budget-maintenance-logiciel-2027.html',
+  datePublished: '2026-11-09',
+  dateModified: '2026-11-09',
+  author: {
+    '@type': 'Person',
+    '@id': 'https://www.rouelleconsulting.fr/#person',
+    name: 'Nadège Rouelle',
+    url: 'https://www.rouelleconsulting.fr/developpeuse-freelance-lyon.html',
+    sameAs: 'https://www.linkedin.com/in/nadegerouelle-dev-dotnet/',
+  },
+  publisher: {
+    '@type': 'ProfessionalService',
+    '@id': 'https://www.rouelleconsulting.fr/#organization',
+    name: 'Rouelle Consulting',
+  },
+  mainEntityOfPage: 'https://www.rouelleconsulting.fr/budget-maintenance-logiciel-2027.html',
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.rouelleconsulting.fr/' },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Combien budgéter en 2027 pour que votre logiciel métier ne vous lâche pas ?',
+      item: 'https://www.rouelleconsulting.fr/budget-maintenance-logiciel-2027.html',
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Combien budgéter en 2027 pour que votre logiciel métier ne vous lâche pas ? — Rouelle Consulting"
+  description="Maintenance de logiciel métier : comment construire un budget 2027 défendable en 4 postes, sans pourcentage magique ni forfait flou. Grille et questions."
+  canonicalPath="/budget-maintenance-logiciel-2027.html"
+  ogType="article"
+>
+  <Fragment slot="head">
+    <meta property="article:published_time" content="2026-11-09" />
+    <meta property="article:modified_time" content="2026-11-09" />
+    <meta property="article:author" content="https://www.rouelleconsulting.fr/developpeuse-freelance-lyon.html" />
+    <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+  </Fragment>
+
+  <article class="article-page">
+
+    <header class="article-header">
+      <div class="container article-header-inner">
+        <p class="eyebrow">Budget IT 2027</p>
+
+        <h1>
+          Combien budgéter en 2027 pour que votre logiciel métier ne vous lâche pas ?
+        </h1>
+        <div class="accent-line"></div>
+
+        <p class="article-intro">
+          Maintenance de logiciel métier : comment construire un budget
+          2027 défendable en 4 postes, sans pourcentage magique ni
+          forfait flou. Grille et questions.
+        </p>
+        <div class="article-meta">
+          <span>Lecture : 9 minutes</span>
+          <span>•</span>
+          <span>Applications métier</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="container article-layout">
+      <div class="article-content">
+
+        <section>
+          <p>
+            C'est la saison des budgets. Vous arbitrez les
+            investissements, les recrutements, les achats de l'an
+            prochain. Et quelque part dans le tableau, il y a une ligne
+            « logiciel métier ». Soit elle est vide, soit elle contient
+            un forfait reconduit d'année en année, que personne autour
+            de la table ne sait vraiment justifier.
+          </p>
+
+          <p>
+            Pourtant, ce logiciel fait tourner l'entreprise. Les
+            commandes, le planning, la facturation, le suivi client
+            passent par lui. S'il s'arrête, ou s'il devient impossible
+            à faire évoluer, c'est l'activité qui ralentit.
+          </p>
+
+          <p>
+            Je ne vais pas vous donner un pourcentage magique. Je vais
+            vous donner une grille en quatre postes pour construire un
+            budget que vous pourrez expliquer, défendre et ajuster.
+          </p>
+        </section>
+
+        <section>
+          <h2>Pourquoi la ligne « logiciel métier » est vide ou floue</h2>
+
+          <p>
+            Un logiciel qui fonctionne est invisible. Personne ne vient
+            se plaindre en réunion de direction que l'application de
+            planning a tourné normalement toute la semaine. Et ce qui
+            est invisible ne se budgète pas.
+          </p>
+
+          <p>
+            Résultat, on retrouve presque toujours l'une de ces deux
+            situations :
+          </p>
+
+          <ul>
+            <li>
+              <strong>la ligne est absente</strong> : on paie au coup
+              par coup, quand quelque chose casse ou quand une évolution
+              devient urgente ;
+            </li>
+            <li>
+              <strong>la ligne est un forfait</strong> : un montant
+              fixe, souvent hérité du contrat initial, dont personne ne
+              sait précisément ce qu'il couvre.
+            </li>
+          </ul>
+
+          <p>
+            Le forfait flou est rassurant. Il donne l'impression que le
+            sujet est traité. Mais il ne dit pas ce qu'il achète : des
+            corrections ? des mises à jour ? des évolutions ? un peu de
+            tout, selon l'humeur de l'année ?
+          </p>
+
+          <p>
+            Un de mes clients en a fait l'expérience. Il avait un
+            contrat de maintenance avec son prestataire et pensait être
+            couvert. Le jour où il a décidé de mettre à jour les
+            briques techniques de son application, le prestataire lui a
+            envoyé un devis pour une prestation à part. En relisant le
+            contrat, il a découvert qu'il ne couvrait que la correction
+            des bugs. Les mises à jour n'avaient jamais été incluses.
+            Personne ne lui avait menti : simplement, personne n'avait
+            posé la question.
+          </p>
+        </section>
+
+        <section>
+          <h2>« 15 à 20 % par an » : un repère, pas une règle</h2>
+
+          <p>
+            Si vous cherchez un chiffre, vous tomberez sur celui-ci : un
+            logiciel coûterait chaque année de l'ordre de 15 à 20 % de
+            son coût de développement initial pour être maintenu. C'est
+            une règle empirique largement répétée, dont personne ne
+            cite vraiment l'origine.
+          </p>
+
+          <p>
+            Ce repère a un mérite : il rappelle qu'un logiciel n'est pas
+            un investissement ponctuel. Une application livrée sans
+            budget d'entretien est une application qui vieillit dès le
+            premier jour.
+          </p>
+
+          <p>Mais il a deux limites sérieuses.</p>
+
+          <p>
+            <strong>Il ne dit pas quoi financer.</strong> Un montant
+            global ne vous aide pas à arbitrer. Vous ne savez pas si
+            vous payez pour que l'application continue de tourner ou
+            pour qu'elle progresse.
+          </p>
+
+          <p>
+            <strong>Il ignore l'état réel du logiciel.</strong> Une
+            application bien entretenue, à jour, avec des tests
+            automatisés, coûte moins cher à faire vivre qu'une
+            application laissée de côté pendant cinq ans. Appliquer le
+            même pourcentage aux deux, c'est sur-budgéter l'une et
+            sous-budgéter l'autre.
+          </p>
+
+          <p>
+            Plutôt qu'un pourcentage, je propose de découper le budget
+            en quatre postes. Chacun répond à une question différente.
+          </p>
+        </section>
+
+        <section>
+          <h2>Poste 1 – Maintenir en conditions opérationnelles : que ça tourne lundi matin</h2>
+
+          <p>
+            C'est le socle. Il répond à la question :{' '}
+            <strong>est-ce que le logiciel fonctionne, aujourd'hui et
+            demain ?</strong>
+          </p>
+
+          <p>Il couvre :</p>
+
+          <ul>
+            <li>la correction des anomalies ;</li>
+            <li>la surveillance de l'application et de son hébergement ;</li>
+            <li>
+              les sauvegardes, et surtout la vérification qu'on sait les
+              restaurer ;
+            </li>
+            <li>
+              le renouvellement des certificats, des licences, des
+              accès ;
+            </li>
+            <li>l'hébergement lui-même.</li>
+          </ul>
+
+          <p>
+            Ce poste n'est pas négociable. Le mettre à zéro, c'est
+            accepter qu'une panne se transforme en crise, faute de
+            quelqu'un qui connaisse le système et puisse intervenir
+            rapidement.
+          </p>
+        </section>
+
+        <section>
+          <h2>Poste 2 – Les montées de version : l'assurance qu'on reporte toujours</h2>
+
+          <p>
+            Votre logiciel repose sur des briques techniques : un
+            framework, des bibliothèques, un système d'exploitation,
+            une base de données. Ces briques ont une durée de vie.
+            Quand l'éditeur arrête de les maintenir, elles ne reçoivent
+            plus de correctifs de sécurité.
+          </p>
+
+          <p>
+            Un exemple très concret, et très actuel : le 10 novembre
+            2026, Microsoft arrête le support de .NET 8 et .NET 9, deux
+            versions de la plateforme sur laquelle reposent de
+            nombreuses applications métier. Les applications continuent
+            de fonctionner, mais elles ne reçoivent plus aucun correctif
+            de sécurité. La version suivante, .NET 10, est supportée
+            jusqu'en novembre 2028.
+          </p>
+
+          <p>
+            Si votre logiciel a été développé ou modernisé ces
+            dernières années sur cette technologie, la question mérite
+            d'être posée à votre prestataire dès maintenant.
+          </p>
+
+          <p>
+            Ce que j'observe en audit est toujours le même scénario : on
+            repousse la mise à jour « quand on aura le temps ». Puis,
+            quelques années plus tard, on découvre qu'il faut sauter
+            plusieurs versions d'un coup. Et les écarts ne s'additionnent
+            pas, ils se multiplient. Une montée de version régulière
+            représente quelques jours de travail. Un rattrapage de
+            plusieurs années peut devenir un chantier de plusieurs mois.
+          </p>
+
+          <blockquote>
+            Ma pratique chez mes clients : une montée de version
+            planifiée chaque année, les dépendances revues tous les
+            mois, et des tests automatisés pour pouvoir mettre à jour
+            sans stress.
+          </blockquote>
+        </section>
+
+        <section>
+          <h2>Poste 3 – Les évolutions : la seule ligne qu'on défend spontanément</h2>
+
+          <p>
+            C'est le poste que tout le monde comprend. Un nouveau
+            besoin, une nouvelle réglementation, un nouveau client qui
+            exige un nouveau format : il faut faire évoluer
+            l'application.
+          </p>
+
+          <p>
+            C'est aussi le poste qui se voit. Une évolution, on peut la
+            montrer, l'utiliser, la présenter en comité. C'est pour cela
+            qu'il est budgété naturellement.
+          </p>
+
+          <p>
+            Le danger, c'est qu'il absorbe tout. Quand le budget est
+            contraint, on finance les évolutions et on rogne sur la
+            maintenance et les mises à jour. L'application gagne des
+            fonctionnalités, mais sa structure s'abîme. Et chaque
+            nouvelle évolution coûte un peu plus cher que la précédente,
+            sans que personne ne sache vraiment pourquoi.
+          </p>
+
+          <p>
+            Ce poste mérite d'être budgété en enveloppe, avec des
+            priorités revues régulièrement, plutôt qu'en liste figée de
+            fonctionnalités décidée en début d'année.
+          </p>
+        </section>
+
+        <section>
+          <h2>Poste 4 – Le regard d'architecture : celui qu'on oublie et qui protège les trois autres</h2>
+
+          <p>
+            C'est le poste qui n'apparaît presque jamais dans les
+            budgets. Et c'est pourtant celui qui conditionne
+            l'efficacité des trois autres.
+          </p>
+
+          <p>
+            Le regard d'architecture, c'est quelqu'un qui connaît votre
+            logiciel dans son ensemble et qui peut répondre à des
+            questions comme :
+          </p>
+
+          <ul>
+            <li>cette évolution va-t-elle fragiliser autre chose ?</li>
+            <li>
+              pourquoi cette demande, qui semble simple, est-elle
+              estimée à trois semaines ?
+            </li>
+            <li>faut-il corriger ce module ou le refaire ?</li>
+            <li>
+              quelle mise à jour doit passer en priorité cette année ?
+            </li>
+          </ul>
+
+          <p>
+            Sans ce regard, les décisions se prennent au cas par cas,
+            évolution après évolution. Chacune paraît raisonnable. Mais
+            ensemble, elles finissent par rendre le logiciel lent à
+            faire évoluer, fragile, et dépendant des quelques personnes
+            qui le comprennent encore.
+          </p>
+
+          <p>
+            Ce poste ne demande pas un architecte à temps plein.
+            Quelques jours par trimestre suffisent souvent : un point
+            avec l'équipe ou le prestataire, une revue avant chaque
+            évolution importante, des choix documentés et mis à jour
+            quand le contexte change.
+          </p>
+
+          <p>
+            C'est un petit montant. Mais c'est lui qui évite qu'un
+            budget d'évolution se transforme, dix-huit mois plus tard,
+            en budget de refonte.
+          </p>
+        </section>
+
+        <section>
+          <h2>La grille : construire votre budget 2027 en une demi-journée</h2>
+
+          <p>
+            Voici la grille que je propose aux dirigeants que
+            j'accompagne. Elle tient sur une page et se remplit avec
+            votre prestataire ou votre éditeur.
+          </p>
+
+          <div class="comparison-table-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Poste</th>
+                  <th>Ce qu'il couvre</th>
+                  <th>Si on le met à zéro</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Maintien en conditions opérationnelles</td>
+                  <td>Corrections, surveillance, sauvegardes, hébergement</td>
+                  <td>Une panne devient une crise</td>
+                </tr>
+                <tr>
+                  <td>Montées de version</td>
+                  <td>Framework, bibliothèques, sécurité</td>
+                  <td>Failles non corrigées, rattrapage coûteux</td>
+                </tr>
+                <tr>
+                  <td>Évolutions</td>
+                  <td>Nouveaux besoins métier</td>
+                  <td>L'outil ne suit plus l'activité</td>
+                </tr>
+                <tr>
+                  <td>Regard d'architecture</td>
+                  <td>Arbitrages, priorités, cohérence</td>
+                  <td>Les trois autres postes dérivent</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            Vous remarquerez que je ne donne pas de montant. Ce n'est
+            pas une esquive : le bon chiffre dépend de l'âge de votre
+            logiciel, de son état, de sa criticité et de vos ambitions.
+            Un même montant peut être généreux pour une application
+            récente et bien entretenue, et très insuffisant pour une
+            application qui n'a pas été mise à jour depuis cinq ans.
+            L'important est que chaque ligne existe, qu'elle ait un
+            objectif clair, et que vous sachiez ce qu'elle achète.
+          </p>
+
+          <h3>Les questions à poser avant de signer votre budget</h3>
+
+          <ol>
+            <li>
+              Sur quelle version de sa technologie tourne notre
+              logiciel, et jusqu'à quand est-elle supportée ?
+            </li>
+            <li>
+              Que couvre exactement notre forfait actuel, et que ne
+              couvre-t-il pas ?
+            </li>
+            <li>
+              Quand avons-nous fait la dernière montée de version, et
+              quand est prévue la prochaine ?
+            </li>
+            <li>
+              Combien de temps faudrait-il pour remettre l'application
+              en service après une panne majeure ? L'avons-nous déjà
+              vérifié ?
+            </li>
+            <li>
+              Qui, aujourd'hui, a une vision d'ensemble de notre
+              logiciel ? Que se passe-t-il si cette personne n'est plus
+              disponible ?
+            </li>
+            <li>
+              Les évolutions de l'an dernier ont-elles coûté plus cher
+              que prévu ? Si oui, savons-nous pourquoi ?
+            </li>
+          </ol>
+
+          <p>
+            Si vous ne savez pas répondre à au moins trois de ces
+            questions, ce n'est pas un problème de budget. C'est un
+            problème de visibilité. Et c'est par là qu'il faut
+            commencer.
+          </p>
+        </section>
+
+        <section class="article-conclusion">
+          <h2>Un budget à zéro n'est pas une économie</h2>
+
+          <p>
+            Ne rien prévoir pour son logiciel métier, ce n'est pas
+            économiser. C'est contracter une dette à taux variable : on
+            ne sait ni quand elle sera exigible, ni combien elle
+            coûtera. Elle arrive toujours au mauvais moment, sous la
+            forme d'une panne, d'une faille, ou d'une évolution
+            impossible à livrer à temps.
+          </p>
+
+          <p>
+            Un budget sain n'a pas besoin d'être élevé. Il a besoin
+            d'être lisible : quatre postes, chacun avec un objectif
+            clair, et quelqu'un pour veiller à ce qu'ils restent
+            équilibrés.
+          </p>
+
+          <p>
+            Si vous vous reconnaissez dans cette situation, ou si la
+            grille vous pose plus de questions qu'elle n'en résout, un
+            regard extérieur d'une demi-journée suffit souvent à y voir
+            clair. C'est exactement le type d'échange que je mène avec
+            les dirigeants de PME : on parle de votre activité, pas de
+            technique.
+          </p>
+
+          <ul>
+            <li>
+              Besoin d'objectiver où en est votre logiciel avant de
+              fixer le budget ? <a href="/diagnostic-application-metier.html">Découvrez le diagnostic d'application métier →</a>
+            </li>
+            <li>
+              Besoin d'un premier état des lieux rapide, à budget fixe ? <a href="/audit-application-metier.html">Découvrez l'audit en 4 jours →</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
