@@ -60,13 +60,20 @@ const breadcrumbJsonLd = {
 
     <header class="article-header">
       <div class="container article-header-inner">
-        <p class="eyebrow">Conception d'application métier</p>
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="/">Accueil</a>
+          <span>/</span>
+          <a href="/#articles">Articles</a>
+          <span>/</span>
+          <span class="breadcrumb-current">Version 1</span>
+        </nav>
+
+        <span class="category-badge">Conception d'application métier</span>
 
         <h1>
           Comment définir les fonctionnalités vraiment nécessaires
           à la première version d'une application métier ?
         </h1>
-        <div class="accent-line"></div>
 
         <p class="article-intro">
           Lorsqu'un projet démarre, la liste des fonctionnalités peut rapidement
@@ -75,17 +82,39 @@ const breadcrumbJsonLd = {
           n'est pas toujours la meilleure façon de construire une application utile.
         </p>
         <div class="article-meta">
-          <span>Lecture : 5 minutes</span>
+          <span>Par Nadège Rouelle</span>
           <span>•</span>
-          <span>Applications métier</span>
+          <span>Lecture : 5 minutes</span>
         </div>
       </div>
     </header>
 
     <div class="container article-layout">
+      <aside class="article-toc">
+        <p class="article-toc-label">Dans cet article</p>
+        <ol>
+          <li><a href="#tout-semble-indispensable"><span class="toc-number">01</span><span>Tout semble indispensable</span></a></li>
+          <li><a href="#objectif-application"><span class="toc-number">02</span><span>Revenir à l'objectif</span></a></li>
+          <li><a href="#parcours-complet"><span class="toc-number">03</span><span>Un premier parcours complet</span></a></li>
+          <li><a href="#entre-mains-utilisateurs"><span class="toc-number">04</span><span>Entre les mains des utilisateurs</span></a></li>
+          <li><a href="#pas-au-rabais"><span class="toc-number">05</span><span>Pas une application au rabais</span></a></li>
+        </ol>
+      </aside>
+
+      <details class="article-toc-mobile">
+        <summary>Sommaire</summary>
+        <ol>
+          <li><a href="#tout-semble-indispensable"><span class="toc-number">01</span><span>Tout semble indispensable</span></a></li>
+          <li><a href="#objectif-application"><span class="toc-number">02</span><span>Revenir à l'objectif</span></a></li>
+          <li><a href="#parcours-complet"><span class="toc-number">03</span><span>Un premier parcours complet</span></a></li>
+          <li><a href="#entre-mains-utilisateurs"><span class="toc-number">04</span><span>Entre les mains des utilisateurs</span></a></li>
+          <li><a href="#pas-au-rabais"><span class="toc-number">05</span><span>Pas une application au rabais</span></a></li>
+        </ol>
+      </details>
+
       <div class="article-content">
         <section>
-          <h2>Au début, tout semble indispensable</h2>
+          <h2 id="tout-semble-indispensable">Au début, tout semble indispensable</h2>
 
           <p>
             Pendant les premiers échanges avec les équipes, les besoins apparaissent
@@ -116,7 +145,7 @@ const breadcrumbJsonLd = {
 
 
         <section>
-          <h2>Revenir à l'objectif de l'application</h2>
+          <h2 id="objectif-application">Revenir à l'objectif de l'application</h2>
 
           <p>
             Pour prioriser, j'aime revenir à des questions très simples.
@@ -154,7 +183,7 @@ const breadcrumbJsonLd = {
 
 
         <section>
-          <h2>Construire un premier parcours complet</h2>
+          <h2 id="parcours-complet">Construire un premier parcours complet</h2>
 
           <p>
             Une première version ne devrait pas être une collection de fonctionnalités
@@ -188,7 +217,7 @@ const breadcrumbJsonLd = {
 
 
         <section>
-          <h2>Mettre rapidement l'application entre les mains des utilisateurs</h2>
+          <h2 id="entre-mains-utilisateurs">Mettre rapidement l'application entre les mains des utilisateurs</h2>
 
           <p>
             Les ateliers, les échanges et les maquettes permettent d'anticiper beaucoup
@@ -220,7 +249,7 @@ const breadcrumbJsonLd = {
 
 
         <section>
-          <h2>Une V1 n'est pas une application au rabais</h2>
+          <h2 id="pas-au-rabais">Une V1 n'est pas une application au rabais</h2>
 
           <p>
             Limiter le périmètre ne signifie pas limiter la qualité.

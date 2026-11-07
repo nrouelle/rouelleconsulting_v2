@@ -116,12 +116,19 @@ const breadcrumbJsonLd = {
 
     <header class="article-header">
       <div class="container article-header-inner">
-        <p class="eyebrow">Modernisation d'application métier</p>
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="/">Accueil</a>
+          <span>/</span>
+          <a href="/#articles">Articles</a>
+          <span>/</span>
+          <span class="breadcrumb-current">Refonte</span>
+        </nav>
+
+        <span class="category-badge">Modernisation d'application métier</span>
 
         <h1>
           Quand refondre une application métier ?
         </h1>
-        <div class="accent-line"></div>
 
         <p class="article-intro">
           Une refonte complète se justifie quand la dette technique rend
@@ -135,18 +142,40 @@ const breadcrumbJsonLd = {
           la dernière.
         </p>
         <div class="article-meta">
-          <span>Lecture : 8 minutes</span>
+          <span>Par Nadège Rouelle</span>
           <span>•</span>
-          <span>Applications métier</span>
+          <span>Lecture : 8 minutes</span>
         </div>
       </div>
     </header>
 
     <div class="container article-layout">
+      <aside class="article-toc">
+        <p class="article-toc-label">Dans cet article</p>
+        <ol>
+          <li><a href="#enjeux-refonte"><span class="toc-number">01</span><span>Les enjeux d'une refonte</span></a></li>
+          <li><a href="#signaux"><span class="toc-number">02</span><span>Les signaux qui doivent alerter</span></a></li>
+          <li><a href="#tableau-decision"><span class="toc-number">03</span><span>Conserver, moderniser ou refondre</span></a></li>
+          <li><a href="#etapes-avant-refonte"><span class="toc-number">04</span><span>Les étapes avant de se lancer</span></a></li>
+          <li><a href="#questions-frequentes"><span class="toc-number">05</span><span>Questions fréquentes</span></a></li>
+        </ol>
+      </aside>
+
+      <details class="article-toc-mobile">
+        <summary>Sommaire</summary>
+        <ol>
+          <li><a href="#enjeux-refonte"><span class="toc-number">01</span><span>Les enjeux d'une refonte</span></a></li>
+          <li><a href="#signaux"><span class="toc-number">02</span><span>Les signaux qui doivent alerter</span></a></li>
+          <li><a href="#tableau-decision"><span class="toc-number">03</span><span>Conserver, moderniser ou refondre</span></a></li>
+          <li><a href="#etapes-avant-refonte"><span class="toc-number">04</span><span>Les étapes avant de se lancer</span></a></li>
+          <li><a href="#questions-frequentes"><span class="toc-number">05</span><span>Questions fréquentes</span></a></li>
+        </ol>
+      </details>
+
       <div class="article-content">
 
         <section>
-          <h2>Quels sont les enjeux d'une refonte d'application métier ?</h2>
+          <h2 id="enjeux-refonte">Quels sont les enjeux d'une refonte d'application métier ?</h2>
 
           <p>
             Une refonte complète engage trois types d'enjeux : des enjeux
@@ -222,7 +251,7 @@ const breadcrumbJsonLd = {
 
 
         <section>
-          <h2>Conserver, moderniser ou refondre : le tableau de décision</h2>
+          <h2 id="tableau-decision">Conserver, moderniser ou refondre : le tableau de décision</h2>
 
           <p>
             Le choix ne se limite pas à une alternative entre tout garder
@@ -287,7 +316,7 @@ const breadcrumbJsonLd = {
 
 
         <section>
-          <h2>Les étapes avant de se lancer dans une refonte</h2>
+          <h2 id="etapes-avant-refonte">Les étapes avant de se lancer dans une refonte</h2>
 
           <p>
             Une fois la refonte identifiée comme la meilleure option,
@@ -329,7 +358,7 @@ const breadcrumbJsonLd = {
 
 
         <section class="article-faq">
-          <h2>Questions fréquentes</h2>
+          <h2 id="questions-frequentes">Questions fréquentes</h2>
 
           <div class="faq-list">
 
