@@ -91,13 +91,20 @@ const breadcrumbJsonLd = {
 
     <header class="article-header">
       <div class="container article-header-inner">
-        <p class="eyebrow">Conception d'application métier</p>
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="/">Accueil</a>
+          <span>/</span>
+          <a href="/#articles">Articles</a>
+          <span>/</span>
+          <span class="breadcrumb-current">Reproduire l'existant</span>
+        </nav>
+
+        <span class="category-badge">Conception d'application métier</span>
 
         <h1>
           Pourquoi reproduire votre outil actuel est rarement un bon cahier
           des charges
         </h1>
-        <div class="accent-line"></div>
 
         <p class="article-intro">
           Quand on remplace un outil vieillissant, le réflexe est souvent de
@@ -109,18 +116,44 @@ const breadcrumbJsonLd = {
           mais ce que vos équipes ont besoin d'accomplir.
         </p>
         <div class="article-meta">
-          <span>Lecture : 5 minutes</span>
+          <span>Par Nadège Rouelle</span>
           <span>•</span>
-          <span>Applications métier</span>
+          <span>Lecture : 5 minutes</span>
         </div>
       </div>
     </header>
 
     <div class="container article-layout">
+      <aside class="article-toc">
+        <p class="article-toc-label">Dans cet article</p>
+        <ol>
+          <li><a href="#meme-chose-en-mieux"><span class="toc-number">01</span><span>« La même chose, en mieux »</span></a></li>
+          <li><a href="#histoire-contournements"><span class="toc-number">02</span><span>L'histoire de ses contournements</span></a></li>
+          <li><a href="#perdu-en-copiant"><span class="toc-number">03</span><span>Ce que l'on perd en copiant</span></a></li>
+          <li><a href="#source-precieuse"><span class="toc-number">04</span><span>L'existant, une source précieuse</span></a></li>
+          <li><a href="#decrire-le-besoin"><span class="toc-number">05</span><span>Décrire le besoin, pas la solution</span></a></li>
+          <li><a href="#partir-sans-senfermer"><span class="toc-number">06</span><span>Partir de l'existant sans s'y enfermer</span></a></li>
+          <li><a href="#questions-frequentes"><span class="toc-number">07</span><span>Questions fréquentes</span></a></li>
+        </ol>
+      </aside>
+
+      <details class="article-toc-mobile">
+        <summary>Sommaire</summary>
+        <ol>
+          <li><a href="#meme-chose-en-mieux"><span class="toc-number">01</span><span>« La même chose, en mieux »</span></a></li>
+          <li><a href="#histoire-contournements"><span class="toc-number">02</span><span>L'histoire de ses contournements</span></a></li>
+          <li><a href="#perdu-en-copiant"><span class="toc-number">03</span><span>Ce que l'on perd en copiant</span></a></li>
+          <li><a href="#source-precieuse"><span class="toc-number">04</span><span>L'existant, une source précieuse</span></a></li>
+          <li><a href="#decrire-le-besoin"><span class="toc-number">05</span><span>Décrire le besoin, pas la solution</span></a></li>
+          <li><a href="#partir-sans-senfermer"><span class="toc-number">06</span><span>Partir de l'existant sans s'y enfermer</span></a></li>
+          <li><a href="#questions-frequentes"><span class="toc-number">07</span><span>Questions fréquentes</span></a></li>
+        </ol>
+      </details>
+
       <div class="article-content">
 
         <section>
-          <h2>« Faites-moi la même chose, en mieux »</h2>
+          <h2 id="meme-chose-en-mieux">« Faites-moi la même chose, en mieux »</h2>
 
           <p>
             C'est l'une des demandes que j'entends le plus souvent au démarrage
@@ -151,7 +184,7 @@ const breadcrumbJsonLd = {
 
 
         <section>
-          <h2>Votre outil actuel raconte l'histoire de ses contournements</h2>
+          <h2 id="histoire-contournements">Votre outil actuel raconte l'histoire de ses contournements</h2>
 
           <p>
             Un outil utilisé depuis plusieurs années n'est jamais figé. Il s'est
@@ -179,7 +212,7 @@ const breadcrumbJsonLd = {
 
 
         <section>
-          <h2>Ce que l'on perd en copiant l'existant</h2>
+          <h2 id="perdu-en-copiant">Ce que l'on perd en copiant l'existant</h2>
 
           <p>
             Copier l'outil actuel a plusieurs effets moins visibles :
@@ -216,7 +249,7 @@ const breadcrumbJsonLd = {
 
 
         <section>
-          <h2>L'existant reste une source précieuse</h2>
+          <h2 id="source-precieuse">L'existant reste une source précieuse</h2>
 
           <p>
             Il ne s'agit pas pour autant de faire table rase.
@@ -254,7 +287,7 @@ const breadcrumbJsonLd = {
 
 
         <section>
-          <h2>Décrire le besoin, pas la solution</h2>
+          <h2 id="decrire-le-besoin">Décrire le besoin, pas la solution</h2>
 
           <p>
             Un cahier des charges utile décrit ce que les utilisateurs doivent
@@ -295,7 +328,7 @@ const breadcrumbJsonLd = {
 
 
         <section>
-          <h2>Partir de l'existant sans s'y enfermer</h2>
+          <h2 id="partir-sans-senfermer">Partir de l'existant sans s'y enfermer</h2>
 
           <p>
             C'est tout l'intérêt des ateliers métier : reconstruire avec vos
@@ -316,7 +349,7 @@ const breadcrumbJsonLd = {
 
 
         <section class="article-faq">
-          <h2>Questions fréquentes</h2>
+          <h2 id="questions-frequentes">Questions fréquentes</h2>
 
           <div class="faq-list">
 

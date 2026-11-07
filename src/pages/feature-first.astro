@@ -59,13 +59,20 @@ const breadcrumbJsonLd = {
 
     <header class="article-header">
       <div class="container article-header-inner">
-        <p class="eyebrow">Conception d'application métier</p>
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="/">Accueil</a>
+          <span>/</span>
+          <a href="/#articles">Articles</a>
+          <span>/</span>
+          <span class="breadcrumb-current">Feature-first</span>
+        </nav>
+
+        <span class="category-badge">Conception d'application métier</span>
 
         <h1>
           Développement d'une application métier : pourquoi avancer
           fonctionnalité par fonctionnalité ?
         </h1>
-        <div class="accent-line"></div>
 
         <p class="article-intro">
           Des résultats visibles plus tôt, des retours utilisateurs plus
@@ -76,18 +83,44 @@ const breadcrumbJsonLd = {
           qu'il n'y paraît.
         </p>
         <div class="article-meta">
-          <span>Lecture : 6 minutes</span>
+          <span>Par Nadège Rouelle</span>
           <span>•</span>
-          <span>Applications métier</span>
+          <span>Lecture : 6 minutes</span>
         </div>
       </div>
     </header>
 
     <div class="container article-layout">
+      <aside class="article-toc">
+        <p class="article-toc-label">Dans cet article</p>
+        <ol>
+          <li><a href="#avancer-sans-resultat"><span class="toc-number">01</span><span>Avancer sans résultat visible</span></a></li>
+          <li><a href="#deux-facons-organiser"><span class="toc-number">02</span><span>Deux façons d'organiser le développement</span></a></li>
+          <li><a href="#se-projeter-plus-tot"><span class="toc-number">03</span><span>Se projeter plus tôt</span></a></li>
+          <li><a href="#corriger-mauvaise-direction"><span class="toc-number">04</span><span>Corriger une mauvaise direction</span></a></li>
+          <li><a href="#priorites-evoluent"><span class="toc-number">05</span><span>Des priorités qui évoluent</span></a></li>
+          <li><a href="#fondations-techniques"><span class="toc-number">06</span><span>Les fondations techniques</span></a></li>
+          <li><a href="#mesurer-avancement"><span class="toc-number">07</span><span>Mesurer l'avancement autrement</span></a></li>
+        </ol>
+      </aside>
+
+      <details class="article-toc-mobile">
+        <summary>Sommaire</summary>
+        <ol>
+          <li><a href="#avancer-sans-resultat"><span class="toc-number">01</span><span>Avancer sans résultat visible</span></a></li>
+          <li><a href="#deux-facons-organiser"><span class="toc-number">02</span><span>Deux façons d'organiser le développement</span></a></li>
+          <li><a href="#se-projeter-plus-tot"><span class="toc-number">03</span><span>Se projeter plus tôt</span></a></li>
+          <li><a href="#corriger-mauvaise-direction"><span class="toc-number">04</span><span>Corriger une mauvaise direction</span></a></li>
+          <li><a href="#priorites-evoluent"><span class="toc-number">05</span><span>Des priorités qui évoluent</span></a></li>
+          <li><a href="#fondations-techniques"><span class="toc-number">06</span><span>Les fondations techniques</span></a></li>
+          <li><a href="#mesurer-avancement"><span class="toc-number">07</span><span>Mesurer l'avancement autrement</span></a></li>
+        </ol>
+      </details>
+
       <div class="article-content">
 
         <section>
-          <h2>Un projet peut avancer sans que les utilisateurs voient de résultat</h2>
+          <h2 id="avancer-sans-resultat">Un projet peut avancer sans que les utilisateurs voient de résultat</h2>
 
           <p>
             Imaginez la situation. Le développement de votre nouvelle
@@ -114,7 +147,7 @@ const breadcrumbJsonLd = {
 
 
         <section>
-          <h2>Deux façons d'organiser le développement</h2>
+          <h2 id="deux-facons-organiser">Deux façons d'organiser le développement</h2>
 
           <p>
             Prenons un exemple concret : une application de suivi des
@@ -160,7 +193,7 @@ const breadcrumbJsonLd = {
 
 
         <section>
-          <h2>Les utilisateurs peuvent se projeter beaucoup plus tôt</h2>
+          <h2 id="se-projeter-plus-tot">Les utilisateurs peuvent se projeter beaucoup plus tôt</h2>
 
           <p>
             C'est sans doute le bénéfice le plus important de cette
@@ -214,7 +247,7 @@ const breadcrumbJsonLd = {
 
 
         <section>
-          <h2>Corriger une mauvaise direction avant qu'elle coûte cher</h2>
+          <h2 id="corriger-mauvaise-direction">Corriger une mauvaise direction avant qu'elle coûte cher</h2>
 
           <p>
             Quand les retours arrivent tôt, ils arrivent à un moment où il
@@ -244,7 +277,7 @@ const breadcrumbJsonLd = {
 
 
         <section>
-          <h2>Des priorités qui peuvent évoluer avec le projet</h2>
+          <h2 id="priorites-evoluent">Des priorités qui peuvent évoluer avec le projet</h2>
 
           <p>
             Au lancement du projet, vous avez listé dix fonctionnalités
@@ -277,7 +310,7 @@ const breadcrumbJsonLd = {
 
 
         <section>
-          <h2>Cela ne signifie pas négliger les fondations techniques</h2>
+          <h2 id="fondations-techniques">Cela ne signifie pas négliger les fondations techniques</h2>
 
           <p>
             Avancer par fonctionnalités ne veut pas dire coder un écran le
@@ -310,7 +343,7 @@ const breadcrumbJsonLd = {
 
 
         <section>
-          <h2>Mesurer l'avancement autrement</h2>
+          <h2 id="mesurer-avancement">Mesurer l'avancement autrement</h2>
 
           <p>
             Lorsqu'on développe une application métier, la question à se

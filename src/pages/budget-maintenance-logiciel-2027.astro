@@ -59,12 +59,19 @@ const breadcrumbJsonLd = {
 
     <header class="article-header">
       <div class="container article-header-inner">
-        <p class="eyebrow">Budget IT 2027</p>
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="/">Accueil</a>
+          <span>/</span>
+          <a href="/#articles">Articles</a>
+          <span>/</span>
+          <span class="breadcrumb-current">Budget IT 2027</span>
+        </nav>
+
+        <span class="category-badge">Budget IT 2027</span>
 
         <h1>
           Combien budgéter en 2027 pour que votre logiciel métier ne vous lâche pas ?
         </h1>
-        <div class="accent-line"></div>
 
         <p class="article-intro">
           Maintenance de logiciel métier : comment construire un budget
@@ -72,14 +79,40 @@ const breadcrumbJsonLd = {
           forfait flou. Grille et questions.
         </p>
         <div class="article-meta">
-          <span>Lecture : 9 minutes</span>
+          <span>Par Nadège Rouelle</span>
           <span>•</span>
-          <span>Applications métier</span>
+          <span>Lecture : 9 minutes</span>
         </div>
       </div>
     </header>
 
     <div class="container article-layout">
+      <aside class="article-toc">
+        <p class="article-toc-label">Dans cet article</p>
+        <ol>
+          <li><a href="#pourquoi-ligne-vide"><span class="toc-number">01</span><span>Pourquoi la ligne est vide ou floue</span></a></li>
+          <li><a href="#repere-15-20"><span class="toc-number">02</span><span>Le repère « 15 à 20 % », ses limites</span></a></li>
+          <li><a href="#poste-1-maintien"><span class="toc-number">03</span><span>Poste 1 — Maintien opérationnel</span></a></li>
+          <li><a href="#poste-2-montees-version"><span class="toc-number">04</span><span>Poste 2 — Montées de version</span></a></li>
+          <li><a href="#poste-3-evolutions"><span class="toc-number">05</span><span>Poste 3 — Évolutions</span></a></li>
+          <li><a href="#poste-4-architecture"><span class="toc-number">06</span><span>Poste 4 — Regard d'architecture</span></a></li>
+          <li><a href="#grille-budget-2027"><span class="toc-number">07</span><span>La grille de budget 2027</span></a></li>
+        </ol>
+      </aside>
+
+      <details class="article-toc-mobile">
+        <summary>Sommaire</summary>
+        <ol>
+          <li><a href="#pourquoi-ligne-vide"><span class="toc-number">01</span><span>Pourquoi la ligne est vide ou floue</span></a></li>
+          <li><a href="#repere-15-20"><span class="toc-number">02</span><span>Le repère « 15 à 20 % », ses limites</span></a></li>
+          <li><a href="#poste-1-maintien"><span class="toc-number">03</span><span>Poste 1 — Maintien opérationnel</span></a></li>
+          <li><a href="#poste-2-montees-version"><span class="toc-number">04</span><span>Poste 2 — Montées de version</span></a></li>
+          <li><a href="#poste-3-evolutions"><span class="toc-number">05</span><span>Poste 3 — Évolutions</span></a></li>
+          <li><a href="#poste-4-architecture"><span class="toc-number">06</span><span>Poste 4 — Regard d'architecture</span></a></li>
+          <li><a href="#grille-budget-2027"><span class="toc-number">07</span><span>La grille de budget 2027</span></a></li>
+        </ol>
+      </details>
+
       <div class="article-content">
 
         <section>
@@ -107,7 +140,7 @@ const breadcrumbJsonLd = {
         </section>
 
         <section>
-          <h2>Pourquoi la ligne « logiciel métier » est vide ou floue</h2>
+          <h2 id="pourquoi-ligne-vide">Pourquoi la ligne « logiciel métier » est vide ou floue</h2>
 
           <p>
             Un logiciel qui fonctionne est invisible. Personne ne vient
@@ -155,7 +188,7 @@ const breadcrumbJsonLd = {
         </section>
 
         <section>
-          <h2>« 15 à 20 % par an » : un repère, pas une règle</h2>
+          <h2 id="repere-15-20">« 15 à 20 % par an » : un repère, pas une règle</h2>
 
           <p>
             Si vous cherchez un chiffre, vous tomberez sur celui-ci : un
@@ -197,7 +230,7 @@ const breadcrumbJsonLd = {
         </section>
 
         <section>
-          <h2>Poste 1 – Maintenir en conditions opérationnelles : que ça tourne lundi matin</h2>
+          <h2 id="poste-1-maintien">Poste 1 – Maintenir en conditions opérationnelles : que ça tourne lundi matin</h2>
 
           <p>
             C'est le socle. Il répond à la question :{' '}
@@ -230,7 +263,7 @@ const breadcrumbJsonLd = {
         </section>
 
         <section>
-          <h2>Poste 2 – Les montées de version : l'assurance qu'on reporte toujours</h2>
+          <h2 id="poste-2-montees-version">Poste 2 – Les montées de version : l'assurance qu'on reporte toujours</h2>
 
           <p>
             Votre logiciel repose sur des briques techniques : un
@@ -275,7 +308,7 @@ const breadcrumbJsonLd = {
         </section>
 
         <section>
-          <h2>Poste 3 – Les évolutions : la seule ligne qu'on défend spontanément</h2>
+          <h2 id="poste-3-evolutions">Poste 3 – Les évolutions : la seule ligne qu'on défend spontanément</h2>
 
           <p>
             C'est le poste que tout le monde comprend. Un nouveau
@@ -307,7 +340,7 @@ const breadcrumbJsonLd = {
         </section>
 
         <section>
-          <h2>Poste 4 – Le regard d'architecture : celui qu'on oublie et qui protège les trois autres</h2>
+          <h2 id="poste-4-architecture">Poste 4 – Le regard d'architecture : celui qu'on oublie et qui protège les trois autres</h2>
 
           <p>
             C'est le poste qui n'apparaît presque jamais dans les
@@ -357,7 +390,7 @@ const breadcrumbJsonLd = {
         </section>
 
         <section>
-          <h2>La grille : construire votre budget 2027 en une demi-journée</h2>
+          <h2 id="grille-budget-2027">La grille : construire votre budget 2027 en une demi-journée</h2>
 
           <p>
             Voici la grille que je propose aux dirigeants que

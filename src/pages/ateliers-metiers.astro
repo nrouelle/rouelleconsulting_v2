@@ -58,11 +58,17 @@ const breadcrumbJsonLd = {
 
     <header class="article-header">
       <div class="container article-header-inner">
-        <p class="eyebrow">Accompagnement métier</p>
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="/">Accueil</a>
+          <span>/</span>
+          <a href="/#articles">Articles</a>
+          <span>/</span>
+          <span class="breadcrumb-current">Atelier métier</span>
+        </nav>
+
+        <span class="category-badge">Accompagnement métier</span>
 
         <h1>Comment se déroule un atelier métier avant de créer une application ?</h1>
-
-        <div class="accent-line"></div>
 
         <p class="article-intro">
           Avant de concevoir une application métier, il est essentiel de comprendre
@@ -72,29 +78,36 @@ const breadcrumbJsonLd = {
         </p>
 
         <div class="article-meta">
-          <span>Lecture : 5 minutes</span>
+          <span>Par Nadège Rouelle</span>
           <span>•</span>
-          <span>Applications métier</span>
+          <span>Lecture : 5 minutes</span>
         </div>
       </div>
     </header>
 
     <div class="container article-layout">
 
-      <aside class="article-sidebar" aria-label="Sommaire de l'article">
-        <p class="sidebar-title">Dans cet article</p>
-
-        <nav>
-          <a href="#partir-du-metier">1. Partir du métier</a><br />
-          <a href="#faire-parler">2. Faire parler ceux qui font</a><br />
-          <a href="#application-simple">3. Transformer cette compréhension</a><br />
-        </nav>
+      <aside class="article-toc">
+        <p class="article-toc-label">Dans cet article</p>
+        <ol>
+          <li><a href="#partir-du-metier"><span class="toc-number">01</span><span>Partir du métier</span></a></li>
+          <li><a href="#faire-parler"><span class="toc-number">02</span><span>Faire parler ceux qui font</span></a></li>
+          <li><a href="#application-simple"><span class="toc-number">03</span><span>Transformer cette compréhension</span></a></li>
+        </ol>
       </aside>
+
+      <details class="article-toc-mobile">
+        <summary>Sommaire</summary>
+        <ol>
+          <li><a href="#partir-du-metier"><span class="toc-number">01</span><span>Partir du métier</span></a></li>
+          <li><a href="#faire-parler"><span class="toc-number">02</span><span>Faire parler ceux qui font</span></a></li>
+          <li><a href="#application-simple"><span class="toc-number">03</span><span>Transformer cette compréhension</span></a></li>
+        </ol>
+      </details>
 
       <div class="article-content">
 
         <section id="partir-du-metier">
-          <span class="section-number">01</span>
           <h2>Partir du métier, pas de l'application</h2>
 
           <p>
@@ -115,7 +128,6 @@ const breadcrumbJsonLd = {
         </section>
 
         <section id="faire-parler">
-          <span class="section-number">02</span>
           <h2>Faire parler ceux qui font</h2>
 
           <p>
@@ -140,7 +152,6 @@ const breadcrumbJsonLd = {
         </section>
 
         <section id="application-simple">
-          <span class="section-number">03</span>
           <h2>Transformer cette compréhension en une application simple</h2>
 
           <p>

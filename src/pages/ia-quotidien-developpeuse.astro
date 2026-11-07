@@ -59,25 +59,52 @@ const breadcrumbJsonLd = {
 
     <header class="article-header">
       <div class="container article-header-inner">
-        <p class="eyebrow">Intelligence artificielle &amp; développement</p>
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="/">Accueil</a>
+          <span>/</span>
+          <a href="/#articles">Articles</a>
+          <span>/</span>
+          <span class="breadcrumb-current">Intelligence artificielle</span>
+        </nav>
+
+        <span class="category-badge">Intelligence artificielle &amp; développement</span>
 
         <h1>
           L'IA dans mon quotidien de développeuse
         </h1>
-        <div class="accent-line"></div>
 
         <p class="article-intro">
           <em>Ce qu'elle accélère vraiment, et ce qu'elle ne remplace pas.</em>
         </p>
         <div class="article-meta">
-          <span>Lecture : 6 minutes</span>
+          <span>Par Nadège Rouelle</span>
           <span>•</span>
-          <span>Intelligence artificielle</span>
+          <span>Lecture : 6 minutes</span>
         </div>
       </div>
     </header>
 
     <div class="container article-layout">
+      <aside class="article-toc">
+        <p class="article-toc-label">Dans cet article</p>
+        <ol>
+          <li><a href="#tout-confier"><span class="toc-number">01</span><span>Premier réflexe : tout confier d'un coup</span></a></li>
+          <li><a href="#avancer-pas-a-pas"><span class="toc-number">02</span><span>Avancer pas à pas</span></a></li>
+          <li><a href="#piloter-us-par-us"><span class="toc-number">03</span><span>Piloter l'IA, US par US</span></a></li>
+          <li><a href="#garder-le-controle"><span class="toc-number">04</span><span>Garder le contrôle</span></a></li>
+        </ol>
+      </aside>
+
+      <details class="article-toc-mobile">
+        <summary>Sommaire</summary>
+        <ol>
+          <li><a href="#tout-confier"><span class="toc-number">01</span><span>Premier réflexe : tout confier d'un coup</span></a></li>
+          <li><a href="#avancer-pas-a-pas"><span class="toc-number">02</span><span>Avancer pas à pas</span></a></li>
+          <li><a href="#piloter-us-par-us"><span class="toc-number">03</span><span>Piloter l'IA, US par US</span></a></li>
+          <li><a href="#garder-le-controle"><span class="toc-number">04</span><span>Garder le contrôle</span></a></li>
+        </ol>
+      </details>
+
       <div class="article-content">
 
         <section>
@@ -98,7 +125,7 @@ const breadcrumbJsonLd = {
 
 
         <section>
-          <h2>Premier réflexe : tout lui confier d'un coup</h2>
+          <h2 id="tout-confier">Premier réflexe : tout lui confier d'un coup</h2>
 
           <p>
             J'ai commencé comme beaucoup : décrire l'application en
@@ -124,7 +151,7 @@ const breadcrumbJsonLd = {
 
 
         <section>
-          <h2>Avancer pas à pas, comme sur un vrai projet</h2>
+          <h2 id="avancer-pas-a-pas">Avancer pas à pas, comme sur un vrai projet</h2>
 
           <p>
             J'ai donc changé d'approche : faire avancer l'IA étape par
@@ -165,7 +192,7 @@ const breadcrumbJsonLd = {
 
 
         <section>
-          <h2>Piloter l'IA, US par US</h2>
+          <h2 id="piloter-us-par-us">Piloter l'IA, US par US</h2>
 
           <p>
             Une fois le cadre posé, je l'ai pilotée pour chaque user
@@ -199,7 +226,7 @@ const breadcrumbJsonLd = {
 
 
         <section>
-          <h2>Garder le contrôle</h2>
+          <h2 id="garder-le-controle">Garder le contrôle</h2>
 
           <p>
             Oui, je suis de celles qui veulent comprendre ce que fait
@@ -249,7 +276,7 @@ const breadcrumbJsonLd = {
         </section>
 
 
-        <section>
+        <section class="article-conclusion">
           <h2>En conclusion</h2>
 
           <p>
@@ -271,6 +298,10 @@ const breadcrumbJsonLd = {
             Et vous, où placez-vous la frontière entre ce que vous
             déléguez à l'IA et ce que vous gardez sous contrôle ?
           </p>
+
+          <a href="/#contact" class="button">
+            Parlons de votre projet
+          </a>
         </section>
 
       </div>
