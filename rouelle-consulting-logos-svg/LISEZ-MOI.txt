@@ -1,0 +1,16 @@
+ROUELLE CONSULTING — LOGO VECTORIEL
+
+Bleu nuit : #13243C
+Citron : #DCF27A
+
+rouelle-consulting.svg : logo principal, fond transparent.
+rouelle-consulting-blanc.svg : logo pour fond sombre, fond transparent.
+rouelle-symbole.svg : monogramme seul.
+rouelle-symbole-blanc.svg : monogramme pour fond sombre.
+
+Tous les caractères sont convertis en tracés. Aucun chargement de police ni image incorporée. Dessin vectoriel redessiné à partir du concept retenu ; courbes et typographie harmonisées, sans reproduction pixel à pixel.
+
+HTML : <a href="/" aria-label="Rouelle Consulting — Accueil"><img src="/assets/rouelle-consulting.svg" alt="Rouelle Consulting" width="285" height="85"></a>
+CSS : img { max-width: 100%; height: auto; }
+
+Préserver les proportions et les marges. Utiliser le symbole seul pour les espaces étroits. Vérifier sa lisibilité à la taille finale pour un favicon.

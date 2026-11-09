@@ -80,21 +80,13 @@ a {
 
 .brand {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   text-decoration: none;
-  line-height: 1.2;
 }
 
-.brand-name {
-  color: #fff;
-  font-size: 21px;
-  font-weight: 800;
-}
-
-.brand-subtitle {
-  margin-top: 4px;
-  color: rgba(255, 255, 255, 0.62);
-  font-size: 12px;
+.brand-logo {
+  height: 42px;
+  width: auto;
 }
 
 .main-nav {
@@ -1412,8 +1404,8 @@ blockquote p:last-child {
     min-height: 72px;
   }
 
-  .brand-subtitle {
-    display: none;
+  .brand-logo {
+    height: 34px;
   }
 
   .hero {
