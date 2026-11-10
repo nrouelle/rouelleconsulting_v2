@@ -1,0 +1,196 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.rouelleconsulting.fr/' },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Articles',
+      item: 'https://www.rouelleconsulting.fr/articles.html',
+    },
+  ],
+};
+
+const blogJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  '@id': 'https://www.rouelleconsulting.fr/articles.html#blog',
+  name: 'Articles — Rouelle Consulting',
+  url: 'https://www.rouelleconsulting.fr/articles.html',
+  publisher: {
+    '@type': 'ProfessionalService',
+    '@id': 'https://www.rouelleconsulting.fr/#organization',
+    name: 'Rouelle Consulting',
+  },
+  blogPost: [
+    {
+      '@type': 'BlogPosting',
+      headline: 'Combien budgéter en 2027 pour que votre logiciel métier ne vous lâche pas ?',
+      datePublished: '2026-11-09',
+      url: 'https://www.rouelleconsulting.fr/budget-maintenance-logiciel-2027.html',
+    },
+    {
+      '@type': 'BlogPosting',
+      headline: 'Quand refondre une application métier ?',
+      datePublished: '2026-11-03',
+      url: 'https://www.rouelleconsulting.fr/quand-refondre-application-metier.html',
+    },
+    {
+      '@type': 'BlogPosting',
+      headline: "L'IA dans mon quotidien de développeuse",
+      datePublished: '2026-11-02',
+      url: 'https://www.rouelleconsulting.fr/ia-quotidien-developpeuse.html',
+    },
+    {
+      '@type': 'BlogPosting',
+      headline: "Développement d'une application métier : pourquoi avancer fonctionnalité par fonctionnalité ?",
+      datePublished: '2026-10-27',
+      url: 'https://www.rouelleconsulting.fr/feature-first.html',
+    },
+    {
+      '@type': 'BlogPosting',
+      headline: 'Pourquoi reproduire votre outil actuel est rarement un bon cahier des charges',
+      datePublished: '2026-10-22',
+      url: 'https://www.rouelleconsulting.fr/reproduire-outil-existant.html',
+    },
+    {
+      '@type': 'BlogPosting',
+      headline: 'Comment se déroule un atelier métier avant de créer une application ?',
+      datePublished: '2026-09-02',
+      url: 'https://www.rouelleconsulting.fr/ateliers-metiers.html',
+    },
+    {
+      '@type': 'BlogPosting',
+      headline: "Tout n'a pas besoin d'être dans la V1",
+      datePublished: '2026-09-02',
+      url: 'https://www.rouelleconsulting.fr/version-1.html',
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Articles — Réflexions sur les applications métier — Rouelle Consulting"
+  description="Tous les articles de Rouelle Consulting sur la conception et le développement d'applications métier sur mesure : méthode, budget, refonte, ateliers métier."
+  canonicalPath="/articles.html"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(blogJsonLd)} />
+  </Fragment>
+
+  <section class="service-hero">
+    <div class="container">
+
+      <p class="eyebrow">Articles</p>
+
+      <h1>Réflexions autour des applications métier.</h1>
+
+      <p class="lead">
+        Méthode, budget, refonte, ateliers métier : des retours concrets
+        sur la conception et le développement d'applications sur mesure.
+      </p>
+
+    </div>
+  </section>
+
+  <section class="articles-section">
+    <div class="container">
+
+      <div class="articles-grid">
+
+        <article class="article-card">
+          <span class="article-card-date">9 novembre 2026</span>
+          <h3>
+            Combien budgéter en 2027 pour que votre logiciel métier ne vous lâche pas ?
+          </h3>
+          <p>
+            Pas de pourcentage magique ni de forfait flou : une grille
+            en quatre postes pour construire un budget de maintenance
+            2027 défendable.
+          </p>
+          <a href="/budget-maintenance-logiciel-2027.html">Lire l'article →</a>
+        </article>
+
+        <article class="article-card">
+          <span class="article-card-date">3 novembre 2026</span>
+          <h3>
+            Quand refondre une application métier ?
+          </h3>
+          <p>
+            Les signaux qui doivent alerter, un tableau pour choisir entre
+            conserver, moderniser ou refondre, et les étapes avant de se
+            lancer.
+          </p>
+          <a href="/quand-refondre-application-metier.html">Lire l'article →</a>
+        </article>
+
+        <article class="article-card">
+          <span class="article-card-date">2 novembre 2026</span>
+          <h3>
+            L'IA dans mon quotidien de développeuse
+          </h3>
+          <p>
+            Dix mois après avoir annoncé un changement de paradigme,
+            retour terrain : ce que l'IA accélère vraiment dans mon
+            travail, et ce qu'elle ne remplace pas.
+          </p>
+          <a href="/ia-quotidien-developpeuse.html">Lire l'article →</a>
+        </article>
+
+        <article class="article-card">
+          <span class="article-card-date">27 octobre 2026</span>
+          <h3>
+            Développement d'une application métier : pourquoi avancer fonctionnalité par fonctionnalité ?
+          </h3>
+          <p>
+            Avancer fonctionnalité par fonctionnalité plutôt que brique par
+            brique, pour des retours utilisateurs plus tôt et moins de
+            mauvaises surprises.
+          </p>
+          <a href="/feature-first.html">Lire l'article →</a>
+        </article>
+
+        <article class="article-card">
+          <span class="article-card-date">22 octobre 2026</span>
+          <h3>
+            Pourquoi reproduire votre outil actuel est rarement un bon cahier des charges
+          </h3>
+          <p>
+            Copier votre outil actuel revient souvent à reconduire ses
+            défauts dans une version plus moderne.
+          </p>
+          <a href="/reproduire-outil-existant.html">Lire l'article →</a>
+        </article>
+
+        <article class="article-card">
+          <span class="article-card-date">2 septembre 2026</span>
+          <h3>
+            Comment se déroule un atelier métier avant de créer une application ?
+          </h3>
+          <p>
+            Comprendre les besoins réels du terrain avant de cadrer les
+            fonctionnalités à développer.
+          </p>
+          <a href="/ateliers-metiers.html">Lire l'article →</a>
+        </article>
+
+        <article class="article-card">
+          <span class="article-card-date">2 septembre 2026</span>
+          <h3>Tout n'a pas besoin d'être dans la V1</h3>
+          <p>
+            Lister toutes les fonctionnalités possibles n'est pas la bonne
+            méthode : comment prioriser ce qui doit vraiment être développé
+            dès le début.
+          </p>
+          <a href="/version-1.html">Lire l'article →</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>

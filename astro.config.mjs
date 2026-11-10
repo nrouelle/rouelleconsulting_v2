@@ -10,6 +10,7 @@ const sitemapMeta = {
   '/': { priority: 1.0, changefreq: 'monthly' },
   '/developpeuse-freelance-lyon': { priority: 0.9, changefreq: 'monthly' },
   '/diagnostic-application-metier': { priority: 0.8, changefreq: 'monthly' },
+  '/articles': { priority: 0.7, changefreq: 'weekly' },
   '/audit-application-metier': { priority: 0.8, changefreq: 'monthly' },
   '/quand-refondre-application-metier': { priority: 0.7, changefreq: 'monthly' },
   '/budget-maintenance-logiciel-2027': { priority: 0.7, changefreq: 'monthly' },

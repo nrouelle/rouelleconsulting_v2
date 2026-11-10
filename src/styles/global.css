@@ -590,8 +590,14 @@ p {
   padding-right: 0;
 }
 
-.article-card:nth-last-child(-n+2) {
+.article-card:last-child,
+.article-card:nth-last-child(2):nth-child(odd) {
   border-bottom: 0;
+}
+
+.articles-more {
+  margin-top: 32px;
+  text-align: center;
 }
 
 .article-card-date {

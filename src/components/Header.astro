@@ -8,7 +8,7 @@ const { isHome = false }: Props = Astro.props;
 const navLinks = [
   { anchor: 'accompagnement', label: 'Accompagnement' },
   { anchor: 'realisations', label: 'Réalisations' },
-  { anchor: 'articles', label: 'Articles' },
+  { href: '/articles.html', label: 'Articles' },
   { anchor: 'apropos', label: 'À propos' },
 ];
 
@@ -29,7 +29,7 @@ const hrefFor = (anchor: string) => (isHome ? `#${anchor}` : `/#${anchor}`);
 
     <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
       {navLinks.map((link) => (
-        <a href={hrefFor(link.anchor)}>{link.label}</a>
+        <a href={'href' in link ? link.href : hrefFor(link.anchor)}>{link.label}</a>
       ))}
       <a href={hrefFor('contact')} class="button button-small">Contact</a>
     </nav>
