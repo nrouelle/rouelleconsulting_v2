@@ -1,0 +1,454 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Nadège Rouelle — Contact professionnel | Rouelle Consulting';
+const description =
+  "Contactez Nadège Rouelle, fondatrice de Rouelle Consulting, spécialisée dans la création et la modernisation d'applications métier sur mesure.";
+
+const linkedinUrl = 'https://www.linkedin.com/in/nadegerouelle-dev-dotnet/';
+const projectMailto = `mailto:nadege@rouelleconsulting.fr?subject=${encodeURIComponent('Échange concernant un projet logiciel')}`;
+
+const offers = [
+  {
+    icon: '◈',
+    title: 'Audit et cadrage',
+    description:
+      'Analyser vos applications existantes, identifier les risques et définir une feuille de route adaptée à vos enjeux.',
+  },
+  {
+    icon: '▣',
+    title: "Création d'applications métier",
+    description:
+      'Concevoir et développer des logiciels sur mesure, adaptés aux usages réels de vos collaborateurs.',
+  },
+  {
+    icon: '↗',
+    title: 'Modernisation applicative',
+    description:
+      'Faire évoluer vos applications existantes, améliorer leur maintenabilité et pérenniser votre activité.',
+  },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath="/contact-pro.html"
+  noindex={true}
+  hideHeader={true}
+  hideFooter={true}
+>
+  <div class="contact-pro">
+    <section class="cp-hero">
+      <div class="container cp-hero-inner">
+        <img
+          src="/assets/rouelle-consulting-blanc.svg"
+          alt="Rouelle Consulting"
+          class="cp-logo"
+        />
+
+        <h1>Nadège Rouelle</h1>
+        <p class="cp-role">Fondatrice &amp; Consultante</p>
+        <p class="cp-experience">20 ans d'expérience en développement logiciel</p>
+
+        <p class="cp-tagline">
+          Comprendre le métier.<br />
+          Concevoir le bon outil.<br />
+          Le développer.
+        </p>
+
+        <p class="cp-positioning">
+          Création et modernisation d'applications métier sur mesure.
+        </p>
+      </div>
+    </section>
+
+    <section class="cp-intro">
+      <div class="container cp-intro-inner">
+        <h2>Ravie de vous avoir rencontrés.</h2>
+        <p>
+          Vous avez un projet logiciel, une application vieillissante ou des
+          outils qui ne répondent plus aux besoins de vos équipes ? Échangeons
+          sur vos enjeux.
+        </p>
+      </div>
+    </section>
+
+    <section class="cp-actions" aria-label="Actions de contact">
+      <div class="container cp-actions-inner">
+        <a
+          href="/nadege-rouelle.vcf"
+          download="nadege-rouelle.vcf"
+          class="cp-button-primary"
+          data-umami-event="contact-pro_vcard_download"
+        >
+          Enregistrer mes coordonnées
+        </a>
+
+        <div class="cp-actions-grid">
+          <a
+            href="tel:+33688346092"
+            class="cp-action"
+            data-umami-event="contact-pro_click_tel"
+          >
+            <span class="cp-action-icon" aria-hidden="true">☎</span>
+            M'appeler
+          </a>
+          <a
+            href="mailto:nadege@rouelleconsulting.fr"
+            class="cp-action"
+            data-umami-event="contact-pro_click_email"
+          >
+            <span class="cp-action-icon" aria-hidden="true">✉</span>
+            M'écrire
+          </a>
+          <a
+            href={linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cp-action"
+            data-umami-event="contact-pro_click_linkedin"
+          >
+            <span class="cp-action-icon" aria-hidden="true">↗</span>
+            LinkedIn
+          </a>
+          <a
+            href={projectMailto}
+            class="cp-action"
+            data-umami-event="contact-pro_click_echange"
+          >
+            <span class="cp-action-icon" aria-hidden="true">✎</span>
+            Échanger sur votre projet
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cp-offers">
+      <div class="container">
+        <h2>Comment puis-je vous accompagner ?</h2>
+
+        <div class="cp-offers-grid">
+          {
+            offers.map((offer) => (
+              <article class="cp-offer">
+                <div class="cp-offer-icon" aria-hidden="true">
+                  {offer.icon}
+                </div>
+                <h3>{offer.title}</h3>
+                <p>{offer.description}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="cp-resources">
+      <div class="container cp-resources-inner">
+        <a
+          href="/"
+          class="cp-resource-link"
+          data-umami-event="contact-pro_click_site"
+        >
+          Visiter le site Rouelle Consulting
+        </a>
+      </div>
+    </section>
+
+    <footer class="cp-footer">
+      <div class="container cp-footer-inner">
+        <p>
+          <strong>Rouelle Consulting</strong><br />
+          Lyon · Auvergne-Rhône-Alpes
+        </p>
+        <p>
+          <a href="/mentions-legales.html">Mentions légales</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+</BaseLayout>
+
+<style>
+  .contact-pro {
+    font-family: inherit;
+  }
+
+  .contact-pro :global(.container) {
+    width: min(calc(100% - 40px), 640px);
+    margin: 0 auto;
+  }
+
+  .contact-pro a {
+    text-decoration: none;
+  }
+
+  .contact-pro a:focus-visible,
+  .contact-pro button:focus-visible {
+    outline: 3px solid var(--navy);
+    outline-offset: 2px;
+  }
+
+  .cp-hero a:focus-visible,
+  .cp-footer a:focus-visible {
+    outline-color: var(--citron);
+  }
+
+  /* HERO */
+
+  .cp-hero {
+    background: var(--navy);
+    color: #fff;
+    padding: 56px 0 44px;
+    text-align: center;
+  }
+
+  .cp-logo {
+    height: 42px;
+    width: auto;
+    margin-bottom: 28px;
+  }
+
+  .cp-hero h1 {
+    margin: 0 0 6px;
+    font-size: clamp(28px, 6vw, 36px);
+    font-weight: 700;
+  }
+
+  .cp-role {
+    margin: 0 0 4px;
+    color: var(--citron);
+    font-weight: 600;
+    font-size: 17px;
+  }
+
+  .cp-experience {
+    margin: 0 0 28px;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 14px;
+  }
+
+  .cp-tagline {
+    margin: 0 0 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .cp-positioning {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 15px;
+  }
+
+  /* INTRO */
+
+  .cp-intro {
+    background: #fff;
+    padding: 44px 0;
+    text-align: center;
+  }
+
+  .cp-intro h2 {
+    margin: 0 0 14px;
+    color: var(--navy);
+    font-size: 22px;
+  }
+
+  .cp-intro p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* ACTIONS */
+
+  .cp-actions {
+    background: var(--background-soft);
+    padding: 36px 0 44px;
+  }
+
+  .cp-button-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid var(--citron);
+    border-radius: 8px;
+    background: var(--citron);
+    color: var(--navy);
+    font-size: 16px;
+    font-weight: 700;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .cp-button-primary:hover {
+    background: var(--citron-dark);
+    border-color: var(--citron-dark);
+    box-shadow: 0 8px 20px rgba(220, 242, 122, 0.3);
+  }
+
+  .cp-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .cp-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-height: 72px;
+    padding: 14px 10px;
+    border: 1px solid var(--navy);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+  }
+
+  .cp-action:hover {
+    background: var(--navy);
+    color: var(--citron);
+  }
+
+  .cp-action-icon {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  /* OFFERS */
+
+  .cp-offers {
+    background: #fff;
+    padding: 48px 0;
+  }
+
+  .cp-offers h2 {
+    margin: 0 0 28px;
+    color: var(--navy);
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .cp-offers-grid {
+    display: grid;
+    gap: 16px;
+  }
+
+  .cp-offer {
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+
+  .cp-offer-icon {
+    margin-bottom: 10px;
+    color: var(--navy);
+    font-size: 24px;
+  }
+
+  .cp-offer h3 {
+    margin: 0 0 8px;
+    color: var(--navy);
+    font-size: 17px;
+  }
+
+  .cp-offer p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* RESOURCES */
+
+  .cp-resources {
+    background: var(--background-soft);
+    padding: 36px 0;
+    text-align: center;
+  }
+
+  .cp-resource-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 20px;
+    border: 1px solid var(--navy);
+    border-radius: 8px;
+    color: var(--navy);
+    font-size: 15px;
+    font-weight: 600;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .cp-resource-link:hover {
+    background: var(--navy);
+    color: var(--citron);
+  }
+
+  /* FOOTER */
+
+  .cp-footer {
+    background: var(--navy);
+    color: rgba(255, 255, 255, 0.68);
+    padding: 28px 0;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .cp-footer a {
+    color: #fff;
+  }
+
+  .cp-footer a:hover {
+    color: var(--citron);
+  }
+
+  .cp-footer p {
+    margin: 0 0 10px;
+  }
+
+  .cp-footer p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cp-button-primary,
+    .cp-action,
+    .cp-resource-link {
+      transition: none;
+    }
+  }
+
+  @media (min-width: 600px) {
+    .cp-actions-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .cp-offers-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (hover: hover) {
+    .cp-button-primary:hover,
+    .cp-action:hover {
+      transform: translateY(-1px);
+    }
+  }
+</style>

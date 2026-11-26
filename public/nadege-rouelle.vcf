@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Rouelle;Nadège;;;
+FN:Nadège Rouelle
+ORG:Rouelle Consulting
+TITLE:Fondatrice & Consultante
+TEL;TYPE=WORK,VOICE:+33688346092
+EMAIL;TYPE=INTERNET,WORK:nadege@rouelleconsulting.fr
+URL:https://www.rouelleconsulting.fr
+NOTE:Création et modernisation d'applications métier sur mesure.
+END:VCARD

@@ -30,6 +30,7 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
+      filter: (page) => new URL(page).pathname !== '/contact-pro',
       serialize(item) {
         const url = new URL(item.url);
         const meta = sitemapMeta[url.pathname];
